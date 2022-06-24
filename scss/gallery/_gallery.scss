@@ -1,10 +1,109 @@
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  grid-template-areas:
+    "render   render    circus  circus    circus"
+    "waves    paws      paws    trusting  trusting"
+    "waves    fatcat    tom     trusting  trusting"
+    "agape    agape     tom     trusting  trusting"
+    "geraci   pixel     pixel   bunny     bunny"
+    "geraci   heart     analog  analog    angua"
+    "glitter  glitter   ursula  waits     waits";
 
-    &__item {
-      background-color: hotpink;
-      aspect-ratio: 1 / 1;
+  &__item {
+    background-color: hotpink;
+    height: 10em;
+    // aspect-ratio: 1 / 1;
+  }
+
+  .render {
+    grid-area: render;
+  }
+
+  .circus {
+    grid-area: circus;
+  }
+
+  .waves {
+    grid-area: waves;
+    height: auto;
+  }
+
+  .paws {
+    grid-area: paws;
+  }
+
+  .trusting {
+    grid-area: trusting;
+    height: auto;
+  }
+
+  .fatcat {
+    grid-area: fatcat;
+  }
+
+  .tom {
+    grid-area: tom;
+    height: auto;
+  }
+
+  .agape {
+    grid-area: agape;
+  }
+
+  .geraci {
+    grid-area: geraci;
+    height: auto;
+  }
+
+  .pixel {
+    grid-area: pixel;
+  }
+
+  .bunny {
+    grid-area: bunny;
+  }
+
+  .heart {
+    grid-area: heart;
+  }
+
+  .analog {
+    grid-area: analog;
+  }
+
+  .angua {
+    grid-area: angua;
+  }
+
+  .glitter {
+    grid-area: glitter;
+  }
+
+  .ursula {
+    grid-area: ursula;
+  }
+
+  .waits {
+    grid-area: waits;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+
+    &__item,
+    .waves,
+    .trusting,
+    .tom,
+    .geraci {
+      background-color: rgb(25, 133, 235);
+      width: 100%;
+      height: 18em;
     }
+  }
 }

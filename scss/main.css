@@ -3,7 +3,6 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -301,11 +300,155 @@ template {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  gap: 1vw;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 10px;
+      grid-template-areas: "render   render    circus  circus    circus" "waves    paws      paws    trusting  trusting" "waves    fatcat    tom     trusting  trusting" "agape    agape     tom     trusting  trusting" "geraci   pixel     pixel   bunny     bunny" "geraci   heart     analog  analog    angua" "glitter  glitter   ursula  waits     waits";
 }
 
 .gallery__item {
   background-color: hotpink;
-  aspect-ratio: 1 / 1;
+  height: 10em;
+}
+
+.gallery .render {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: render;
+}
+
+.gallery .circus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: circus;
+}
+
+.gallery .waves {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: waves;
+  height: auto;
+}
+
+.gallery .paws {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: paws;
+}
+
+.gallery .trusting {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: trusting;
+  height: auto;
+}
+
+.gallery .fatcat {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: fatcat;
+}
+
+.gallery .tom {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: tom;
+  height: auto;
+}
+
+.gallery .agape {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: agape;
+}
+
+.gallery .geraci {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: geraci;
+  height: auto;
+}
+
+.gallery .pixel {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: pixel;
+}
+
+.gallery .bunny {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: bunny;
+}
+
+.gallery .heart {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: heart;
+}
+
+.gallery .analog {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: analog;
+}
+
+.gallery .angua {
+  -ms-grid-row: 6;
+  -ms-grid-column: 5;
+  grid-area: angua;
+}
+
+.gallery .glitter {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: glitter;
+}
+
+.gallery .ursula {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+  grid-area: ursula;
+}
+
+.gallery .waits {
+  -ms-grid-row: 7;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: waits;
+}
+
+@media screen and (max-width: 700px) {
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery__item,
+  .gallery .waves,
+  .gallery .trusting,
+  .gallery .tom,
+  .gallery .geraci {
+    background-color: #1985eb;
+    width: 100%;
+    height: 18em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
