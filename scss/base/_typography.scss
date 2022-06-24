@@ -1,0 +1,60 @@
+@import url(https://api.fontshare.com/css?f[]=clash-display@1&display=swap);
+
+body {
+    font: 1.5rem 'Clash Display', sans-serif;
+    color: $accent-color;
+}
+
+a,
+.nav__link {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 7rem;
+
+    &__title {
+        margin: 1rem 3rem;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: .3rem;
+        font-size: calc(10vw + 40%);
+
+        &--small {
+            margin-bottom: 1.5rem;
+        }
+
+        &--kerning {
+            letter-spacing: -1rem;
+        }
+
+        & span:first-child {
+            padding-right: 1rem;
+        }
+    }
+
+    h2 {
+        font-weight: 500;
+        margin-top: 0;
+    }
+}
+
+blockquote::before {
+    content: open-quote;
+    font-size: 5rem;
+}
+
+blockquote::after {
+    content: close-quote;
+    font-size: 5rem;
+}
+
+@media (max-width: 500px) {
+
+    .heading__title {
+        letter-spacing: -2rem;
+        background: blue;
+    }
+}

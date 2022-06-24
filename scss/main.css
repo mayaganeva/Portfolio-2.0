@@ -1,3 +1,4 @@
+@import url(https://api.fontshare.com/css?f[]=clash-display@1&display=swap);
 *,
 *::before,
 *::after {
@@ -295,6 +296,87 @@ template {
   display: none;
 }
 
+body {
+  font: 1.5rem 'Clash Display', sans-serif;
+  color: #191919;
+}
+
+a,
+.nav__link {
+  text-decoration: none;
+  color: #191919;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.heading__title {
+  margin: 1rem 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: .3rem;
+  font-size: calc(10vw + 40%);
+}
+
+.heading__title--small {
+  margin-bottom: 1.5rem;
+}
+
+.heading__title--kerning {
+  letter-spacing: -1rem;
+}
+
+.heading__title span:first-child {
+  padding-right: 1rem;
+}
+
+.heading h2 {
+  font-weight: 500;
+  margin-top: 0;
+}
+
+blockquote::before {
+  content: open-quote;
+  font-size: 5rem;
+}
+
+blockquote::after {
+  content: close-quote;
+  font-size: 5rem;
+}
+
+@media (max-width: 500px) {
+  .heading__title {
+    letter-spacing: -2rem;
+    background: blue;
+  }
+}
+
+.cta__btn {
+  border: none;
+  display: inline-block;
+  background-color: #191919;
+  color: white;
+  padding: .75em 1.75em;
+}
+
+.skills__bar {
+  height: 1rem;
+  background: #e9e9e9;
+}
+
+.skills__bar > span {
+  display: block;
+  height: 100%;
+  background: #191919;
+}
+
+.skills__label {
+  line-height: 0;
+}
+
 .gallery {
   display: -ms-grid;
   display: grid;
@@ -303,7 +385,7 @@ template {
 
 .gallery__item {
   background: #badd1e;
-  height: 20em;
+  height: 60vw;
 }
 
 @media screen and (min-width: 700px) {
@@ -319,7 +401,7 @@ template {
   }
   .gallery__item {
     background-color: hotpink;
-    height: 15em;
+    height: 19vw;
   }
   .gallery .render {
     -ms-grid-row: 1;
@@ -424,5 +506,41 @@ template {
     -ms-grid-column-span: 2;
     grid-area: waits;
   }
+}
+
+.header {
+  border: 2px solid hotpink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  height: 40px;
+  background-color: salmon;
+}
+
+.nav h3 {
+  font-size: 1.6rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.75em;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #191919;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */
