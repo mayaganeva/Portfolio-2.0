@@ -5,39 +5,18 @@ body {
     color: $accent-color;
 }
 
-a,
-.nav__link {
-    text-decoration: none;
-    color: $accent-color;
-}
-
-.heading {
+.hero {
     text-align: center;
-    margin-top: 7rem;
+    margin-bottom: 3.5em;
 
     &__title {
-        margin: 1rem 3rem;
-        text-transform: uppercase;
+        font-size: 4.5rem;
         line-height: 1;
-        letter-spacing: .3rem;
-        font-size: calc(10vw + 40%);
-
-        &--small {
-            margin-bottom: 1.5rem;
-        }
-
-        &--kerning {
-            letter-spacing: -1rem;
-        }
-
-        & span:first-child {
-            padding-right: 1rem;
-        }
+        margin: 128px .5em 0;
     }
 
-    h2 {
-        font-weight: 500;
-        margin-top: 0;
+    &__subtitle {
+        font-weight: 400;
     }
 }
 
@@ -51,10 +30,14 @@ blockquote::after {
     font-size: 5rem;
 }
 
-@media (max-width: 500px) {
+@media screen and (min-width: 900px) {
+    
+    .hero {
+        margin: 9em 0 7em;
 
-    .heading__title {
-        letter-spacing: -2rem;
-        background: blue;
+        &__title {
+            font-size: 7rem;
+        }
     }
+    
 }

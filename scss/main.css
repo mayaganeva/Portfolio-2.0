@@ -6,6 +6,15 @@
           box-sizing: border-box;
 }
 
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -301,40 +310,19 @@ body {
   color: #191919;
 }
 
-a,
-.nav__link {
-  text-decoration: none;
-  color: #191919;
-}
-
-.heading {
+.hero {
   text-align: center;
-  margin-top: 7rem;
+  margin-bottom: 3.5em;
 }
 
-.heading__title {
-  margin: 1rem 3rem;
-  text-transform: uppercase;
+.hero__title {
+  font-size: 4.5rem;
   line-height: 1;
-  letter-spacing: .3rem;
-  font-size: calc(10vw + 40%);
+  margin: 128px .5em 0;
 }
 
-.heading__title--small {
-  margin-bottom: 1.5rem;
-}
-
-.heading__title--kerning {
-  letter-spacing: -1rem;
-}
-
-.heading__title span:first-child {
-  padding-right: 1rem;
-}
-
-.heading h2 {
-  font-weight: 500;
-  margin-top: 0;
+.hero__subtitle {
+  font-weight: 400;
 }
 
 blockquote::before {
@@ -347,10 +335,12 @@ blockquote::after {
   font-size: 5rem;
 }
 
-@media (max-width: 500px) {
-  .heading__title {
-    letter-spacing: -2rem;
-    background: blue;
+@media screen and (min-width: 900px) {
+  .hero {
+    margin: 9em 0 7em;
+  }
+  .hero__title {
+    font-size: 7rem;
   }
 }
 
@@ -509,7 +499,11 @@ blockquote::after {
 }
 
 .header {
-  border: 2px solid hotpink;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: .5em 1.5em;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,10 +517,10 @@ blockquote::after {
 
 .logo {
   height: 40px;
-  background-color: salmon;
 }
 
-.nav h3 {
+.nav {
+  visibility: hidden;
   font-size: 1.6rem;
 }
 
@@ -542,5 +536,48 @@ blockquote::after {
   text-decoration: none;
   color: #191919;
   font-weight: 500;
+}
+
+.nav-toggle {
+  visibility: hidden;
+}
+
+.hamburger {
+  visibility: visible;
+  margin-right: 1.5em;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  background-color: #191919;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 24px;
+  position: absolute;
+  right: 0;
+}
+
+.hamburger::before {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.hamburger::after {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+@media screen and (min-width: 600px) {
+  .nav {
+    visibility: visible;
+  }
+  .hamburger {
+    visibility: hidden;
+  }
+}
+
+.cta {
+  text-align: center;
+  margin: 3em 2em 3.5em;
 }
 /*# sourceMappingURL=main.css.map */
