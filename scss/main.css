@@ -324,8 +324,7 @@ body {
   font-weight: 400;
 }
 
-.hero__title,
-.about {
+.hero__title {
   margin: 128px .5em 0;
 }
 
@@ -355,6 +354,10 @@ blockquote::after {
   background-color: #191919;
   color: white;
   padding: .75em 1.75em;
+}
+
+.about__btn {
+  width: 100%;
 }
 
 .gallery {
@@ -572,23 +575,31 @@ blockquote::after {
 }
 
 .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  gap: 3em;
+  -ms-grid-columns: minmax(300px, 360px) minmax(400px, 700px);
+      grid-template-columns: minmax(300px, 360px) minmax(400px, 700px);
+  margin: 128px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .about__picture {
+  aspect-ratio: 1 / 1;
   display: block;
   background-color: hotpink;
 }
 
-.about .right {
-  max-width: 600px;
+.tools {
+  margin-bottom: 2em;
 }
 
 .tools__progress-bars {
   line-height: 0;
-  width: minmax(200px, 400px);
 }
 
 .tools__progress-bars__label {

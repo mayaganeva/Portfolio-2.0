@@ -1,24 +1,24 @@
 .about {
-    display: flex;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: minmax(300px, 360px) minmax(400px, 700px);
+    margin: 128px auto;
+    justify-content: center;
+    align-content: center;
+
 
     &__picture {
+        aspect-ratio: 1 / 1;
         display: block;
         background-color: hotpink;
     }
-
-    .right {
-        max-width: 600px;
-    }
-    
 }
 
-
-
 .tools {
+    margin-bottom: 2em;
 
     &__progress-bars {
         line-height: 0;
-        width: minmax(200px, 400px);
 
         &__label {
             font-size: 1.4rem;
@@ -58,5 +58,9 @@
 
 .five {
     width: 75%;
+}
+
+@media screen and (min-width: 800px) {
+    
 }
 
