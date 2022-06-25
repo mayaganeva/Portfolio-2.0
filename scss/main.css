@@ -318,11 +318,15 @@ body {
 .hero__title {
   font-size: 4.5rem;
   line-height: 1;
-  margin: 128px .5em 0;
 }
 
 .hero__subtitle {
   font-weight: 400;
+}
+
+.hero__title,
+.about {
+  margin: 128px .5em 0;
 }
 
 blockquote::before {
@@ -344,27 +348,13 @@ blockquote::after {
   }
 }
 
-.cta__btn {
+.cta__btn,
+.about__btn {
   border: none;
   display: inline-block;
   background-color: #191919;
   color: white;
   padding: .75em 1.75em;
-}
-
-.skills__bar {
-  height: 1rem;
-  background: #e9e9e9;
-}
-
-.skills__bar > span {
-  display: block;
-  height: 100%;
-  background: #191919;
-}
-
-.skills__label {
-  line-height: 0;
 }
 
 .gallery {
@@ -579,5 +569,63 @@ blockquote::after {
 .cta {
   text-align: center;
   margin: 3em 2em 3.5em;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__picture {
+  display: block;
+  background-color: hotpink;
+}
+
+.about .right {
+  max-width: 600px;
+}
+
+.tools__progress-bars {
+  line-height: 0;
+  width: minmax(200px, 400px);
+}
+
+.tools__progress-bars__label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: hotpink;
+  margin: 1.8em 0 1em;
+}
+
+.tools__progress-bars__bar {
+  height: .8rem;
+  background: #e9e9e9;
+}
+
+.tools__progress-bars__progress {
+  display: block;
+  height: 100%;
+  background: #191919;
+}
+
+.one {
+  width: 95%;
+}
+
+.two {
+  width: 85%;
+}
+
+.three {
+  width: 65%;
+}
+
+.four {
+  width: 90%;
+}
+
+.five {
+  width: 75%;
 }
 /*# sourceMappingURL=main.css.map */

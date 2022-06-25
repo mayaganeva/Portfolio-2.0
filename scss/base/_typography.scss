@@ -12,12 +12,16 @@ body {
     &__title {
         font-size: 4.5rem;
         line-height: 1;
-        margin: 128px .5em 0;
     }
 
     &__subtitle {
         font-weight: 400;
     }
+}
+
+.hero__title,
+.about {
+    margin: 128px .5em 0;
 }
 
 blockquote::before {

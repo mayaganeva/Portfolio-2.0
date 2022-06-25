@@ -1,0 +1,62 @@
+.about {
+    display: flex;
+
+    &__picture {
+        display: block;
+        background-color: hotpink;
+    }
+
+    .right {
+        max-width: 600px;
+    }
+    
+}
+
+
+
+.tools {
+
+    &__progress-bars {
+        line-height: 0;
+        width: minmax(200px, 400px);
+
+        &__label {
+            font-size: 1.4rem;
+            font-weight: 500;
+            background-color: hotpink;
+            margin: 1.8em 0 1em;
+        }
+        
+        &__bar {
+            height: .8rem;
+            background: $tools-bar-bg;
+        }
+    
+        &__progress {
+            display: block;
+            height: 100%;
+            background: $accent-color;
+        }
+    }
+}
+
+.one {
+    width: 95%;
+}
+
+.two {
+    width: 85%;
+}
+
+.three {
+    width: 65%;
+}
+
+.four {
+    width: 90%;
+}
+
+.five {
+    width: 75%;
+}
+
