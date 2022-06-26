@@ -1,7 +1,7 @@
 .header {
     background-color: rgba($white, .8);
     border-bottom: 2px solid $accent-color;
-    padding: .2em 1.5em;
+    padding: .2rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -40,7 +40,7 @@
 
 .hamburger {
     visibility: visible;
-    margin-right: 1.5em;
+    margin-right: 2rem;
 
     &,
     &::before,

@@ -472,7 +472,7 @@ h1, h2, h3, h4 {
 .header {
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 2px solid #191919;
-  padding: .2em 1.5em;
+  padding: .2rem 2rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -520,7 +520,7 @@ h1, h2, h3, h4 {
 
 .hamburger {
   visibility: visible;
-  margin-right: 1.5em;
+  margin-right: 2rem;
 }
 
 .hamburger, .hamburger::before, .hamburger::after {
@@ -571,16 +571,12 @@ h1, h2, h3, h4 {
 }
 
 .footer {
-  background-color: rgba(255, 255, 255, 0.8);
   border-top: 2px solid #191919;
-  padding: .2em 1.5em 2em;
+  padding: 0 2rem 0;
+  font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -589,17 +585,58 @@ h1, h2, h3, h4 {
           justify-content: space-between;
 }
 
+.footer__links {
+  display: none;
+}
+
 .footer__link {
-  display: hidden;
   text-decoration: none;
   color: #191919;
   font-weight: 500;
+  margin-left: 1em;
+}
+
+.footer__icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer__icon {
+  margin-left: 8%;
+}
+
+.footer .behance {
+  height: 20px;
+}
+
+.footer .linkedin {
+  height: 22px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.footer .github {
+  height: 23px;
+}
+
+.footer .codepen {
+  height: 27px;
+}
+
+.footer .insta {
+  height: 30px;
 }
 
 @media screen and (min-width: 700px) {
   .footer {
-    background-color: hotpink;
-    padding: .2em 1.5em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -607,20 +644,17 @@ h1, h2, h3, h4 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .footer__links {
-    display: block;
+    display: unset;
   }
-  .footer__link {
-    margin-left: 1em;
+  .footer__icons {
+    display: none;
   }
 }
 
 .about {
-  margin: 1.5em 1.5em 3.5em;
+  margin: 2rem 2rem 3em;
 }
 
 .about__picture {
@@ -706,18 +740,22 @@ h1, h2, h3, h4 {
   width: 75%;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 650px) {
   .left {
     display: -ms-grid;
     display: grid;
     grid-template: "img tools" 1fr "btn tools" 63.6px / 1fr 1fr;
     gap: 1.5em;
   }
+  .about {
+    margin: 7.5% 7.5% 3.5em;
+  }
   .about__picture {
     grid-area: img;
   }
   .about__btn {
     grid-area: btn;
+    padding: .75em 1.36em;
   }
   .about .tools {
     grid-area: tools;
@@ -753,10 +791,9 @@ h1, h2, h3, h4 {
   .about {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr minmax(280px, 1fr) minmax(440px, 2fr) 1fr;
-        grid-template-columns: 1fr minmax(280px, 1fr) minmax(440px, 2fr) 1fr;
+    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2em;
-    margin-top: 3em;
   }
   .about .left {
     display: block;
@@ -776,6 +813,7 @@ h1, h2, h3, h4 {
     -ms-grid-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
         grid-template-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
     gap: 2.5em;
+    margin-top: 3.75%;
   }
 }
 /*# sourceMappingURL=main.css.map */

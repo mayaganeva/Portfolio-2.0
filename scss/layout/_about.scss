@@ -1,5 +1,5 @@
 .about {
-    margin: 1.5em 1.5em 3.5em;
+    margin: 2rem 2rem 3em;
 
     &__picture {
         aspect-ratio: 1 / 1;
@@ -86,7 +86,7 @@
     width: 75%;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 650px) {
     .left {
         display: grid;
         grid-template: 
@@ -96,12 +96,15 @@
     }
 
     .about {
+        margin: 7.5% 7.5% 3.5em;
+
         &__picture  {
             grid-area: img;
         }
 
         &__btn {
             grid-area: btn;
+            padding: .75em 1.36em;
         }
 
         .tools {
@@ -135,9 +138,8 @@
 @media screen and (min-width: 900px) {
     .about {
         display: grid;
-        grid-template-columns: 1fr minmax(280px, 1fr) minmax(440px, 2fr) 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 2em;
-        margin-top: 3em;
 
         .left {
             display: block;
@@ -158,5 +160,6 @@
     .about {
         grid-template-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
         gap: 2.5em;
+        margin-top: 3.75%;
     }
 }

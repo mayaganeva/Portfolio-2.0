@@ -1,189 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="author" content="Maya Ganeva">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maya Ganeva</title>
-    <link rel="icon" type="image/x-icon" href="img/x-icon-5.svg">
-    <link rel="stylesheet" href="scss/main.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Maya Ganeva">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maya Ganeva</title>
+        <link rel="icon" type="image/x-icon" href="img/x-icon-5.svg">
+        <link rel="stylesheet" href="scss/main.css">
+    </head>
 
-<body>
-    <header class="header">
-        <svg class="logo" xmlns="http://www.w3.org/2000/svg"
-            xml:space="preserve"
-            baseProfile="tiny"
-            overflow="visible"
-            version="1.2"
-            viewBox="0 0 250 250">
-            <path fill="#010101" d="M250 171v26.4h-92.1V250H0V118.5h131.5V49.2L79 84.2l-52.6-35v42.9H0V0l79 52.6L157.9 0v144.7H26.4v78.9h105.1v-26.2H65.8V171z"/>
-          </svg>
-        <button class="nav-toggle"><span class="hamburger"></span></button>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
-                <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="header-dummy"></div>
+    <body>
+        <header class="header">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                baseProfile="tiny"
+                overflow="visible"
+                version="1.2"
+                viewBox="0 0 250 250">
+                <path fill="#010101" d="M250 171v26.4h-92.1V250H0V118.5h131.5V49.2L79 84.2l-52.6-35v42.9H0V0l79 52.6L157.9 0v144.7H26.4v78.9h105.1v-26.2H65.8V171z"/>
+            </svg>
+            <button class="nav-toggle"><span class="hamburger"></span></button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="header-dummy"></div>
 
-    <section class="hero">
-        <h1 class="hero__title">Maya Ganeva</h1>
-        <h2 class="hero__subtitle">Design + Front End</h2>
-    </section>
+        <section class="hero">
+            <h1 class="hero__title">Maya Ganeva</h1>
+            <h2 class="hero__subtitle">Design + Front End</h2>
+        </section>
 
-    <section class="gallery">
+        <section class="gallery">
 
-            <!-- picture.gallery__item*16>source[media="(min-width: 600px)"][srcset="img/gallery/file.webp"]+source[media="(min-width: 960px)"][srcset="img/gallery/file.webp"]img.gallery__img -->
+                <!-- picture.gallery__item*16>source[media="(min-width: 600px)"][srcset="img/gallery/file.webp"]+source[media="(min-width: 960px)"][srcset="img/gallery/file.webp"]img.gallery__img -->
 
-            <div class="gallery__item circus">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">1
-                </picture>
-            </div>
-            <div class="gallery__item render">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">2
-                </picture>
-            </div>
-            <div class="gallery__item waves">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="">
-                    <source media="(min-width: 960px)" srcset="">
-                    <img src="" alt="" class="gallery__img">3
-                </picture>
-            </div>
-            <div class="gallery__item paws">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">4
-                </picture>
-            </div>
-            <div class="gallery__item trusting">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">5
-                </picture>
-            </div>
-            <div class="gallery__item fatcat">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">6
-                </picture>
-            </div>
-            <div class="gallery__item agape">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">7
-                </picture>
-            </div>
-            <div class="gallery__item bunny">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">8
-                </picture>
-            </div>
-            <div class="gallery__item tom">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">9
-                </picture>
-            </div>
-            <div class="gallery__item pixel">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">10
-                </picture>
-            </div>
-            <div class="gallery__item geraci">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">11
-                </picture>
-            </div>
-            <div class="gallery__item waits">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">12
-                </picture>
-            </div>
-            <div class="gallery__item angua">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">13
-                </picture>
-            </div>
-            <div class="gallery__item analog">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">14
-                </picture>
-            </div>
-            <div class="gallery__item heart">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">15
-                </picture>
-            </div>
-            <div class="gallery__item ursula">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">16
-                </picture>
-            </div>
-            <div class="gallery__item glitter">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">17
-                </picture>
-            </div>
+                <div class="gallery__item circus">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">1
+                    </picture>
+                </div>
+                <div class="gallery__item render">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">2
+                    </picture>
+                </div>
+                <div class="gallery__item waves">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="">
+                        <source media="(min-width: 960px)" srcset="">
+                        <img src="" alt="" class="gallery__img">3
+                    </picture>
+                </div>
+                <div class="gallery__item paws">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">4
+                    </picture>
+                </div>
+                <div class="gallery__item trusting">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">5
+                    </picture>
+                </div>
+                <div class="gallery__item fatcat">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">6
+                    </picture>
+                </div>
+                <div class="gallery__item agape">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">7
+                    </picture>
+                </div>
+                <div class="gallery__item bunny">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">8
+                    </picture>
+                </div>
+                <div class="gallery__item tom">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">9
+                    </picture>
+                </div>
+                <div class="gallery__item pixel">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">10
+                    </picture>
+                </div>
+                <div class="gallery__item geraci">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">11
+                    </picture>
+                </div>
+                <div class="gallery__item waits">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">12
+                    </picture>
+                </div>
+                <div class="gallery__item angua">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">13
+                    </picture>
+                </div>
+                <div class="gallery__item analog">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">14
+                    </picture>
+                </div>
+                <div class="gallery__item heart">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">15
+                    </picture>
+                </div>
+                <div class="gallery__item ursula">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">16
+                    </picture>
+                </div>
+                <div class="gallery__item glitter">
+                    <picture class="gallery__picture">
+                        <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
+                        <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
+                        <img src="" alt="" class="gallery__img">17
+                    </picture>
+                </div>
 
-            
-    </section>
+                
+        </section>
 
-    <section class="cta">
-        <p class="cta__text">Hope my work made you smile!</p>
-        <p class="cta__text">If you like what you see and would like to collaborate or just gush over web design</p>
-        <button class="cta__btn">Get in touch</button>
-    </section>
+        <section class="cta">
+            <p class="cta__text">Hope my work made you smile!</p>
+            <p class="cta__text">If you like what you see and would like to collaborate or just gush over web design</p>
+            <button class="cta__btn">Get in touch</button>
+        </section>
 
-    <footer class="footer">
-        <p class="footer__text">©2022</p>
-        <div class="footer__links">
-            <a class="footer__link" href="#">Behance</a>
-            <a class="footer__link" href="#">LinkedIn</a>
-            <a class="footer__link" href="#">GitHub</a>
-            <a class="footer__link" href="#">Codepen</a>
-            <a class="footer__link" href="#">Instagram</a>
-        </div>
-        <div class="footer__icons">
-            <embed src="img/icons/behance.svg" type="" class="footer__icons" id="behance">
-            <embed src="img/icons/linkedin.svg" type="" class="footer__icons" id="linkedin">
-            <embed src="img/icons/github.svg" type="" class="footer__icons" id="github">
-            <embed src="img/icons/codepen.svg" type="" class="footer__icons" id="codepen">
-            <embed src="img/icons/instagram.svg" type="" class="footer__icons" id="instagram">
-        </div>
-    </footer>
-</body>
+        <footer class="footer">
+            <p class="footer__text">©2022</p>
+            <div class="footer__links">
+                <a class="footer__link" href="#">Behance</a>
+                <a class="footer__link" href="#">LinkedIn</a>
+                <a class="footer__link" href="#">GitHub</a>
+                <a class="footer__link" href="#">Codepen</a>
+                <a class="footer__link" href="#">Instagram</a>
+            </div>
+            <div class="footer__icons">
+                <svg class="footer__icon behance" xmlns="http://www.w3.org/2000/svg" viewBox="1 94 511 324">
+                    <path d="M207 239s48-4 48-60c0-57-39-85-90-85H1v317h164s101 3 101-93c0 0 4-79-59-79zm-53-88h11s23 0 23 32c0 33-13 38-28 38H73v-70h81zm7 204H73v-85h92s34 0 34 44c0 37-25 40-38 41zm239-180c-122 0-121 122-121 122s-9 121 121 121c0 0 109 6 109-85h-56s2 35-51 35c0 0-56 3-56-56h165s18-137-111-137zm-54 95s7-49 56-49 48 49 48 49H346zm117-118H332v-39h131v39z"/>
+                </svg>
+                <svg class="footer__icon linkedin" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 310 310">
+                    <path d="M72 100H10c-3 0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5V105c0-3-2-5-5-5zM41 0a41 41 0 1 0 0 83 41 41 0 0 0 0-83zm189 95c-25 0-43 11-54 23v-13c0-3-2-5-5-5h-60c-3 0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5v-99c0-34 9-47 33-47 25 0 27 21 27 48v98c0 2 2 5 5 5h62c3 0 5-3 5-5V195c0-50-9-100-80-100z"/>
+                </svg>
+                <svg class="footer__icon github" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 256 256">
+                    <path d="M128 2C58 2 2 58 2 131c0 59 39 109 95 123v-39c-36 8-45-14-45-14-5-17-14-20-14-20-11-8 0-8 0-8 14 0 20 14 20 14 11 19 31 14 39 11 0-8 6-17 9-20-28-2-59-14-59-64 0-14 3-28 11-36 0-3-6-17 3-34 0 0 11-6 36 11a123 123 0 0 1 65 0c25-17 36-11 36-11 6 17 3 31 0 34 8 8 14 22 14 36 0 50-31 62-59 64 6 6 9 14 9 26v50c53-17 92-64 92-123C254 58 198 2 128 2z"/>
+                </svg>
+                <svg class="footer__icon codepen" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 128 128">
+                    <g clip-rule="evenodd">
+                    <path fill="none" d="M0 0h128v128H0z"/>
+                    <path fill="#0B0B0A" fill-rule="evenodd" d="m117 73-14-9 14-9v18zm-47 39V87l23-16 20 12-44 29zm-6-35L45 64l19-13 20 13-20 13zm-5 35L15 84l20-13 24 16v25zM11 55l14 9-14 9V55zm48-39v25L35 57 15 44l44-28zm11 0 43 28-20 13-24-16V16zm58 28v-1a7 7 0 0 0-1-1 4 4 0 0 0 0-1h-1v-1L67 1a6 6 0 0 0-6 0L3 40H2v1a4 4 0 0 0-1 0 5 5 0 0 0-1 1v44h1a5 5 0 0 0 1 2l59 39a5 5 0 0 0 6 0l59-39v-1a5 5 0 0 0 1-1h1V44z"/>
+                    </g>
+                </svg>
+                <svg class="footer__icon insta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8a26.8 26.8 0 1 1 26.8-26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388a75.63 75.63 0 0 1-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9A75.63 75.63 0 0 1 49.4 388c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1A75.63 75.63 0 0 1 92 81.2c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9a75.63 75.63 0 0 1 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                </svg>
+            </div>
+        </footer>
+    </body>
 </html>
