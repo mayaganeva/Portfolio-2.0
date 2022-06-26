@@ -3,6 +3,11 @@
 body {
     font: 1.5rem 'Clash Display', sans-serif;
     color: $accent-color;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1;
 }
 
 .hero {
@@ -11,7 +16,6 @@ body {
 
     &__title {
         font-size: 4.5rem;
-        line-height: 1;
     }
 
     &__subtitle {
@@ -23,24 +27,9 @@ body {
     margin: 128px .5em 0;
 }
 
-blockquote::before {
-    content: open-quote;
-    font-size: 5rem;
-}
-
-blockquote::after {
-    content: close-quote;
-    font-size: 5rem;
-}
-
 @media screen and (min-width: 900px) {
     
-    .hero {
-        margin: 9em 0 7em;
-
-        &__title {
-            font-size: 7rem;
-        }
+    .hero__title {
+        font-size: 7rem;
     }
-    
 }

@@ -308,6 +308,11 @@ template {
 body {
   font: 1.5rem 'Clash Display', sans-serif;
   color: #191919;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1;
 }
 
 .hero {
@@ -317,7 +322,6 @@ body {
 
 .hero__title {
   font-size: 4.5rem;
-  line-height: 1;
 }
 
 .hero__subtitle {
@@ -328,20 +332,7 @@ body {
   margin: 128px .5em 0;
 }
 
-blockquote::before {
-  content: open-quote;
-  font-size: 5rem;
-}
-
-blockquote::after {
-  content: close-quote;
-  font-size: 5rem;
-}
-
 @media screen and (min-width: 900px) {
-  .hero {
-    margin: 9em 0 7em;
-  }
   .hero__title {
     font-size: 7rem;
   }
@@ -496,7 +487,8 @@ blockquote::after {
   top: 0;
   width: 100%;
   padding: .5em 1.5em;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #191919;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,6 +498,10 @@ blockquote::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-dummy {
+  height: 109.2px;
 }
 
 .logo {
@@ -575,17 +571,7 @@ blockquote::after {
 }
 
 .about {
-  display: -ms-grid;
-  display: grid;
-  gap: 3em;
-  -ms-grid-columns: minmax(300px, 360px) minmax(400px, 700px);
-      grid-template-columns: minmax(300px, 360px) minmax(400px, 700px);
-  margin: 128px auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  margin: 1.5em 1.5em 3.5em;
 }
 
 .about__picture {
@@ -594,19 +580,50 @@ blockquote::after {
   background-color: hotpink;
 }
 
-.tools {
-  margin-bottom: 2em;
+.about__title {
+  margin-top: 1.8em;
 }
 
-.tools__progress-bars {
-  line-height: 0;
+.about__text {
+  margin: 1em 0;
+}
+
+.about__quote__container {
+  margin: 1.8em 0;
+}
+
+.about__quote {
+  font-weight: 500;
+  padding: 1em 1em 0;
+  margin-top: 1em;
+}
+
+.about__quote, .about__source {
+  background-color: #e9e9e9;
+  margin: 0;
+}
+
+.about__quote::before {
+  content: open-quote;
+}
+
+.about__quote::after {
+  content: close-quote;
+}
+
+.about__source {
+  text-align: right;
+  padding: 0 1em 1em;
+}
+
+.tools {
+  margin: 1.5em 0 2em;
 }
 
 .tools__progress-bars__label {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  background-color: hotpink;
-  margin: 1.8em 0 1em;
+  margin: 1em 0 .5em;
 }
 
 .tools__progress-bars__bar {
@@ -621,11 +638,11 @@ blockquote::after {
 }
 
 .one {
-  width: 95%;
+  width: 97%;
 }
 
 .two {
-  width: 85%;
+  width: 93%;
 }
 
 .three {
