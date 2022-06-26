@@ -1,17 +1,17 @@
 .header {
+    background-color: rgba($white, .8);
+    border-bottom: 2px solid $accent-color;
+    padding: .2em 1.5em;
     position: fixed;
     top: 0;
     width: 100%;
-    padding: .5em 1.5em;
-    background-color: rgba($white, .8);
-    border-bottom: 2px solid $accent-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .header-dummy {
-    height: 109.2px;
+    height: 101.2px;
 }
 
 .logo {

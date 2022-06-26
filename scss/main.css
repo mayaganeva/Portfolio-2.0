@@ -483,12 +483,12 @@ h1, h2, h3, h4 {
 }
 
 .header {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #191919;
+  padding: .2em 1.5em;
   position: fixed;
   top: 0;
   width: 100%;
-  padding: .5em 1.5em;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: 2px solid #191919;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,7 +501,7 @@ h1, h2, h3, h4 {
 }
 
 .header-dummy {
-  height: 109.2px;
+  height: 101.2px;
 }
 
 .logo {
@@ -620,18 +620,18 @@ h1, h2, h3, h4 {
   margin: 1.5em 0 2em;
 }
 
-.tools__progress-bars__label {
+.tools__label {
   font-size: 1.3rem;
   font-weight: 500;
   margin: 1em 0 .5em;
 }
 
-.tools__progress-bars__bar {
+.tools__bar {
   height: .8rem;
   background: #e9e9e9;
 }
 
-.tools__progress-bars__progress {
+.tools__progress {
   display: block;
   height: 100%;
   background: #191919;
@@ -642,7 +642,7 @@ h1, h2, h3, h4 {
 }
 
 .two {
-  width: 93%;
+  width: 94%;
 }
 
 .three {
@@ -655,5 +655,78 @@ h1, h2, h3, h4 {
 
 .five {
   width: 75%;
+}
+
+@media screen and (min-width: 700px) {
+  .left {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "img tools" 1fr "btn tools" 63.6px / 1fr 1fr;
+    gap: 1.5em;
+  }
+  .about__picture {
+    grid-area: img;
+  }
+  .about__btn {
+    grid-area: btn;
+  }
+  .about .tools {
+    grid-area: tools;
+    margin: 0;
+  }
+  .about .tools__header {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 812px) {
+  .left {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "img tools" 1fr "btn ." 63.6px / 1fr 1fr;
+    gap: 1.5em;
+  }
+  .tools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr minmax(280px, 1fr) minmax(440px, 2fr) 1fr;
+        grid-template-columns: 1fr minmax(280px, 1fr) minmax(440px, 2fr) 1fr;
+    gap: 2em;
+    margin-top: 3em;
+  }
+  .about .left {
+    display: block;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+  .about .left .tools {
+    margin: 2em 0;
+  }
+  .about__title {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .about {
+    -ms-grid-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
+        grid-template-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
+    gap: 2.5em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

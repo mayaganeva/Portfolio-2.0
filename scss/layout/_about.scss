@@ -48,50 +48,118 @@
 .tools {
     margin: 1.5em 0 2em;
 
-    &__progress-bars {
-
-        &__label {
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin: 1em 0 .5em;
-        }
-        
-        &__bar {
-            height: .8rem;
-            background: $tools-bar-bg;
-        }
+    &__label {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin: 1em 0 .5em;
+    }
     
-        &__progress {
-            display: block;
-            height: 100%;
-            background: $accent-color;
-        }
+    &__bar {
+        height: .8rem;
+        background: $tools-bar-bg;
+    }
+
+    &__progress {
+        display: block;
+        height: 100%;
+        background: $accent-color;
     }
 }
 
 .one {
-        width: 97%;
-    }
-    
-    .two {
-        width: 93%;
-    }
-    
-    .three {
-        width: 65%;
-    }
-    
-    .four {
-        width: 90%;
-    }
-    
-    .five {
-        width: 75%;
+    width: 97%;
+}
+
+.two {
+    width: 94%;
+}
+
+.three {
+    width: 65%;
+}
+
+.four {
+    width: 90%;
+}
+
+.five {
+    width: 75%;
+}
+
+@media screen and (min-width: 700px) {
+    .left {
+        display: grid;
+        grid-template: 
+            "img tools" 1fr
+            "btn tools" 63.6px / 1fr 1fr;
+        gap: 1.5em;
     }
 
+    .about {
+        &__picture  {
+            grid-area: img;
+        }
 
+        &__btn {
+            grid-area: btn;
+        }
 
+        .tools {
+            grid-area: tools;
+            margin: 0;
 
+            &__header {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 812px) {
+
+    .left {
+        display: grid;
+        grid-template: 
+            "img tools" 1fr
+            "btn ." 63.6px / 1fr 1fr;
+        gap: 1.5em;
+    }
+    
+    .tools {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr minmax(280px, 1fr) minmax(440px, 2fr) 1fr;
+        gap: 2em;
+        margin-top: 3em;
+
+        .left {
+            display: block;
+            grid-column-start: 2;
+
+            .tools {
+                margin: 2em 0;
+            }
+        }
+
+        &__title {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .about {
+        grid-template-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
+        gap: 2.5em;
+    }
+}
 
 
 
