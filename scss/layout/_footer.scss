@@ -1,0 +1,41 @@
+.footer {
+    background-color: rgba($white, .8);
+    border-top: 2px solid $accent-color;
+    padding: .2em 1.5em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__link {
+        display: hidden;
+        text-decoration: none;
+        color: $accent-color;
+        font-weight: 500;
+    }
+
+    // &__icons {
+    //     display: flex;
+    // }
+
+}
+
+@media screen and (min-width: 700px) {
+    .footer {
+        background-color: hotpink;
+        padding: .2em 1.5em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__links {
+            display: block;
+        }
+    
+        &__link {
+            margin-left: 1em;
+        }
+    
+    }
+    
+}
