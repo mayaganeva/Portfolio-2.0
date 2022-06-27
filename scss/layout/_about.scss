@@ -1,12 +1,10 @@
-.about {
-    .container {
-        margin: 2rem 2rem 3em;
-    }
+.container {
+    margin: 2rem 2rem 3em;
+}
 
-    &__picture {
-        aspect-ratio: 1 / 1;
-        display: block;
-        background-color: hotpink;
+.about {
+    &__picture > img {
+        width: 100%;
     }
 
     &__title {

@@ -1,6 +1,6 @@
 .footer {
-    border-top: 2px solid $accent-color;
-    padding: 0 2rem 3px;
+    box-shadow: 0 -2px 0 $accent-color;
+    padding: 0 2rem;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -22,20 +22,22 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        transform: translateY(3px);
     }
 
     &__icon {
         margin-left: 10%;
     }
 
-    .behance {
-        height: 16px;
+    .behance,
+    .linkedin {
+        height: 16.5px;
         transform: translateY(-2px);
     }
 
     .linkedin {
         height: 18px;
-        transform: translateY(-1.5px);
+        transform: translateY(-2px);
     }
 
     .github {
@@ -53,7 +55,7 @@
 
 @media screen and (min-width: 700px) {
     .footer {
-        padding: 0 2rem 5px;
+        padding: 0 2rem;
 
         &__links {
             display: unset;

@@ -7,44 +7,48 @@
         <title>Contact</title>
         <link rel="icon" type="image/x-icon" href="img/x-icon-5.svg">
         <link rel="stylesheet" href="scss/main.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header class="header">
-            <svg class="logo" xmlns="http://www.w3.org/2000/svg"
-                xml:space="preserve"
-                baseProfile="tiny"
-                overflow="visible"
-                version="1.2"
-                viewBox="0 0 250 250">
-                <path fill="#010101" d="M250 171v26.4h-92.1V250H0V118.5h131.5V49.2L79 84.2l-52.6-35v42.9H0V0l79 52.6L157.9 0v144.7H26.4v78.9h105.1v-26.2H65.8V171z"/>
-            </svg>
+            <a href="#">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    baseProfile="tiny"
+                    overflow="visible"
+                    version="1.2"
+                    viewBox="0 0 250 250">
+                    <path fill="#010101" d="M250 171v26.4h-92.1V250H0V118.5h131.5V49.2L79 84.2l-52.6-35v42.9H0V0l79 52.6L157.9 0v144.7H26.4v78.9h105.1v-26.2H65.8V171z"/>
+                </svg>
+            </a>
             <button class="nav-toggle"><span class="hamburger"></span></button>
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="index.html" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <div class="header-dummy"></div>
 
-        <form action="" class="form" autocomplete="on">
-            <h2 class="form__title">Come say hi!</h2>
+        <div class="container">
+            <form action="" class="form" autocomplete="on">
+                <h1 class="form__title">Come say hi!</h1>
 
-            <label for="name">Hi! My name is</label><br>
-            <input type="text" id="name" name="name"><br>
+                <label class="form__label" for="name">Hi! My name is</label><br>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Your name goes here"><br>
 
-            <label for="email">Here's my email</label><br>
-            <input type="email" id="email" name="email"><br>
+                <label class="form__label" for="email">Here's my email</label><br>
+                <input class="form__input" type="email" id="email" name="email" placeholder="Your email goes here"><br>
 
-            <label for="message">So get this!</label><br>
-            <textarea type="text" id="message" name="message"></textarea>
+                <label class="form__label" for="message">So get this!</label><br>
+                <textarea class="form__input" type="text" id="message" name="message" placeholder="Super exciting thing you want to talk about goes here"></textarea>
 
-            <input type="submit" value="Send message" class="form__btn"><br>
-        </form>
+                <input type="submit" value="Send message" class="form__btn"><br>
+            </form>
+        </div>
         
-
         <footer class="footer">
             <p class="footer__text">©2022</p>
             <div class="footer__links">
