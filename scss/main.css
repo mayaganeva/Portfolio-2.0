@@ -573,7 +573,7 @@ h1, h2, h3, h4 {
 
 .footer {
   border-top: 2px solid #191919;
-  padding: 0 2rem;
+  padding: 0 2rem 3px;
   font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,10 +616,14 @@ h1, h2, h3, h4 {
 
 .footer .behance {
   height: 16px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .footer .linkedin {
   height: 18px;
+  -webkit-transform: translateY(-1.5px);
+          transform: translateY(-1.5px);
 }
 
 .footer .github {
@@ -635,6 +639,9 @@ h1, h2, h3, h4 {
 }
 
 @media screen and (min-width: 700px) {
+  .footer {
+    padding: 0 2rem 5px;
+  }
   .footer__links {
     display: unset;
   }
@@ -643,7 +650,7 @@ h1, h2, h3, h4 {
   }
 }
 
-.about {
+.about .container {
   margin: 2rem 2rem 3em;
 }
 
@@ -737,7 +744,7 @@ h1, h2, h3, h4 {
     grid-template: "img tools" 1fr "btn tools" 63.6px / 1fr 1fr;
     gap: 1.5em;
   }
-  .about {
+  .about .container {
     margin: 7.5% 7.5% 3.5em;
   }
   .about__picture {
@@ -778,17 +785,16 @@ h1, h2, h3, h4 {
 }
 
 @media screen and (min-width: 900px) {
-  .about {
+  .about .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
     gap: 2em;
   }
   .about .left {
     display: block;
-    -ms-grid-column: 2;
-        grid-column-start: 2;
+    min-width: 260px;
   }
   .about .left .tools {
     margin: 2em 0;
@@ -799,11 +805,10 @@ h1, h2, h3, h4 {
 }
 
 @media screen and (min-width: 1240px) {
-  .about {
-    -ms-grid-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
-        grid-template-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
+  .about .container {
     gap: 2.5em;
-    margin-top: 3.75%;
+    margin: 3.75% auto 5rem;
+    width: 65%;
   }
 }
 /*# sourceMappingURL=main.css.map */

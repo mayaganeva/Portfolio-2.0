@@ -1,5 +1,7 @@
 .about {
-    margin: 2rem 2rem 3em;
+    .container {
+        margin: 2rem 2rem 3em;
+    }
 
     &__picture {
         aspect-ratio: 1 / 1;
@@ -96,7 +98,9 @@
     }
 
     .about {
-        margin: 7.5% 7.5% 3.5em;
+        .container {
+            margin: 7.5% 7.5% 3.5em;
+        }
 
         &__picture  {
             grid-area: img;
@@ -119,7 +123,6 @@
 }
 
 @media screen and (min-width: 812px) {
-
     .left {
         display: grid;
         grid-template: 
@@ -137,13 +140,16 @@
 
 @media screen and (min-width: 900px) {
     .about {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2em;
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2em;
+        }
 
         .left {
             display: block;
-            grid-column-start: 2;
+            min-width: 260px;
 
             .tools {
                 margin: 2em 0;
@@ -157,9 +163,9 @@
 }
 
 @media screen and (min-width: 1240px) {
-    .about {
-        grid-template-columns: 1fr minmax(400px, 1fr) minmax(600px, 2fr) 1fr;
+    .about .container {
         gap: 2.5em;
-        margin-top: 3.75%;
+        margin: 3.75% auto 5rem;
+        width: 65%;
     }
 }

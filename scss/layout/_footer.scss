@@ -1,6 +1,6 @@
 .footer {
     border-top: 2px solid $accent-color;
-    padding: 0 2rem;
+    padding: 0 2rem 3px;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -30,10 +30,12 @@
 
     .behance {
         height: 16px;
+        transform: translateY(-2px);
     }
 
     .linkedin {
         height: 18px;
+        transform: translateY(-1.5px);
     }
 
     .github {
@@ -51,6 +53,8 @@
 
 @media screen and (min-width: 700px) {
     .footer {
+        padding: 0 2rem 5px;
+
         &__links {
             display: unset;
         }
