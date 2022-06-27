@@ -558,7 +558,8 @@ h1, h2, h3, h4 {
 }
 
 .cta__btn,
-.about__btn {
+.about__btn,
+.form__btn {
   border: none;
   display: inline-block;
   background-color: #191919;
@@ -572,7 +573,7 @@ h1, h2, h3, h4 {
 
 .footer {
   border-top: 2px solid #191919;
-  padding: 0 2rem 0;
+  padding: 0 2rem;
   font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,7 +594,7 @@ h1, h2, h3, h4 {
   text-decoration: none;
   color: #191919;
   font-weight: 500;
-  margin-left: 1em;
+  margin-left: 3vw;
 }
 
 .footer__icons {
@@ -610,41 +611,30 @@ h1, h2, h3, h4 {
 }
 
 .footer__icon {
-  margin-left: 8%;
+  margin-left: 10%;
 }
 
 .footer .behance {
-  height: 20px;
+  height: 16px;
 }
 
 .footer .linkedin {
-  height: 22px;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  height: 18px;
 }
 
 .footer .github {
-  height: 23px;
+  height: 20px;
 }
 
 .footer .codepen {
-  height: 27px;
+  height: 21px;
 }
 
 .footer .insta {
-  height: 30px;
+  height: 24px;
 }
 
 @media screen and (min-width: 700px) {
-  .footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .footer__links {
     display: unset;
   }

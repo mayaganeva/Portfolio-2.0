@@ -1,6 +1,6 @@
 .footer {
     border-top: 2px solid $accent-color;
-    padding: 0 2rem 0;
+    padding: 0 2rem;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
         text-decoration: none;
         color: $accent-color;
         font-weight: 500;
-        margin-left: 1em;
+        margin-left: 3vw;
     }
 
     &__icons {
@@ -25,37 +25,32 @@
     }
 
     &__icon {
-        margin-left: 8%;
+        margin-left: 10%;
     }
 
     .behance {
-        height: 20px;
+        height: 16px;
     }
 
     .linkedin {
-        height: 22px;
-        transform: translateY(-1px);
+        height: 18px;
     }
 
     .github {
-        height: 23px;
+        height: 20px;
     }
 
     .codepen {
-        height: 27px;
+        height: 21px;
     }
 
     .insta {
-        height: 30px;
+        height: 24px;
     }
-
 }
 
 @media screen and (min-width: 700px) {
     .footer {
-        flex-direction: row;
-        align-items: center;
-
         &__links {
             display: unset;
         }
@@ -64,5 +59,4 @@
             display: none;
         }
     }
-    
 }
