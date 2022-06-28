@@ -10,26 +10,28 @@ h1, h2, h3, h4 {
     line-height: 1;
 }
 
-.hero {
+.hero,
+.cta {
     text-align: center;
-    margin-bottom: 3.5em;
+    margin: 4em 2em 4em;
 
     &__title {
         font-size: 4.5rem;
+        margin: 0;
     }
 
     &__subtitle {
         font-weight: 400;
+
     }
 }
 
-.hero__title {
-    margin: 128px .5em 0;
-}
-
 @media screen and (min-width: 900px) {
-    
-    .hero__title {
-        font-size: 7rem;
+    .hero {
+        margin: 6em 2em 6em;
+
+        &__title {
+            font-size: 7rem;
+        }
     }
 }

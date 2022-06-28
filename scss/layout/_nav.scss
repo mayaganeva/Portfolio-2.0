@@ -1,22 +1,27 @@
 .header {
-    background-color: rgba($white, .8);
-    border-bottom: 2px solid $accent-color;
-    padding: .2rem 2rem;
+    position: absolute;
+    z-index: 1;
+    background-color: $white;
+    border-bottom: $border-width solid $accent-color;
+    padding: calc(#{$mobile-margin}  - 8px) $mobile-margin;
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & a {
+        line-height: 0;
+    }
 }
 
 .header-dummy {
-    height: 101.2px;
+    height: calc(#{$logo-height} + calc(#{$mobile-margin}  - 8px)*2 + #{$border-width} * 2);
 }
 
 .logo {
-    height: 40px;
-    transform: translateY(5px);
+    height: $logo-height;
 }
 
 .nav {
@@ -27,6 +32,7 @@
         list-style: none;
         display: flex;
         gap: 1.75em;
+        margin: 0;
     }
     &__link {
         text-decoration: none;
@@ -39,16 +45,15 @@
     visibility: hidden;
 }
 
-.hamburger {
+.open {
     visibility: visible;
-    margin-right: 2rem;
+    margin-right: $mobile-margin;
 
     &,
     &::before,
     &::after {
     background-color: $accent-color;
     content: '';
-    display: block;
     height: 4px;
     width: 24px;
     position: absolute;
@@ -61,6 +66,26 @@
 
     &::after {
         transform: translateY(-8px);
+    }
+}
+
+.close {
+    visibility: visible;
+    margin-right: $mobile-margin;
+
+    &,
+    &::after {
+        background-color: $accent-color;
+        content: '';
+        height: 4px;
+        width: 26px;
+        position: absolute;
+        right: 0;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-90deg);
     }
 }
 

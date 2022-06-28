@@ -1,31 +1,107 @@
 .gallery {
+  text-align: center;
   display: grid;
   gap: 10px;
 
   &__item {
-    background: #badd1e;
-    height: 60vw;
+    position: relative;
+    width: 100%;
+    max-height: 60vw;
+    overflow: hidden;
   }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, .7);
+    background-blend-mode: multiply;
+    backdrop-filter: blur(10px);
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  &__picture > img {
+    // display: block;
+    width: 100%;
+    
+    object-fit: cover;
+  }
+
+
+  // &__item {
+  //   background: #badd1e;
+  //   overflow: hidden;
+    
+  //   & > img {
+  //     width:100%;
+  //     max-height: 60vw;
+  //     object-fit: cover;
+  //   }
+  // }
+
+  // &__hover {
+  //   position: relative;
+  //   background-color: transparent;
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   &__label {
+  //     position: absolute;
+  //     background-color: red;
+  //     inset: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
 }
 
 @media screen and (min-width: 700px) {
   .gallery {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-columns: repeat(autofill, minmax(100px, 1fr));
-    grid-template-rows: auto;
-    gap: 10px;
     grid-template-areas:
-      "render   render    circus  circus    circus"
-      "waves    paws      paws    trusting  trusting"
-      "waves    fatcat    tom     trusting  trusting"
-      "agape    agape     tom     trusting  trusting"
-      "geraci   pixel     pixel   bunny     bunny"
-      "geraci   heart     analog  analog    angua"
-      "glitter  glitter   ursula  waits     waits";
+      "render   render  circus  circus    circus"
+      "waves    paws    paws    trusting  trusting"
+      "waves    fatcat  tom     trusting  trusting"
+      "agape    agape   tom     trusting  trusting"
+      "angua    pixel   pixel   bunny     bunny"
+      "waits    waits   heart   analog    analog";
+
+
+    // &__item {
+    //   background-color: hotpink;
+
+    //   transition: all ease-in-out 150ms;
+
+    //   &:hover {
+    //     background-blend-mode: multiply;
+    //     background-color: $gallery-hover;
+
+    //     cursor: pointer;
+    //   }
+    // }
 
     &__item {
-      background-color: hotpink;
       height: 19vw;
+    }
+  
+    &__overlay:hover {
+      opacity: 1;
+    }
+
+    .tall {
+      max-height: 39vw;
+    }  
+
+    .waves {
+      grid-area: waves;
     }
 
     .render {
@@ -38,7 +114,7 @@
 
     .waves {
       grid-area: waves;
-      height: auto;
+      height:100%;
     }
 
     .paws {
@@ -47,7 +123,7 @@
 
     .trusting {
       grid-area: trusting;
-      height: auto;
+      height: 59vw;
     }
 
     .fatcat {
@@ -56,16 +132,11 @@
 
     .tom {
       grid-area: tom;
-      height: auto;
+      height: 100%;
     }
 
     .agape {
       grid-area: agape;
-    }
-
-    .geraci {
-      grid-area: geraci;
-      height: auto;
     }
 
     .pixel {
@@ -86,14 +157,6 @@
 
     .angua {
       grid-area: angua;
-    }
-
-    .glitter {
-      grid-area: glitter;
-    }
-
-    .ursula {
-      grid-area: ursula;
     }
 
     .waits {

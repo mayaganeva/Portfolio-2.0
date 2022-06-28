@@ -315,54 +315,94 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 
-.hero {
+.hero,
+.cta {
   text-align: center;
-  margin-bottom: 3.5em;
+  margin: 4em 2em 4em;
 }
 
-.hero__title {
+.hero__title,
+.cta__title {
   font-size: 4.5rem;
+  margin: 0;
 }
 
-.hero__subtitle {
+.hero__subtitle,
+.cta__subtitle {
   font-weight: 400;
 }
 
-.hero__title {
-  margin: 128px .5em 0;
-}
-
 @media screen and (min-width: 900px) {
+  .hero {
+    margin: 6em 2em 6em;
+  }
   .hero__title {
     font-size: 7rem;
   }
 }
 
 .gallery {
+  text-align: center;
   display: -ms-grid;
   display: grid;
   gap: 10px;
 }
 
 .gallery__item {
-  background: #badd1e;
-  height: 60vw;
+  position: relative;
+  width: 100%;
+  max-height: 60vw;
+  overflow: hidden;
+}
+
+.gallery__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+
+.gallery__picture > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 700px) {
   .gallery {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
-    -ms-grid-columns: (minmax(100px, 1fr))[autofill];
-        grid-template-columns: repeat(autofill, minmax(100px, 1fr));
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    gap: 10px;
-        grid-template-areas: "render   render    circus  circus    circus" "waves    paws      paws    trusting  trusting" "waves    fatcat    tom     trusting  trusting" "agape    agape     tom     trusting  trusting" "geraci   pixel     pixel   bunny     bunny" "geraci   heart     analog  analog    angua" "glitter  glitter   ursula  waits     waits";
+        grid-template-areas: "render   render  circus  circus    circus" "waves    paws    paws    trusting  trusting" "waves    fatcat  tom     trusting  trusting" "agape    agape   tom     trusting  trusting" "angua    pixel   pixel   bunny     bunny" "waits    waits   heart   analog    analog";
   }
   .gallery__item {
-    background-color: hotpink;
     height: 19vw;
+  }
+  .gallery__overlay:hover {
+    opacity: 1;
+  }
+  .gallery .tall {
+    max-height: 39vw;
+  }
+  .gallery .waves {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: waves;
   }
   .gallery .render {
     -ms-grid-row: 1;
@@ -381,7 +421,7 @@ h1, h2, h3, h4 {
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     grid-area: waves;
-    height: auto;
+    height: 100%;
   }
   .gallery .paws {
     -ms-grid-row: 2;
@@ -395,7 +435,7 @@ h1, h2, h3, h4 {
     -ms-grid-column: 4;
     -ms-grid-column-span: 2;
     grid-area: trusting;
-    height: auto;
+    height: 59vw;
   }
   .gallery .fatcat {
     -ms-grid-row: 3;
@@ -407,20 +447,13 @@ h1, h2, h3, h4 {
     -ms-grid-row-span: 2;
     -ms-grid-column: 3;
     grid-area: tom;
-    height: auto;
+    height: 100%;
   }
   .gallery .agape {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: agape;
-  }
-  .gallery .geraci {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    grid-area: geraci;
-    height: auto;
   }
   .gallery .pixel {
     -ms-grid-row: 5;
@@ -436,43 +469,34 @@ h1, h2, h3, h4 {
   }
   .gallery .heart {
     -ms-grid-row: 6;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
     grid-area: heart;
   }
   .gallery .analog {
     -ms-grid-row: 6;
-    -ms-grid-column: 3;
+    -ms-grid-column: 4;
     -ms-grid-column-span: 2;
     grid-area: analog;
   }
   .gallery .angua {
-    -ms-grid-row: 6;
-    -ms-grid-column: 5;
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
     grid-area: angua;
   }
-  .gallery .glitter {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: glitter;
-  }
-  .gallery .ursula {
-    -ms-grid-row: 7;
-    -ms-grid-column: 3;
-    grid-area: ursula;
-  }
   .gallery .waits {
-    -ms-grid-row: 7;
-    -ms-grid-column: 4;
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: waits;
   }
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
   border-bottom: 2px solid #191919;
-  padding: .2rem 2rem;
+  padding: calc(32px  - 8px) 32px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -487,14 +511,16 @@ h1, h2, h3, h4 {
           align-items: center;
 }
 
+.header a {
+  line-height: 0;
+}
+
 .header-dummy {
-  height: 101.2px;
+  height: calc(36px + calc(32px  - 8px)*2 + 2px * 2);
 }
 
 .logo {
-  height: 40px;
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
+  height: 36px;
 }
 
 .nav {
@@ -508,6 +534,7 @@ h1, h2, h3, h4 {
   display: -ms-flexbox;
   display: flex;
   gap: 1.75em;
+  margin: 0;
 }
 
 .nav__link {
@@ -520,29 +547,49 @@ h1, h2, h3, h4 {
   visibility: hidden;
 }
 
-.hamburger {
+.open {
   visibility: visible;
-  margin-right: 2rem;
+  margin-right: 32px;
 }
 
-.hamburger, .hamburger::before, .hamburger::after {
+.open, .open::before, .open::after {
   background-color: #191919;
   content: '';
-  display: block;
   height: 4px;
   width: 24px;
   position: absolute;
   right: 0;
 }
 
-.hamburger::before {
+.open::before {
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
 }
 
-.hamburger::after {
+.open::after {
   -webkit-transform: translateY(-8px);
           transform: translateY(-8px);
+}
+
+.close {
+  visibility: visible;
+  margin-right: 32px;
+}
+
+.close, .close::after {
+  background-color: #191919;
+  content: '';
+  height: 4px;
+  width: 26px;
+  position: absolute;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close::after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 600px) {
@@ -552,11 +599,6 @@ h1, h2, h3, h4 {
   .hamburger {
     visibility: hidden;
   }
-}
-
-.cta {
-  text-align: center;
-  margin: 3em 2em 3.5em;
 }
 
 .cta__btn,
@@ -576,7 +618,7 @@ h1, h2, h3, h4 {
 .footer {
   -webkit-box-shadow: 0 -2px 0 #191919;
           box-shadow: 0 -2px 0 #191919;
-  padding: 0 2rem;
+  padding: 0 32px;
   font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,7 +699,7 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  margin: 2rem 2rem 3em;
+  margin: 32px 32px 3em;
 }
 
 .about__picture > img {

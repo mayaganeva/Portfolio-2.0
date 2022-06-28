@@ -11,7 +11,7 @@
 
     <body>
         <header class="header">
-            <a href="#">
+            <a href="index.html">
                 <svg class="logo" xmlns="http://www.w3.org/2000/svg"
                     xml:space="preserve"
                     baseProfile="tiny"
@@ -21,10 +21,10 @@
                     <path fill="#010101" d="M250 171v26.4h-92.1V250H0V118.5h131.5V49.2L79 84.2l-52.6-35v42.9H0V0l79 52.6L157.9 0v144.7H26.4v78.9h105.1v-26.2H65.8V171z"/>
                 </svg>
             </a>
-            <button class="nav-toggle"><span class="hamburger"></span></button>
+            <button class="nav-toggle"><span class="hamburger open"></span></button>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
@@ -39,125 +39,146 @@
 
         <section class="gallery">
 
-            <!-- picture.gallery__item*16>source[media="(min-width: 600px)"][srcset="img/gallery/file.webp"]+source[media="(min-width: 960px)"][srcset="img/gallery/file.webp"]img.gallery__img -->
+            <!-- picture.gallery__item*15>source[media="(min-width: 600px)"][srcset=""]+source[media="(min-width: 960px)"][srcset=""]img.gallery__img -->
 
             <div class="gallery__item circus">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">1
-                </picture>
-            </div>
-            <div class="gallery__item render">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">2
-                </picture>
-            </div>
-            <div class="gallery__item waves">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Artist collective branding + social presence</p>
+                </div>
                 <picture class="gallery__picture">
                     <source media="(min-width: 600px)" srcset="">
                     <source media="(min-width: 960px)" srcset="">
-                    <img src="" alt="" class="gallery__img">3
+                    <img src="img/gallery/02-rainbow-circus/insta__post--full.webp" alt="" class="gallery__img">
+                </picture>
+            </div>
+            <div class="gallery__item render">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">UI/UX study of a social app</p>
+                </div>
+                <picture class="gallery__picture">
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/01-render/render-01.webp" alt="" class="gallery__img">
+                </picture>
+            </div>
+            <div class="gallery__item waves tall">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Veterinary site design</p>
+                </div>
+                <picture class="gallery__picture">
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/wavy/1920 – 1.jpg" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item paws">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Veterinary site design + custom illustrations</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">4
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/paws/1920.jpg" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item trusting">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Veterinary site design</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">5
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/trusting/1280x720-green.jpg" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item fatcat">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Small illustrations</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">6
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/orange-cat23.png" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item agape">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Veterinary site design</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">7
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/agape/1280.webp" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item bunny">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Illustrations of bunnies</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">8
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/agent_bunny.png" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item tom">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Various posters</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">9
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/plakat.jpg" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item pixel">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Book cover design</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">10
-                </picture>
-            </div>
-            <div class="gallery__item geraci">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">11
-                </picture>
-            </div>
-            <div class="gallery__item waits">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">12
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/pixel22.png" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item angua">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Illustrations</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">13
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/Angua_and_Cheery.webp" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item analog">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Book cover design</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">14
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/mockup_analog_11.png" alt="" class="gallery__img">
+                </picture>
+            </div>
+            <div class="gallery__item waits">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Book cover design</p>
+                </div>
+                <picture class="gallery__picture">
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/tw.jpg" alt="" class="gallery__img">
                 </picture>
             </div>
             <div class="gallery__item heart">
+                <div class="gallery__overlay">
+                    <p class="gallery__label">Sticker design</p>
+                </div>
                 <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">15
-                </picture>
-            </div>
-            <div class="gallery__item ursula">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">16
-                </picture>
-            </div>
-            <div class="gallery__item glitter">
-                <picture class="gallery__picture">
-                    <source media="(min-width: 600px)" srcset="img/gallery/file.webp">
-                    <source media="(min-width: 960px)" srcset="img/gallery/file.webp">
-                    <img src="" alt="" class="gallery__img">17
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/gallery/support.png" alt="" class="gallery__img">
                 </picture>
             </div>
         </section>
