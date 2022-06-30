@@ -11,8 +11,9 @@
         margin-top: 1.8em;
     }
 
-    &__text {
+    &__info {
         margin: 1em 0;
+        font-size: 1.2rem;
     }
 
     &__quote__container {
@@ -164,6 +165,6 @@
     .about .container {
         gap: 2.5em;
         margin: 3.75% auto 5rem;
-        width: 65%;
+        width: 60%;
     }
 }

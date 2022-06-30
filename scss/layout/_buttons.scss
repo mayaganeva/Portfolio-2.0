@@ -2,6 +2,7 @@
 .about__btn,
 .form__btn {
     border: none;
+    text-decoration: none;
     display: inline-block;
     background-color: $accent-color;
     color: white;
@@ -10,4 +11,10 @@
 
 .about__btn {
     width: 100%;
+}
+
+.cta__btn:hover,
+.about__btn:hover,
+.form__btn:hover {
+    opacity: .8;
 }
