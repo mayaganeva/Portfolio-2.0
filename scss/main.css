@@ -355,7 +355,6 @@ h1, h2, h3, h4 {
   width: 100%;
   max-height: 60vw;
   overflow: hidden;
-  outline: 1px solid hotpink;
 }
 
 .gallery__overlay {
@@ -383,6 +382,8 @@ h1, h2, h3, h4 {
 .gallery__picture > img {
   display: block;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 700px) {
