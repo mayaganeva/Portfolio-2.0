@@ -318,7 +318,7 @@ h1, h2, h3, h4 {
 .hero,
 .cta {
   text-align: center;
-  margin: 4em 2em 4em;
+  margin: 4em 2em;
 }
 
 .hero__title,
@@ -334,7 +334,7 @@ h1, h2, h3, h4 {
 
 @media screen and (min-width: 900px) {
   .hero {
-    margin: 6em 2em 6em;
+    margin: 6em 2em 6.5em;
   }
   .hero__title {
     font-size: 7rem;
@@ -473,8 +473,7 @@ h1, h2, h3, h4 {
   position: absolute;
   z-index: 1;
   background-color: #fff;
-  border-bottom: 2px solid #191919;
-  padding: calc(32px  - 8px) 32px;
+  padding: calc(40px  - 8px) 40px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -494,7 +493,7 @@ h1, h2, h3, h4 {
 }
 
 .header-dummy {
-  height: calc(36px + calc(32px  - 8px)*2 + 2px * 2);
+  height: calc(36px + calc(40px  - 8px)*2 + 2px * 2);
 }
 
 .logo {
@@ -503,7 +502,7 @@ h1, h2, h3, h4 {
 
 .nav {
   visibility: hidden;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .nav__list {
@@ -527,7 +526,7 @@ h1, h2, h3, h4 {
 
 .open {
   visibility: visible;
-  margin-right: 32px;
+  margin-right: 40px;
 }
 
 .open, .open::before, .open::after {
@@ -551,7 +550,7 @@ h1, h2, h3, h4 {
 
 .close {
   visibility: visible;
-  margin-right: 32px;
+  margin-right: 40px;
 }
 
 .close, .close::after {
@@ -582,12 +581,14 @@ h1, h2, h3, h4 {
 .cta__btn,
 .about__btn,
 .form__btn {
-  border: none;
-  text-decoration: none;
-  display: inline-block;
   background-color: #191919;
+  border: none;
   color: white;
+  display: inline-block;
+  line-height: 1.2;
   padding: .75em 1.75em;
+  text-align: center;
+  text-decoration: none;
 }
 
 .about__btn {
@@ -601,9 +602,10 @@ h1, h2, h3, h4 {
 }
 
 .footer {
+  display: none !important;
   -webkit-box-shadow: 0 -2px 0 #191919;
           box-shadow: 0 -2px 0 #191919;
-  padding: 0 32px;
+  padding: 0 40px;
   font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,7 +686,9 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  margin: 32px 32px 3em;
+  margin: 40px 40px 3em;
+  z-index: 1;
+  position: relative;
 }
 
 .about__picture > img {
@@ -733,13 +737,13 @@ h1, h2, h3, h4 {
 }
 
 .tools__label {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  margin: 1em 0 .5em;
+  margin: 1.8em 0 .5em;
 }
 
 .tools__bar {
-  height: .8rem;
+  height: .7rem;
   background: #e9e9e9;
 }
 
@@ -771,31 +775,29 @@ h1, h2, h3, h4 {
 
 @media screen and (min-width: 650px) {
   .left {
-    display: -ms-grid;
-    display: grid;
-    grid-template: "img tools" 1fr "btn tools" 63.6px / 1fr 1fr;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 1.5em;
   }
   .about .container {
-    margin: 7.5% 7.5% 3.5em;
-  }
-  .about__picture {
-    grid-area: img;
+    margin: 2.5em;
   }
   .about__btn {
-    grid-area: btn;
     padding: .75em 1.36em;
   }
   .about .tools {
-    grid-area: tools;
-    margin: 0;
+    margin-bottom: 2em;
   }
   .about .tools__header {
     margin: 0;
   }
 }
 
-@media screen and (min-width: 812px) {
+@media screen and (min-width: 600px) {
   .left {
     display: -ms-grid;
     display: grid;
@@ -816,20 +818,20 @@ h1, h2, h3, h4 {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 680px) {
   .about .container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
-    gap: 2em;
+    gap: 1.8em;
   }
   .about .left {
     display: block;
     min-width: 260px;
   }
   .about .left .tools {
-    margin: 2em 0;
+    margin: 1.8em 0;
   }
   .about__title {
     margin-top: 0;
@@ -840,7 +842,7 @@ h1, h2, h3, h4 {
   .about .container {
     gap: 2.5em;
     margin: 3.75% auto 5rem;
-    width: 60%;
+    max-width: 1150px;
   }
 }
 

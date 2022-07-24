@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 1;
     background-color: $white;
-    border-bottom: $border-width solid $accent-color;
+    // border-bottom: $border-width solid $accent-color;
     padding: calc(#{$mobile-margin}  - 8px) $mobile-margin;
     position: fixed;
     top: 0;
@@ -26,7 +26,8 @@
 
 .nav {
     visibility: hidden;
-    font-size: 1.6rem;
+    // font-size: 1.6rem;
+    font-size: 1.2rem;
 
     &__list {
         list-style: none;

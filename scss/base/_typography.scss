@@ -13,7 +13,7 @@ h1, h2, h3, h4 {
 .hero,
 .cta {
     text-align: center;
-    margin: 4em 2em 4em;
+    margin: 4em 2em;
 
     &__title {
         font-size: 4.5rem;
@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
 
 @media screen and (min-width: 900px) {
     .hero {
-        margin: 6em 2em 6em;
+        margin: 6em 2em 6.5em;
 
         &__title {
             font-size: 7rem;

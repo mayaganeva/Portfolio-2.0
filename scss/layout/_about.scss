@@ -1,5 +1,7 @@
 .container {
     margin: $mobile-margin $mobile-margin 3em;
+    z-index: 1;
+    position: relative;
 }
 
 .about {
@@ -50,13 +52,13 @@
     margin: 1.5em 0 2em;
 
     &__label {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 500;
-        margin: 1em 0 .5em;
+        margin: 1.8em 0 .5em;
     }
     
     &__bar {
-        height: .8rem;
+        height: .7rem;
         background: $tools-bar-bg;
     }
 
@@ -89,30 +91,32 @@
 
 @media screen and (min-width: 650px) {
     .left {
-        display: grid;
-        grid-template: 
-            "img tools" 1fr
-            "btn tools" 63.6px / 1fr 1fr;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // display: grid;
+        // grid-template: 
+        //     "img tools" 1fr
+        //     "btn tools" 63.6px / 1fr 1fr;
         gap: 1.5em;
     }
 
     .about {
         .container {
-            margin: 7.5% 7.5% 3.5em;
+            margin: 2.5em;
         }
 
-        &__picture  {
-            grid-area: img;
-        }
+        // &__picture  {
+            // grid-area: img;
+        // }
 
         &__btn {
-            grid-area: btn;
+            // grid-area: btn;
             padding: .75em 1.36em;
         }
 
         .tools {
-            grid-area: tools;
-            margin: 0;
+            // grid-area: tools;
+            margin-bottom: 2em;
 
             &__header {
                 margin: 0;
@@ -121,7 +125,7 @@
     }
 }
 
-@media screen and (min-width: 812px) {
+@media screen and (min-width: 600px) {
     .left {
         display: grid;
         grid-template: 
@@ -137,21 +141,22 @@
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 680px) {
     .about {
 
         .container {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 2em;
+            gap: 1.8em;
         }
 
         .left {
             display: block;
             min-width: 260px;
+            //don't change min-width to avoid squishing btn
 
             .tools {
-                margin: 2em 0;
+                margin: 1.8em 0;
             }
         }
 
@@ -165,6 +170,6 @@
     .about .container {
         gap: 2.5em;
         margin: 3.75% auto 5rem;
-        width: 60%;
+        max-width: 1150px;
     }
 }

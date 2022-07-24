@@ -1,12 +1,14 @@
 .cta__btn,
 .about__btn,
 .form__btn {
-    border: none;
-    text-decoration: none;
-    display: inline-block;
     background-color: $accent-color;
+    border: none;
     color: white;
+    display: inline-block;
+    line-height: 1.2;
     padding: .75em 1.75em;
+    text-align: center;
+    text-decoration: none;
 }
 
 .about__btn {
