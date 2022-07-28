@@ -1,6 +1,6 @@
 .container {
-    margin: $mobile-margin $mobile-margin 3em;
-    z-index: 1;
+    margin: 0 $mobile-margin 3em;
+    z-index: -1;
     position: relative;
 }
 
@@ -9,10 +9,12 @@
         width: 100%;
     }
 
-    &__title {
-        margin-top: 1.8em;
+    &__title,
+    .tools__title {
+        border-top: 2px solid $main-color;
+        font-size: 4rem;
+        padding-top: 20px;
     }
-
     &__info {
         margin: 1em 0;
         font-size: 1.2rem;
@@ -49,7 +51,7 @@
 }
 
 .tools {
-    margin: 1.5em 0 2em;
+    margin-bottom: 2em;
 
     &__label {
         font-size: 1.25rem;
@@ -65,7 +67,7 @@
     &__progress {
         display: block;
         height: 100%;
-        background: $accent-color;
+        background: $main-color;
     }
 }
 
@@ -93,10 +95,10 @@
     .left {
         flex-direction: row;
         flex-wrap: wrap;
-        // display: grid;
-        // grid-template: 
-        //     "img tools" 1fr
-        //     "btn tools" 63.6px / 1fr 1fr;
+        display: grid;
+        grid-template: 
+            "img tools" 1fr
+            "btn tools" 63.6px / 1fr 1fr;
         gap: 1.5em;
     }
 
@@ -105,17 +107,17 @@
             margin: 2.5em;
         }
 
-        // &__picture  {
-            // grid-area: img;
-        // }
+        &__picture  {
+            grid-area: img;
+        }
 
         &__btn {
-            // grid-area: btn;
+            grid-area: btn;
             padding: .75em 1.36em;
         }
 
         .tools {
-            // grid-area: tools;
+            grid-area: tools;
             margin-bottom: 2em;
 
             &__header {

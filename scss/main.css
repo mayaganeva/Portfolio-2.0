@@ -470,10 +470,8 @@ h1, h2, h3, h4 {
 }
 
 .header {
-  position: absolute;
-  z-index: 1;
   background-color: #fff;
-  padding: calc(40px  - 8px) 40px;
+  padding: calc(40px - 8px) 40px calc(40px - 6px);
   position: fixed;
   top: 0;
   width: 100%;
@@ -493,7 +491,7 @@ h1, h2, h3, h4 {
 }
 
 .header-dummy {
-  height: calc(36px + calc(40px  - 8px)*2 + 2px * 2);
+  height: calc(36px + calc(40px  - 7px)*2);
 }
 
 .logo {
@@ -520,16 +518,19 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-.nav-toggle {
+.hamburger__toggle {
   visibility: hidden;
 }
 
-.open {
-  visibility: visible;
+.hamburger__open {
+  display: inline-block;
   margin-right: 40px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  visibility: visible;
 }
 
-.open, .open::before, .open::after {
+.hamburger__open, .hamburger__open::before, .hamburger__open::after {
   background-color: #191919;
   content: '';
   height: 4px;
@@ -538,22 +539,22 @@ h1, h2, h3, h4 {
   right: 0;
 }
 
-.open::before {
+.hamburger__open::before {
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
 }
 
-.open::after {
+.hamburger__open::after {
   -webkit-transform: translateY(-8px);
           transform: translateY(-8px);
 }
 
-.close {
+.hamburger__close {
   visibility: visible;
   margin-right: 40px;
 }
 
-.close, .close::after {
+.hamburger__close, .hamburger__close::after {
   background-color: #191919;
   content: '';
   height: 4px;
@@ -564,7 +565,7 @@ h1, h2, h3, h4 {
           transform: rotate(45deg);
 }
 
-.close::after {
+.hamburger__close::after {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -602,7 +603,7 @@ h1, h2, h3, h4 {
 }
 
 .footer {
-  display: none !important;
+  display: none;
   -webkit-box-shadow: 0 -2px 0 #191919;
           box-shadow: 0 -2px 0 #191919;
   padding: 0 40px;
@@ -686,8 +687,8 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  margin: 40px 40px 3em;
-  z-index: 1;
+  margin: 0 40px 3em;
+  z-index: -1;
   position: relative;
 }
 
@@ -695,8 +696,11 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-.about__title {
-  margin-top: 1.8em;
+.about__title,
+.about .tools__title {
+  border-top: 2px solid #191919;
+  font-size: 4rem;
+  padding-top: 20px;
 }
 
 .about__info {
@@ -733,7 +737,7 @@ h1, h2, h3, h4 {
 }
 
 .tools {
-  margin: 1.5em 0 2em;
+  margin-bottom: 2em;
 }
 
 .tools__label {
@@ -781,15 +785,23 @@ h1, h2, h3, h4 {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    display: -ms-grid;
+    display: grid;
+    grid-template: "img tools" 1fr "btn tools" 63.6px / 1fr 1fr;
     gap: 1.5em;
   }
   .about .container {
     margin: 2.5em;
   }
+  .about__picture {
+    grid-area: img;
+  }
   .about__btn {
+    grid-area: btn;
     padding: .75em 1.36em;
   }
   .about .tools {
+    grid-area: tools;
     margin-bottom: 2em;
   }
   .about .tools__header {

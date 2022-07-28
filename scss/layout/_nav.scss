@@ -1,9 +1,8 @@
 .header {
-    position: absolute;
-    z-index: 1;
     background-color: $white;
-    // border-bottom: $border-width solid $accent-color;
-    padding: calc(#{$mobile-margin}  - 8px) $mobile-margin;
+    // padding: calc(#{$mobile-margin}  - 8px) $mobile-margin;
+    padding: calc(#{$mobile-margin} - 8px) $mobile-margin calc(#{$mobile-margin} - 6px);
+    // padding: $mobile-margin;
     position: fixed;
     top: 0;
     width: 100%;
@@ -17,7 +16,8 @@
 }
 
 .header-dummy {
-    height: calc(#{$logo-height} + calc(#{$mobile-margin}  - 8px)*2 + #{$border-width} * 2);
+    // height: calc(#{$logo-height} + calc(#{$mobile-margin}  - 8px)*2 + #{$border-width} * 2);
+    height: calc(#{$logo-height} + calc(#{$mobile-margin}  - 7px)*2);
 }
 
 .logo {
@@ -37,58 +37,65 @@
     }
     &__link {
         text-decoration: none;
-        color: $accent-color;
+        color: $main-color;
         font-weight: 500;
     }
 }
 
-.nav-toggle {
-    visibility: hidden;
-}
+.hamburger {
 
-.open {
-    visibility: visible;
-    margin-right: $mobile-margin;
-
-    &,
-    &::before,
-    &::after {
-    background-color: $accent-color;
-    content: '';
-    height: 4px;
-    width: 24px;
-    position: absolute;
-    right: 0;
+    &__toggle {
+        visibility: hidden;
     }
 
-    &::before {
-        transform: translateY(8px);
-    }
-
-    &::after {
-        transform: translateY(-8px);
-    }
-}
-
-.close {
-    visibility: visible;
-    margin-right: $mobile-margin;
-
-    &,
-    &::after {
-        background-color: $accent-color;
+    &__open {
+        display: inline-block;
+        margin-right: $mobile-margin;
+        transform: translateY(-1px);
+        visibility: visible;
+    
+        &,
+        &::before,
+        &::after {
+        background-color: $main-color;
         content: '';
         height: 4px;
-        width: 26px;
+        width: 24px;
         position: absolute;
         right: 0;
-        transform: rotate(45deg);
+        }
+    
+        &::before {
+            transform: translateY(8px);
+        }
+    
+        &::after {
+            transform: translateY(-8px);
+        }
     }
-
-    &::after {
-        transform: rotate(-90deg);
+    
+    &__close {
+        visibility: visible;
+        margin-right: $mobile-margin;
+    
+        &,
+        &::after {
+            background-color: $main-color;
+            content: '';
+            height: 4px;
+            width: 26px;
+            position: absolute;
+            right: 0;
+            transform: rotate(45deg);
+        }
+    
+        &::after {
+            transform: rotate(-90deg);
+        }
     }
 }
+
+
 
 @media screen and (min-width: 600px) {
     .nav {
