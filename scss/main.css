@@ -698,7 +698,11 @@ h1, h2, h3, h4 {
 }
 
 .about__picture > img {
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 10px;
+>>>>>>> bb5bec85d85e6938b6f5dd443683e0985a3b1751
   max-width: 400px;
 }
 
