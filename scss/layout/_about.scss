@@ -5,63 +5,58 @@
 }
 
 .about {
+    max-width: 700px;
+    margin-left: auto;
+
     &__picture > img {
         width: 100%;
+        max-width: 400px;
     }
 
     &__title,
     .tools__title {
         border-top: 2px solid $main-color;
-        font-size: 4rem;
+        font-size: 4.5rem;
+        margin: 30px 0 40px;
         padding-top: 20px;
     }
+
     &__info {
-        margin: 1em 0;
-        font-size: 1.2rem;
-    }
-
-    &__quote__container {
-        margin: 1.8em 0;
-    }
-
-    &__quote {
-        font-weight: 500;
-        padding: 1em 1em 0;
-        margin-top: 1em;
-    }
-
-    &__quote,
-    &__source {
-        background-color: $tools-bar-bg;
-        margin: 0;
-    }
-
-    &__quote::before {
-        content: open-quote;
-    }
-
-    &__quote::after {
-        content: close-quote;
-    }
-
-    &__source {
-        text-align: right;
-        padding: 0 1em 1em;
+        font-size: 1.3rem;
+        margin-bottom: 3.5em;
     }
 }
 
 .tools {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+
+    &__subtitle {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 2em 0 1.2em;
+        line-height: 0;
+    }
+
+    &__subtitle:nth-of-type(2) {
+        margin-top: 2em;
+    }
+    
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5em;
+    }
 
     &__label {
-        font-size: 1.25rem;
-        font-weight: 500;
-        margin: 1.8em 0 .5em;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 0 0 .5em;
     }
     
     &__bar {
-        height: .7rem;
         background: $tools-bar-bg;
+        height: .7rem;
+        margin-bottom: 1em;
     }
 
     &__progress {
@@ -72,7 +67,7 @@
 }
 
 .one {
-    width: 97%;
+    width: 1 / 6;
 }
 
 .two {
@@ -91,87 +86,132 @@
     width: 75%;
 }
 
-@media screen and (min-width: 650px) {
-    .left {
-        flex-direction: row;
-        flex-wrap: wrap;
-        display: grid;
-        grid-template: 
-            "img tools" 1fr
-            "btn tools" 63.6px / 1fr 1fr;
-        gap: 1.5em;
-    }
-
+@media (min-width: 1180px) {
     .about {
-        .container {
-            margin: 2.5em;
-        }
-
-        &__picture  {
-            grid-area: img;
-        }
-
-        &__btn {
-            grid-area: btn;
-            padding: .75em 1.36em;
-        }
-
-        .tools {
-            grid-area: tools;
-            margin-bottom: 2em;
-
-            &__header {
-                margin: 0;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .left {
-        display: grid;
-        grid-template: 
-            "img tools" 1fr
-            "btn ." 63.6px / 1fr 1fr;
-        gap: 1.5em;
-    }
-    
-    .tools {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (min-width: 680px) {
-    .about {
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 1.8em;
-        }
-
-        .left {
-            display: block;
-            min-width: 260px;
-            //don't change min-width to avoid squishing btn
-
-            .tools {
-                margin: 1.8em 0;
-            }
+        &__picture > img {
+            transform: translateX(-115%);
+            position: fixed;
         }
 
         &__title {
-            margin-top: 0;
+            // margin-top: 400px;
         }
     }
 }
 
-@media screen and (min-width: 1240px) {
-    .about .container {
-        gap: 2.5em;
-        margin: 3.75% auto 5rem;
-        max-width: 1150px;
-    }
-}
+// .about {
+
+//     &__quote__container {
+//         margin: 1.8em 0;
+//     }
+
+//     &__quote {
+//         font-weight: 500;
+//         padding: 1em 1em 0;
+//         margin-top: 1em;
+//     }
+
+//     &__quote,
+//     &__source {
+//         background-color: $tools-bar-bg;
+//         margin: 0;
+//     }
+
+//     &__quote::before {
+//         content: open-quote;
+//     }
+
+//     &__quote::after {
+//         content: close-quote;
+//     }
+
+//     &__source {
+//         text-align: right;
+//         padding: 0 1em 1em;
+//     }
+// }
+
+// @media screen and (min-width: 650px) {
+//     .left {
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         display: grid;
+//         grid-template: 
+//             "img tools" 1fr
+//             "btn tools" 63.6px / 1fr 1fr;
+//         gap: 1.5em;
+//     }
+
+//     .about {
+//         .container {
+//             margin: 2.5em;
+//         }
+
+//         &__picture  {
+//             grid-area: img;
+//         }
+
+//         &__btn {
+//             grid-area: btn;
+//             padding: .75em 1.36em;
+//         }
+
+//         .tools {
+//             grid-area: tools;
+//             margin-bottom: 2em;
+
+//             &__header {
+//                 margin: 0;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 600px) {
+//     .left {
+//         display: grid;
+//         grid-template: 
+//             "img tools" 1fr
+//             "btn ." 63.6px / 1fr 1fr;
+//         gap: 1.5em;
+//     }
+    
+//     .tools {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//     }
+// }
+
+// @media screen and (min-width: 680px) {
+//     .about {
+
+//         .container {
+//             display: grid;
+//             grid-template-columns: 1fr 2fr;
+//             gap: 1.8em;
+//         }
+
+//         .left {
+//             display: block;
+//             min-width: 260px;
+//             //don't change min-width to avoid squishing btn
+
+//             .tools {
+//                 margin: 1.8em 0;
+//             }
+//         }
+
+//         &__title {
+//             margin-top: 0;
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 1240px) {
+//     .about .container {
+//         gap: 2.5em;
+//         margin: 3.75% auto 5rem;
+//         max-width: 1150px;
+//     }
+// }
