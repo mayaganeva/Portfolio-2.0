@@ -58,24 +58,20 @@
     }
 }
 
-.one {
-    width: 1 / 6;
+.half {
+    width: 50%;
 }
 
-.two {
-    width: 94%;
+.two-third {
+    width: 70%;
 }
 
-.three {
-    width: 65%;
+.three-fourth {
+    width: 80%;
 }
 
-.four {
-    width: 90%;
-}
-
-.five {
-    width: 75%;
+.max {
+    width: 95%;
 }
 
 @media (min-width: 440px) {
