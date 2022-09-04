@@ -131,7 +131,7 @@
         }
         
         &__title {
-            margin-top: calc(100px + 2vw);
+            margin-top: $picture-width;
         }
     }
 
@@ -146,13 +146,7 @@
         }
         
         &__title {
-            margin-top: 155px;
+            margin-top: 300px;
         }
-    }
-}
-
-@media (min-width: 1280px) {
-    .about__title {
-        margin-top: 300px;
     }
 }

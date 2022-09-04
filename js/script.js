@@ -1,3 +1,12 @@
+let c = document.getElementById("#ham");
+
+function toggleNav() {
+  console.log(c);
+}
+
+
+
+
 // Auto resize textareas
 
 // var tx = document.getElementsByTagName('textarea');
@@ -11,13 +20,16 @@
 //   this.style.height = (this.scrollHeight) + '1px';
 // }
 
-// Open / Close Menu
 
-const navButton = document.querySelector('button[aria-expanded]');
 
-    function toggleNav({ target }) {
-      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
-      navButton.setAttribute('aria-expanded', !expanded);
-    }
+// const navButton = document.querySelector(".hamburger__open");
 
-    navButton.addEventListener('click', toggleNav);
+//   function toggleNav() {
+//     if (navButton.getElementsByClassName.display === "block") {
+//       navButton.style.display = "none";
+//     } else {
+//       navButton.style.display = "block";
+//     }
+//   }
+
+//   navButton.addEventListener('click', toggleNav);
