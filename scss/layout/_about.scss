@@ -1,10 +1,10 @@
 .container {
     margin: 0 $mobile-margin 3em;
+    max-width: 650px;
     z-index: -1;
 }
 
 .about {
-    max-width: 650px;
     margin-left: auto;
 
     &__picture > img {
@@ -14,7 +14,7 @@
     &__title,
     .tools__title {
         border-top: 2px solid $main-color;
-        font-size: 4.5rem;
+        font-size: 3rem;
         margin: 30px 0 40px;
         padding-top: 20px;
     }
@@ -37,12 +37,6 @@
 
     &__subtitle:nth-of-type(2) {
         margin-top: 2em;
-    }
-    
-    &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1.5em;
     }
 
     &__label {
@@ -84,6 +78,23 @@
     width: 75%;
 }
 
+@media (min-width: 440px) {
+    .about {
+        &__title,
+        .tools__title {
+            font-size: 4.5rem;
+        }
+    }
+    
+    .tools {        
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1.5em;
+        }
+    }
+}
+
 @media (min-width: 550px) {
     .about__picture > img {
         margin-left: $mobile-margin;
@@ -91,144 +102,61 @@
     }
 }
 
-@media (min-width: 650px) {
-    .about__picture > img {
-        margin-left: calc(-100vw + 690px);
+@media (min-width: 730px) {
+    .container {
+        margin-inline: auto $mobile-margin;
     }
+
 }
 
-@media (min-width: 1000px) {
-    .container {
-       border: 2px solid aquamarine;
-       position: relative;
-    //    right: calc(100vw - 50%);
+@media (min-width: 850px) {
+    .about {
+        display: grid;
+        grid-template-columns: $picture-width calc(438px + 8vw);
+        column-gap: $mobile-margin;
+        justify-content: center;
+        margin-bottom: 3em;
+
+        .container {
+            margin: 0;
+        }
+
+        &__picture {
+            box-sizing: border-box;
+            position: sticky;
+            top: calc(#{$logo-height} + calc(#{$mobile-margin}  - 7px)*2);
+            height: 50vh;
+
+            & img {
+                margin-left: 0;
+                width: $picture-width;
+                max-width: 300px;
+            }
+        }
+        
+        &__title {
+            margin-top: calc(100px + 2vw);
+        }
     }
-    .about__picture > img {
-        position: fixed;
-        margin-left: calc(-100vw + 69%);
+
+}
+
+@media (min-width: 1024px) {
+    .about {
+        grid-template-columns: 300px 600px;
+
+        &__picture img {
+            width: 300px;
+        }
+        
+        &__title {
+            margin-top: 155px;
+        }
     }
 }
 
 @media (min-width: 1280px) {
-    .about__picture > img {
-        position: fixed;
-        margin-left: calc(-100vw + 53%);
-        min-width: 400px;
+    .about__title {
+        margin-top: 300px;
     }
 }
-// .about {
-
-//     &__quote__container {
-//         margin: 1.8em 0;
-//     }
-
-//     &__quote {
-//         font-weight: 500;
-//         padding: 1em 1em 0;
-//         margin-top: 1em;
-//     }
-
-//     &__quote,
-//     &__source {
-//         background-color: $tools-bar-bg;
-//         margin: 0;
-//     }
-
-//     &__quote::before {
-//         content: open-quote;
-//     }
-
-//     &__quote::after {
-//         content: close-quote;
-//     }
-
-//     &__source {
-//         text-align: right;
-//         padding: 0 1em 1em;
-//     }
-// }
-
-// @media screen and (min-width: 650px) {
-//     .left {
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//         display: grid;
-//         grid-template: 
-//             "img tools" 1fr
-//             "btn tools" 63.6px / 1fr 1fr;
-//         gap: 1.5em;
-//     }
-
-//     .about {
-//         .container {
-//             margin: 2.5em;
-//         }
-
-//         &__picture  {
-//             grid-area: img;
-//         }
-
-//         &__btn {
-//             grid-area: btn;
-//             padding: .75em 1.36em;
-//         }
-
-//         .tools {
-//             grid-area: tools;
-//             margin-bottom: 2em;
-
-//             &__header {
-//                 margin: 0;
-//             }
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 600px) {
-//     .left {
-//         display: grid;
-//         grid-template: 
-//             "img tools" 1fr
-//             "btn ." 63.6px / 1fr 1fr;
-//         gap: 1.5em;
-//     }
-    
-//     .tools {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//     }
-// }
-
-// @media screen and (min-width: 680px) {
-//     .about {
-
-//         .container {
-//             display: grid;
-//             grid-template-columns: 1fr 2fr;
-//             gap: 1.8em;
-//         }
-
-//         .left {
-//             display: block;
-//             min-width: 260px;
-//             //don't change min-width to avoid squishing btn
-
-//             .tools {
-//                 margin: 1.8em 0;
-//             }
-//         }
-
-//         &__title {
-//             margin-top: 0;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1240px) {
-//     .about .container {
-//         gap: 2.5em;
-//         margin: 3.75% auto 5rem;
-//         max-width: 1150px;
-//     }
-// }

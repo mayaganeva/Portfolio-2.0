@@ -17,3 +17,6 @@ $ar-wide: 2 / 1;
 $ar-tall: 1 / 2;
 $ar-big: 2 / 3;
 $row-height: calc((#{$gallery-width} - #{$gallery-gutter} * 5) / 5);
+
+// About Me
+$picture-width: calc(200px + 3vw);
