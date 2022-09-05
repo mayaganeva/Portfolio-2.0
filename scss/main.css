@@ -322,7 +322,7 @@ h1, h2, h3, h4 {
 .hero,
 .cta {
   text-align: center;
-  margin: 4em 2em;
+  padding: 4em 2em;
 }
 
 .hero__title,
@@ -336,6 +336,12 @@ h1, h2, h3, h4 {
   font-weight: 400;
 }
 
+.cta {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
 @media screen and (min-width: 900px) {
   .hero {
     margin: 6em 2em 6.5em;
@@ -346,12 +352,15 @@ h1, h2, h3, h4 {
 }
 
 .gallery {
-  width: 100vw;
-  text-align: center;
+  background-color: #fff;
   display: -ms-grid;
   display: grid;
   grid-auto-rows: 11;
   gap: 10px;
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  z-index: 2;
 }
 
 .gallery__item {
@@ -625,11 +634,9 @@ h1, h2, h3, h4 {
 }
 
 .footer {
-  display: none;
   -webkit-box-shadow: 0 -2px 0 #191919;
           box-shadow: 0 -2px 0 #191919;
-  position: absolute;
-  padding: 0 40px;
+  display: none;
   font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -640,7 +647,10 @@ h1, h2, h3, h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 40px;
+  position: absolute;
   width: 100%;
+  z-index: 3;
 }
 
 .footer__text {
@@ -696,10 +706,6 @@ h1, h2, h3, h4 {
 
 .footer .codepen {
   height: 21px;
-}
-
-.footer .insta {
-  height: 24px;
 }
 
 @media screen and (min-width: 700px) {
