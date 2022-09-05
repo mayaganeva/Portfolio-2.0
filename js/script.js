@@ -1,10 +1,8 @@
-let c = document.getElementById("#ham");
+// let c = document.getElementById("#ham");
 
-function toggleNav() {
-  console.log(c);
-}
-
-
+// function toggleNav() {
+//   console.log(c);
+// }
 
 
 // Auto resize textareas
