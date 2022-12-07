@@ -68,23 +68,6 @@
     text-decoration: underline dotted; /* 2 */
   }
   
-  /**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-  
-  b,
-  strong {
-    font-weight: bolder;
-  }
-  
-  /**
-   * Add the correct font size in all browsers.
-   */
-  
-  small {
-    font-size: 80%;
-  }
-  
   /* Embedded content
      ========================================================================== */
   
@@ -218,15 +201,6 @@
   [type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
-  }
-  
-  /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
-  
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
-    height: auto;
   }
   
   /**

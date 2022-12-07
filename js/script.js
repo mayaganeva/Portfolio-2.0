@@ -1,3 +1,13 @@
+let galleryItems = document.getElementsByClassName("gallery__item");
+console.log(galleryItems);
+
+for (let i = 0; i < galleryItems.length; i++) {
+    galleryItems[i].classList.add("class");
+}
+
+
+
+
 // let c = document.getElementById("#ham");
 
 // function toggleNav() {

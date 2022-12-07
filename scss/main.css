@@ -15,6 +15,10 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  min-height: 100vh;
+}
+
 button {
   border: none;
 }
@@ -86,21 +90,6 @@ abbr[title] {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
   /* 2 */
-}
-
-/**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
-   * Add the correct font size in all browsers.
-   */
-small {
-  font-size: 80%;
 }
 
 /* Embedded content
@@ -241,14 +230,6 @@ textarea {
 }
 
 /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
@@ -364,32 +345,37 @@ h1, h2, h3, h4 {
 }
 
 .gallery__item {
-  position: relative;
-  width: 100%;
+  -webkit-animation: slideup 200ms ease-in;
+          animation: slideup 200ms ease-in;
   max-height: 60vw;
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .gallery__overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
+  inset: 0;
   opacity: 0;
+  padding: 2em;
+  position: absolute;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  width: 100%;
 }
 
 .gallery__picture > img {
