@@ -17,6 +17,7 @@ html::-webkit-scrollbar {
 
 body {
   min-height: 100vh;
+  position: relative;
 }
 
 button {
@@ -340,7 +341,6 @@ h1, h2, h3, h4 {
   gap: 10px;
   position: relative;
   text-align: center;
-  width: 100vw;
   z-index: 2;
 }
 
@@ -389,7 +389,7 @@ h1, h2, h3, h4 {
   .gallery {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: calc((100vw - 10px * 5) / 5);
+    grid-auto-rows: calc((100vw - 10px * 4) / 5);
         grid-template-areas: "render   render  circus  circus    circus" "waves    paws    paws    trusting  trusting" "waves    fatcat  tom     trusting  trusting" "agape    agape   tom     trusting  trusting";
   }
   .gallery__overlay:hover {
@@ -620,6 +620,7 @@ h1, h2, h3, h4 {
 }
 
 .footer {
+  bottom: 0;
   -webkit-box-shadow: 0 -2px 0 #191919;
           box-shadow: 0 -2px 0 #191919;
   display: none;
@@ -876,6 +877,22 @@ h1, h2, h3, h4 {
 
 .form__input:focus {
   outline: 2px solid #191919;
+}
+
+.form__input::-webkit-input-placeholder {
+  font-weight: 300;
+}
+
+.form__input:-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.form__input::-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.form__input::placeholder {
+  font-weight: 300;
 }
 
 .form__btn {

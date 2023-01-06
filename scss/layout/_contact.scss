@@ -18,6 +18,10 @@
         &:focus {
             outline: 2px solid $main-color;
         }
+
+        &::placeholder {
+            font-weight: 300;
+        }
     }
 
     &__btn {
