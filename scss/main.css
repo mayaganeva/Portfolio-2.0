@@ -304,7 +304,7 @@ h1, h2, h3, h4 {
 .hero,
 .cta {
   text-align: center;
-  padding: 4em 2em;
+  padding: 4em 2em 6em;
 }
 
 .hero__title,
@@ -385,25 +385,30 @@ h1, h2, h3, h4 {
      object-fit: cover;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
   .gallery {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: calc((100vw - 10px * 4) / 5);
-        grid-template-areas: "render   render  circus  circus    circus" "waves    paws    paws    trusting  trusting" "waves    fatcat  tom     trusting  trusting" "agape    agape   tom     trusting  trusting";
+        grid-template-areas: "dikman   dikman  circus  circus    circus" "agape    agape   waves   trusting  trusting" "paws     paws    fatcat  trusting  trusting" "tom      render  render  trusting  trusting";
   }
   .gallery__overlay:hover {
     opacity: 1;
   }
+  .gallery .dikman {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: dikman;
+  }
   .gallery .waves {
     -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
+    -ms-grid-column: 3;
     grid-area: waves;
   }
   .gallery .render {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-area: render;
   }
@@ -415,13 +420,12 @@ h1, h2, h3, h4 {
   }
   .gallery .waves {
     -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
+    -ms-grid-column: 3;
     grid-area: waves;
   }
   .gallery .paws {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: paws;
   }
@@ -434,17 +438,16 @@ h1, h2, h3, h4 {
   }
   .gallery .fatcat {
     -ms-grid-row: 3;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
     grid-area: fatcat;
   }
   .gallery .tom {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 3;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
     grid-area: tom;
   }
   .gallery .agape {
-    -ms-grid-row: 4;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: agape;
@@ -607,6 +610,10 @@ h1, h2, h3, h4 {
   padding: .75em 1.75em;
   text-align: center;
   text-decoration: none;
+}
+
+.cta__btn {
+  margin-top: .6em;
 }
 
 .about__btn {
