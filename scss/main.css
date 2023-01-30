@@ -715,8 +715,9 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  margin: 0 40px 3em;
+  margin: 0 40px;
   max-width: 650px;
+  padding-bottom: 6em;
   z-index: -1;
 }
 
@@ -829,7 +830,6 @@ h1, h2, h3, h4 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 3em;
   }
   .about .container {
     margin: 0;

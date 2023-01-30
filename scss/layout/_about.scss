@@ -1,6 +1,7 @@
 .container {
-    margin: 0 $mobile-margin 3em;
+    margin: 0 $mobile-margin;
     max-width: 650px;
+    padding-bottom: 6em;
     z-index: -1;
 }
 
@@ -111,7 +112,6 @@
         grid-template-columns: $picture-width calc(438px + 8vw);
         column-gap: $mobile-margin;
         justify-content: center;
-        margin-bottom: 3em;
 
         .container {
             margin: 0;
