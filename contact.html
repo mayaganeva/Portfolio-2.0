@@ -37,14 +37,20 @@
             <form action="" class="form" autocomplete="on">
                 <h1 class="form__title">Come say hi!</h1>
 
-                <label class="form__label" for="name">Hi! My name is</label><br>
-                <input class="form__input" type="text" id="name" name="name" placeholder="Your name goes here"><br>
+                <label class="form__label" for="name">
+                    <span>Hi! My name is</span>
+                    <input class="form__input" type="text" id="name" name="name" placeholder="Your name goes here" required>
+                </label>
 
-                <label class="form__label" for="email">Here's my email</label><br>
-                <input class="form__input" type="email" id="email" name="email" placeholder="Your email goes here"><br>
+                <label class="form__label" for="email">
+                    <span>Here's my email</span>
+                    <input class="form__input" type="email" id="email" name="email" placeholder="Your email goes here" required>
+                </label>
 
-                <label class="form__label" for="message">So get this!</label><br>
-                <textarea class="form__input" type="text" id="message" name="message" placeholder="Super exciting thing you want to talk about goes here"></textarea>
+                <label class="form__label" for="message">
+                    <span>So get this!</span>
+                    <textarea class="form__input" type="text" id="message" name="message" placeholder="Super exciting thing you want to talk about goes here Super exciting thing you want to talk about goes here Super exciting thing you want to talk about goes here " required></textarea>
+                </label>
 
                 <input type="submit" value="Send message" class="form__btn"><br>
             </form>

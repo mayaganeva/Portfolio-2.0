@@ -1,4 +1,6 @@
 .form {
+    display: grid;
+    
     &__title {
         margin-top: 3rem;
     }
@@ -24,6 +26,10 @@
         }
     }
 
+    #message {
+        overflow: auto;
+    }
+
     &__btn {
         width: 100%;
     }
@@ -33,11 +39,5 @@
     .form {
         max-width: 80%;
         margin: 0 auto;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .form {
-        width: 50%;
     }
 }
