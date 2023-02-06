@@ -23,13 +23,13 @@
             <button onclick="toggleNav()" class="hamburger hamburger__open">
                 <!-- <div class="hamburger__open"></div> -->
             </button>
-            <nav class="nav">
+            <!-- <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="index.html" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </header>
         <div class="header-dummy"></div>
 
@@ -147,50 +147,115 @@
             </div>
         </section>
 
+        <section class="about">
+            <picture class="about__picture">
+                <source media="(min-width: 600px)" srcset="">
+                <source media="(min-width: 960px)" srcset="">
+                <img src="img/self-animated-cropped.gif" alt="Illustration of Maya Ganeva in vivid colors" class="about__img">
+            </picture>
+            
+            <div class="container">
+                <div class="about__links">
+                    <a class="about__link" href="https://www.behance.net/mayaganeva" target="_blank">Behance</a>
+                    <a class="about__link" href="https://www.linkedin.com/in/mayaganeva/" target="_blank">LinkedIn</a>
+                    <a class="about__link" href="https://github.com/mayaganeva" target="_blank">GitHub</a>
+                    <a class="about__link" href="https://codepen.io/hrastalak" target="_blank">Codepen</a>
+                </div>
+                <h2 class="about__title">About Me</h2>
+                <div class="about__info">
+                    <p>👋 Hi, my name is Maya (like the bee!)</p>
+                    <p>🎓 I studied Animation and Graphic Design at New Bulgarian University.</p>
+            
+                    <p>🌇 Sofia native with a passion for designing and coding clean, accessible UI that makes your company and your clients' lives easier.</p>
+            
+                    <p>💻 My ideal workplace is where I can make an impact and be a part of a team of passionate, intelligent and empathetic people who learn and create together in a progressive and supportive environment.</p>
+            
+                    <p>🏔 In my free time you can find me making illustrations, rock climbing and dancing to 80's music.</p>
+                </div>
+                <div class="about__quote__container">
+                    <blockquote class="about__quote">Good design is like a refrigerator — when it works, no one notices, but when it doesn’t, it sure stinks.</blockquote>
+                <figcaption class="about__source">— Irene Au</figcaption>
+                </div>
+                <div class="about__info">
+                    <p>💪 My biggest strengths are curiosity, persistence and organization.</p>
+            
+                    <p>👀 Curiosity, because it drives me to try new approaches and is the pillar of innovation and creativity. The world fascinates me and I'm always eager to understand it's How's and Why's.</p>
+            
+                    <p>🔧 Persistence, because in order to succeed you need to push through tough times and dig deep to solve the hardest problems. This is the hard work that follows the spark of a new idea, without which it quickly withers.</p>
+            
+                    <p>📋 Organization, because it's the backbone of creation - without it we're lost to the whims of inspiration and motivation. Being organized means taking charge of when you learn, when you create and when you rest so you can do all of it consistently.</p>
+                </div>
+
+                <div class="tools">
+                    <h3 class="tools__title">Toolbox</h3>
+                    <h4 class="tools__subtitle">Design</h4>
+                    <div class="tools__container">
+                        <div class="mini-container">
+                            <h5 class="tools__label">Research</h5>
+                            <div class="tools__bar"><span class="tools__progress max"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">Xd, Figma</h5>
+                            <div class="tools__bar"><span class="tools__progress max"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">Prototyping</h5>
+                            <div class="tools__bar"><span class="tools__progress max"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">Illustrator</h5>
+                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">UI/UX Design</h5>
+                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">Photoshop</h5>
+                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">Animation</h5>
+                            <div class="tools__bar"><span class="tools__progress two-third"></span></div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="tools__subtitle">Development</h4>
+                    <div class="tools__container">
+                        <div class="mini-container">
+                            <h5 class="tools__label">HTML/CSS</h5>
+                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">SCSS/Sass</h5>
+                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">Accessibility</h5>
+                            <div class="tools__bar"><span class="tools__progress two-third"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">Git</h5>
+                            <div class="tools__bar"><span class="tools__progress two-third"></span></div>
+                        </div>
+                        <div class="mini-container">
+                            <h5 class="tools__label">JavaScript</h5>
+                            <div class="tools__bar"><span class="tools__progress half"></span></div>
+                        </div>
+                    </div>
+                </div>
+                    <a class="about__btn" href="img/cv__maya-ganeva.pdf" download>Download my CV</a>
+            </div>
+        </section>
+        
         <section class="cta">
             <p class="cta__text">Hope my work made you smile!</p>
             <p class="cta__text">If you like what you see and would like to collaborate or just gush over web design</p>
-            <a class="cta__btn" href="contact.html">Get in touch</a>
+            <a class="cta__btn" href="mailto:mayagganeva@gmail.com">Get in touch</a>
         </section>
 
         <footer class="footer">
             <p class="footer__text">©2022</p>
-            <div class="footer__links">
-                <a class="footer__link" href="https://www.behance.net/mayaganeva" target="_blank">Behance</a>
-                <a class="footer__link" href="https://www.linkedin.com/in/mayaganeva/" target="_blank">LinkedIn</a>
-                <a class="footer__link" href="https://github.com/mayaganeva" target="_blank">GitHub</a>
-                <a class="footer__link" href="https://codepen.io/hrastalak" target="_blank">Codepen</a>
-                <!-- <a class="footer__link" href="https://www.instagram.com/hrastalak/" target="_blank">Instagram</a> -->
-            </div>
-            <div class="footer__icons">
-                <a class="footer__icon" href="https://www.behance.net/mayaganeva" target="_blank" name="Behance">
-                    <svg class="behance" xmlns="http://www.w3.org/2000/svg" viewBox="1 94 511 324">
-                        <path d="M207 239s48-4 48-60c0-57-39-85-90-85H1v317h164s101 3 101-93c0 0 4-79-59-79zm-53-88h11s23 0 23 32c0 33-13 38-28 38H73v-70h81zm7 204H73v-85h92s34 0 34 44c0 37-25 40-38 41zm239-180c-122 0-121 122-121 122s-9 121 121 121c0 0 109 6 109-85h-56s2 35-51 35c0 0-56 3-56-56h165s18-137-111-137zm-54 95s7-49 56-49 48 49 48 49H346zm117-118H332v-39h131v39z"/>
-                    </svg>
-                </a>
-                <a class="footer__icon" href="https://www.linkedin.com/in/mayaganeva/" target="_blank" name="LinkedIn">
-                    <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 310 310">
-                        <path d="M72 100H10c-3 0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5V105c0-3-2-5-5-5zM41 0a41 41 0 1 0 0 83 41 41 0 0 0 0-83zm189 95c-25 0-43 11-54 23v-13c0-3-2-5-5-5h-60c-3 0-5 2-5 5v200c0 2 2 5 5 5h62c3 0 5-3 5-5v-99c0-34 9-47 33-47 25 0 27 21 27 48v98c0 2 2 5 5 5h62c3 0 5-3 5-5V195c0-50-9-100-80-100z"/>
-                    </svg>
-                </a>
-                <a class="footer__icon" href="https://github.com/mayaganeva" target="_blank" name="GitHub">
-                    <svg class="github" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 256 256">
-                        <path d="M128 2C58 2 2 58 2 131c0 59 39 109 95 123v-39c-36 8-45-14-45-14-5-17-14-20-14-20-11-8 0-8 0-8 14 0 20 14 20 14 11 19 31 14 39 11 0-8 6-17 9-20-28-2-59-14-59-64 0-14 3-28 11-36 0-3-6-17 3-34 0 0 11-6 36 11a123 123 0 0 1 65 0c25-17 36-11 36-11 6 17 3 31 0 34 8 8 14 22 14 36 0 50-31 62-59 64 6 6 9 14 9 26v50c53-17 92-64 92-123C254 58 198 2 128 2z"/>
-                    </svg>
-                </a>
-                <a class="footer__icon" href="https://codepen.io/hrastalak" target="_blank" name="Codepen">
-                    <svg class="codepen" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 128 128">
-                        <g clip-rule="evenodd">
-                        <path fill="none" d="M0 0h128v128H0z"/>
-                        <path fill="#0B0B0A" fill-rule="evenodd" d="m117 73-14-9 14-9v18zm-47 39V87l23-16 20 12-44 29zm-6-35L45 64l19-13 20 13-20 13zm-5 35L15 84l20-13 24 16v25zM11 55l14 9-14 9V55zm48-39v25L35 57 15 44l44-28zm11 0 43 28-20 13-24-16V16zm58 28v-1a7 7 0 0 0-1-1 4 4 0 0 0 0-1h-1v-1L67 1a6 6 0 0 0-6 0L3 40H2v1a4 4 0 0 0-1 0 5 5 0 0 0-1 1v44h1a5 5 0 0 0 1 2l59 39a5 5 0 0 0 6 0l59-39v-1a5 5 0 0 0 1-1h1V44z"/>
-                        </g>
-                    </svg>
-                </a>
-                <!-- <a class="footer__icon" href="https://www.instagram.com/hrastalak/" target="_blank">
-                    <svg class="insta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8a26.8 26.8 0 1 1 26.8-26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388a75.63 75.63 0 0 1-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9A75.63 75.63 0 0 1 49.4 388c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1A75.63 75.63 0 0 1 92 81.2c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9a75.63 75.63 0 0 1 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                    </svg>
-                </a> -->
             </div>
         </footer>
     </body>

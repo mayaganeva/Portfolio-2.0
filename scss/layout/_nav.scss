@@ -22,7 +22,7 @@
 }
 
 .nav {
-    visibility: hidden;
+    visibility: visible;
 
     &__list,
     &__mobile {
@@ -86,7 +86,7 @@
         background-color: $main-color;
         content: '';
         height: 4px;
-        width: 24px;
+        width: 28px;
         position: absolute;
         right: 0;
         }
@@ -130,6 +130,6 @@
     }
 
     .hamburger {
-        visibility: hidden;
+        // visibility: hidden;
     }
 }

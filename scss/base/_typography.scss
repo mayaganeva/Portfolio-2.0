@@ -10,6 +10,13 @@ h1, h2, h3, h4 {
     line-height: 1;
 }
 
+a {
+    color: $main-color;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 .hero,
 .cta {
     text-align: center;

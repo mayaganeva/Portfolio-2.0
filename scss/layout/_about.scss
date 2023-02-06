@@ -2,7 +2,6 @@
     margin: 0 $mobile-margin;
     max-width: 650px;
     padding-bottom: 6em;
-    z-index: -1;
 }
 
 .about {
@@ -12,11 +11,19 @@
         width: 100vw;
     }
 
+    &__links {
+        grid-column: 2 / 3;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: .8em;
+        padding-top: 30px;
+    }
+
     &__title,
     .tools__title {
         border-top: 2px solid $main-color;
         font-size: 3rem;
-        margin: 30px 0 40px;
+        margin: 10px 0 40px;
         padding-top: 20px;
     }
 
@@ -114,7 +121,9 @@
         justify-content: center;
 
         .container {
-            margin: 0;
+            grid-column: 2 / 3;
+            margin: 0 0 30px 0;
+            padding-bottom: 0;
         }
 
         &__picture {
@@ -123,15 +132,26 @@
             top: calc(#{$logo-height} + calc(#{$mobile-margin}  - 7px)*2);
             height: 50vh;
 
+            &::before {
+                background-color: $accent;
+                content: '';
+                display: inline-block;
+                height: $picture-width;
+                left: -600px;
+                position: absolute;
+                width: 80vh;
+                z-index: -1;
+            }
+
             & img {
                 margin-left: 0;
                 width: $picture-width;
                 max-width: 300px;
             }
         }
-        
-        &__title {
-            margin-top: $picture-width;
+
+        &__links {
+            padding-top: 184px;
         }
     }
 
@@ -144,9 +164,15 @@
         &__picture img {
             width: 300px;
         }
+
+        &__picture::before {
+            height: 300px;
+            right: calc(100vw - #{$picture-width} - 650px);
+            width: 90vh;
+        }
         
-        &__title {
-            margin-top: 300px;
+        &__links {
+            padding-top: 255px;
         }
     }
 }
