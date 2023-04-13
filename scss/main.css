@@ -464,7 +464,6 @@ a {
 
 .header {
   background-color: #fff;
-  padding: calc(40px - 8px) 40px calc(40px - 6px);
   position: fixed;
   top: 0;
   width: 100%;
@@ -487,121 +486,139 @@ a {
   height: calc(36px + calc(40px  - 7px)*2);
 }
 
-.logo {
+.logo,
+.menu__label {
+  margin: 32px 40px;
+}
+
+.logo svg {
   height: 36px;
 }
 
-.nav {
-  visibility: visible;
-}
-
-.nav__list, .nav__mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.75em;
-  font-size: 1.4rem;
-  list-style: none;
-  margin: 0;
-}
-
-.nav__link, .nav__mobile__link {
-  color: #191919;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.nav__link a,
-.nav__mobile__link a {
+.menu__label {
+  cursor: pointer;
   display: block;
+  height: calc(4px * 5);
+  width: 28px;
+  z-index: 10;
 }
 
-.nav__mobile {
-  visibility: hidden;
-  background-color: #fff;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2em;
-  padding: 40px;
+.menu__label::before {
+  background-color: hotpink;
+  opacity: .8;
+  aspect-ratio: 1 / 1;
+  content: '';
+  display: block;
+  height: 80px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  -webkit-transform: translate(calc(28px * -2), calc(4px * -2));
+          transform: translate(calc(28px * -2), calc(4px * -2));
+  z-index: -1;
 }
 
-.nav__mobile__link {
-  line-height: 1;
-  padding: .5em 1em;
+.menu__label:hover {
+  outline-color: #191919;
+  outline-offset: -10px;
 }
 
-.nav__mobile__link:hover {
+.menu__nav {
   background-color: #191919;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: .5em 1em;
+  color: white;
+  inset: 0 0 0 auto;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  width: 0;
 }
 
-.hamburger {
-  visibility: hidden;
+.menu__nav .menu__ul {
+  list-style-type: none;
+  -webkit-transform: translateY(55%);
+          transform: translateY(55%);
+}
+
+.menu__nav .menu__ul .menu__link {
+  padding: 16px 40px;
+  text-transform: uppercase;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.menu__nav .menu__ul .menu__link:hover {
+  color: white;
   cursor: pointer;
 }
 
-.hamburger__open {
+.menu__nav .menu__ul .menu__li::before {
+  background-color: rgba(255, 255, 255, 0.7);
+  bottom: .4rem;
+  content: '';
   display: inline-block;
-  margin-right: 40px;
-  visibility: visible;
+  height: 1px;
+  margin-right: 4px;
+  position: relative;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  width: 0;
 }
 
-.hamburger__open, .hamburger__open::before, .hamburger__open::after {
+.menu__nav .menu__ul .menu__li:hover::before {
+  width: 40px;
+}
+
+.burger {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.burger,
+.burger::before,
+.burger::after {
   background-color: #191919;
   content: '';
+  display: block;
   height: 4px;
   width: 28px;
-  position: absolute;
-  right: 0;
+  position: relative;
+  z-index: 1;
 }
 
-.hamburger__open::before {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+.burger::before {
+  top: calc(4px * 2);
 }
 
-.hamburger__open::after {
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
+.burger::after {
+  top: calc(4px * 3);
 }
 
-.hamburger__close {
-  visibility: visible;
-  margin-right: 40px;
-  z-index: 2;
+[type="checkbox"] {
+  display: none;
 }
 
-.hamburger__close, .hamburger__close::after {
-  background-color: #191919;
-  content: '';
-  height: 4px;
-  width: 26px;
-  position: absolute;
-  right: 0;
+[type="checkbox"]:checked ~ .menu__label:hover {
+  outline-color: rgba(255, 255, 255, 0.6);
+}
+
+[type="checkbox"]:checked ~ .menu__label .hamburger {
+  background-color: #fff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.hamburger__close::after {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+[type="checkbox"]:checked ~ .menu__label .hamburger::before {
+  background-color: #fff;
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
-@media screen and (min-width: 550px) {
-  .nav {
-    visibility: visible;
-  }
+[type="checkbox"]:checked ~ .menu__label .hamburger::after {
+  display: none;
+}
+
+[type="checkbox"]:checked ~ .menu__nav {
+  width: 280px;
 }
 
 .cta__btn,
