@@ -4,10 +4,11 @@ $main-color: #191919;
 $gallery-hover: #3b3b3b;
 $tools-bar-bg: #e4e4e4;
 $white: #fff;
+$white-transparent: #ffffffb3;
 
 // Header
 $mobile-margin: 40px;
-$logo-height: 36px;
+$logo-height: 34px;
 $border-width: 2px;
 $burger-line-height: 4px;
 $burger-line-width: 28px;
@@ -23,3 +24,6 @@ $row-height: calc((#{$gallery-width} - #{$gallery-gutter} * 4) / 5);
 
 // About Me
 $picture-width: calc(200px + 3vw);
+
+//Animation
+$transition-default: 200ms ease;

@@ -1,145 +1,89 @@
 .header {
+    align-items: center;
     background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    height: 106px;
+    padding-inline: $mobile-margin;
     position: fixed;
     top: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    z-index: 10;
     & a {
         line-height: 0;
     }
-}
-.header-dummy {
-    height: calc(#{$logo-height} + calc(#{$mobile-margin}  - 7px)*2);
-}
-.logo,
-.menu__label {
-    // padding: calc(#{$mobile-margin} - 8px) $mobile-margin calc(#{$mobile-margin} - 6px);
-    margin: 32px $mobile-margin;
+    &-dummy {
+        height: 106px;
+    }
 }
 .logo svg {
     height: $logo-height;
 }
-.nav {
-
-    // &__list,
-    // &__mobile {
-    //     display: flex;
-    //     gap: 1.75em;
-    //     font-size: 1.4rem;
-    //     list-style: none;
-    //     margin: 0;
-    // }
-    // &__link,
-    // &__mobile__link {
-    //     color: $main-color;
-    //     font-weight: 500;
-    //     text-decoration: none;
-    // }
-
-    // &__link a,
-    // &__mobile__link a {
-    //     display: block;
-    // }
-    
-    // &__mobile {
-    //     visibility: hidden;
-    //     background-color: $white;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     gap: 2em;
-    //     padding: $mobile-margin;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    
-    //     &__link {
-    //         line-height: 1;
-    //         padding: .5em 1em;
-    //     }
-
-    //     &__link:hover {
-    //         background-color: $main-color;
-    //         border: 2px solid $white;
-    //         color: $white;
-    //         padding: .5em 1em;
-    //     }
-
-    // }
-}
-
 .menu {
     &__label {
-        // border-radius: 100px;
+        align-items: center;
+        border-radius: 100px;
         cursor: pointer;
-        display: block;
-        height: calc(#{$burger-line-height} * 5);
-        // outline: 1px solid orange;
-        // outline-offset: 50px;
-        // transition: outline-offset 200ms ease;
+        display: flex;
+        height: $burger-line-width;
+        outline: 1px solid transparent;
+        outline-offset: 60px;
+        position: relative;
+        transition: $transition-default;
         width: $burger-line-width;
-        z-index: 10
-    }
-    &__label::before {
-        background-color: hotpink;
-        opacity: .8;
-        aspect-ratio: 1 / 1;
-        content: '';
-        display: block;
-        height: 80px;
-        position: absolute;
-        transform: translate(
-            calc(#{$burger-line-width} * -2),
-            calc(#{$burger-line-height} * -2)
-        );
-        z-index: -1;
+        z-index: 1;
     }
     &__label:hover {
         outline-color: $main-color;
-        outline-offset: -10px;
+        outline-offset: 24px;
     }
     &__nav {
         background-color: $main-color;
-        color: white;
+        display: grid;
+        height: 100vh;
         inset: 0 0 0 auto;
         overflow: hidden;
         position: absolute;
-        transition: 200ms ease;
-        width: 0;
+        transition: $transition-default;
+        transform: translateX(110%);
+        width: 100vw;
     }
     &__nav &__ul {
+        align-items: center;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 1.5em;
         list-style-type: none;
-        transform: translateY(55%);
+        margin: 0;
+        padding: 8em 2em;
     }
-    &__nav &__ul &__link {
-        padding: 16px 40px;
+    &__nav &__ul a {
+        color: $white;
+        height: 100%;
         text-transform: uppercase;
-        transition: 200ms ease;
+        transition: $transition-default;
     }
-    &__nav &__ul &__link:hover {
+    &__nav &__ul a:hover {
         color: white;
         cursor: pointer;
     }
     &__nav &__ul &__li::before {
-        background-color: rgba(255, 255, 255, .7);
+        background-color: $white-transparent;
         bottom: .4rem;
         content: '';
         display: inline-block;
         height: 1px;
         margin-right: 4px;
         position: relative;
-        transition: 200ms ease;
+        transition: $transition-default;
         width: 0;
     }
     &__nav &__ul &__li:hover::before {
-        width: 40px;
+        width: 50px;
     }
 }
 .burger {
-    transition: 200ms ease;
+    transition: $transition-default;
 }
 .burger,
 .burger::before,
@@ -153,29 +97,43 @@
     z-index: 1;
 }
 .burger::before {
-    top: calc(#{$burger-line-height} * 2);
+    // top: calc(#{$burger-line-height} * 2);
+    top: calc(#{$burger-line-height} * -2);
 }
 .burger::after {
-    top: calc(#{$burger-line-height} * 3);
+    // top: calc(#{$burger-line-height} * 3);
+    top: $burger-line-height;
 }
 [type="checkbox"] {
     display: none;
 }
 [type="checkbox"]:checked ~ .menu__label:hover {
-    outline-color: rgba(255, 255, 255, .6);
+    outline-color: $white-transparent;
 }
-[type="checkbox"]:checked ~ .menu__label .hamburger {
-    background-color: #fff;
+[type="checkbox"]:checked ~ .menu__label .burger {
+    background-color: $white;
     transform: rotate(45deg);
 }
-[type="checkbox"]:checked ~ .menu__label .hamburger::before {
-    background-color: #fff;
+[type="checkbox"]:checked ~ .menu__label .burger::before {
+    background-color: $white;
     top: 0;
     transform: rotate(90deg);
 }
-[type="checkbox"]:checked ~ .menu__label .hamburger::after {
+[type="checkbox"]:checked ~ .menu__label .burger::after {
     display: none;
 }
 [type="checkbox"]:checked ~ .menu__nav {
-    width: 280px;
+    transform: translateX(0);
+}
+@media (min-width: 600px) {
+    .menu {
+        &__nav {
+            align-content: center;
+            width: 400px;
+        }
+        &__nav &__ul {
+            align-items: start;
+            padding: 2em;
+        }
+    }
 }
