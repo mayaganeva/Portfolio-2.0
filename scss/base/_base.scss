@@ -7,10 +7,17 @@
 html {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
     display: none;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {

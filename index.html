@@ -28,13 +28,13 @@
                 <nav class="menu__nav">
                   <ul class="menu__ul">
                     <li class="menu__li">
-                        <a href="#" class="menu__link">Work</a>
+                        <a href="#work" class="menu__link">Work</a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu__link">About</a>
+                        <a href="#about" class="menu__link">About</a>
                     </li>
                     <li class="menu__li">
-                        <a href="#" class="menu__link">Contact</a>
+                        <a href="#contact" class="menu__link">Contact</a>
                     </li>
                   </ul>
                 </nav>
@@ -47,7 +47,7 @@
             <h2 class="hero__subtitle">Design + Front End</h2>
         </section>
 
-        <section class="work">
+        <section class="work" id="work">
             <div class="gallery">
                 <div class="gallery__item dikman">
                     <div class="gallery__overlay">
@@ -156,14 +156,14 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <picture class="about__picture">
                 <source media="(min-width: 600px)" srcset="">
                 <source media="(min-width: 960px)" srcset="">
                 <img src="img/self-animated-cropped.gif" alt="Illustration of Maya Ganeva in vivid colors" class="about__img">
             </picture>
             
-            <div class="container">
+            <div class="about__container">
                 <div class="about__links">
                     <a class="about__link" href="https://www.behance.net/mayaganeva" target="_blank">Behance</a>
                     <a class="about__link" href="https://www.linkedin.com/in/mayaganeva/" target="_blank">LinkedIn</a>
@@ -257,11 +257,31 @@
             </div>
         </section>
         
-        <section class="cta">
-            <p class="cta__text">Hope my work made you smile!</p>
-            <p class="cta__text">If you like what you see and would like to collaborate or just gush over web design</p>
-            <a class="cta__btn" href="mailto:mayagganeva@gmail.com">Get in touch</a>
+        <section class="contact" id="contact">
+            <form action="" class="form" autocomplete="on">
+                <p class="cta__text">Hope my work made you smile!</p>
+                <p class="cta__text">If you like what you see and would like to collaborate or just gush over web design</p>
+                <h1 class="form__title">Come say hi!</h1>
+
+                <label class="form__label" for="name">
+                    <span>Hi! My name is</span>
+                    <input class="form__input" type="text" id="name" name="name" placeholder="Your name goes here" required>
+                </label>
+
+                <label class="form__label" for="email">
+                    <span>Here's my email</span>
+                    <input class="form__input" type="email" id="email" name="email" placeholder="Your email goes here" required>
+                </label>
+
+                <label class="form__label" for="message">
+                    <span>So get this!</span>
+                    <textarea class="form__input" type="text" id="message" name="message" placeholder="Super exciting thing you want to talk about goes here Super exciting thing you want to talk about goes here Super exciting thing you want to talk about goes here " required></textarea>
+                </label>
+
+                <input type="submit" value="Send message" class="form__btn"><br>
+            </form>
         </section>
+        
 
         <footer class="footer">
             <p class="footer__text">©2022</p>

@@ -3,23 +3,28 @@
     background-color: $white;
     display: flex;
     justify-content: space-between;
-    height: 106px;
+    height: $header-height;
     padding-inline: $mobile-margin;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
+
     & a {
         line-height: 0;
     }
+
     &-dummy {
-        height: 106px;
+        height: $header-height;
     }
 }
+
 .logo svg {
     height: $logo-height;
 }
+
 .menu {
+
     &__label {
         align-items: center;
         border-radius: 100px;
@@ -33,10 +38,7 @@
         width: $burger-line-width;
         z-index: 1;
     }
-    &__label:hover {
-        outline-color: $main-color;
-        outline-offset: 24px;
-    }
+
     &__nav {
         background-color: $main-color;
         display: grid;
@@ -45,9 +47,10 @@
         overflow: hidden;
         position: absolute;
         transition: $transition-default;
-        transform: translateX(110%);
+        transform: translateX(100%);
         width: 100vw;
     }
+
     &__nav &__ul {
         align-items: center;
         display: flex;
@@ -57,34 +60,40 @@
         margin: 0;
         padding: 8em 2em;
     }
+
     &__nav &__ul a {
         color: $white;
         height: 100%;
         text-transform: uppercase;
         transition: $transition-default;
     }
+
     &__nav &__ul a:hover {
         color: white;
         cursor: pointer;
     }
-    &__nav &__ul &__li::before {
+
+    &__nav &__ul a::before {
         background-color: $white-transparent;
         bottom: .4rem;
         content: '';
         display: inline-block;
         height: 1px;
-        margin-right: 4px;
+        margin-right: 6px;
         position: relative;
         transition: $transition-default;
         width: 0;
     }
-    &__nav &__ul &__li:hover::before {
+
+    &__nav &__ul a:hover::before {
         width: 50px;
     }
 }
+
 .burger {
     transition: $transition-default;
 }
+
 .burger,
 .burger::before,
 .burger::after {
@@ -96,41 +105,56 @@
     position: relative;
     z-index: 1;
 }
+
 .burger::before {
-    // top: calc(#{$burger-line-height} * 2);
     top: calc(#{$burger-line-height} * -2);
 }
+
 .burger::after {
-    // top: calc(#{$burger-line-height} * 3);
     top: $burger-line-height;
 }
+
 [type="checkbox"] {
     display: none;
 }
-[type="checkbox"]:checked ~ .menu__label:hover {
-    outline-color: $white-transparent;
-}
+
 [type="checkbox"]:checked ~ .menu__label .burger {
     background-color: $white;
     transform: rotate(45deg);
 }
+
 [type="checkbox"]:checked ~ .menu__label .burger::before {
     background-color: $white;
     top: 0;
     transform: rotate(90deg);
 }
+
 [type="checkbox"]:checked ~ .menu__label .burger::after {
     display: none;
 }
+
 [type="checkbox"]:checked ~ .menu__nav {
     transform: translateX(0);
 }
+
 @media (min-width: 600px) {
+
     .menu {
+
+        &__label:hover {
+            outline-color: $main-color;
+            outline-offset: 24px;
+        }
+
+        [type="checkbox"]:checked ~ .menu__label:hover {
+            outline-color: $white-transparent;
+        }
+
         &__nav {
             align-content: center;
             width: 400px;
         }
+        
         &__nav &__ul {
             align-items: start;
             padding: 2em;

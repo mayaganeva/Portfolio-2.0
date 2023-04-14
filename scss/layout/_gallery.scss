@@ -1,13 +1,15 @@
+
+.work {
+  padding-top: $header-height;
+}
 .gallery {
   background-color: $white;
   display: grid;
   grid-auto-rows: 11;
   gap: $gallery-gutter;
-  // gap: 24px;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
   position: relative;
   text-align: center;
-  // width: $gallery-width;
   z-index: 2;
 
   &__item {
