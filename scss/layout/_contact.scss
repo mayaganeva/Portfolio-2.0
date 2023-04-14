@@ -1,5 +1,9 @@
 .contact {
-    padding-top: $header-height;
+    padding-block: $header-height 5em;
+
+    &__text {
+        margin: 0;
+    }
 }
 
 .form {
@@ -30,6 +34,10 @@
         }
     }
 
+    textarea {
+        height: 8em;
+    }
+
     #message {
         overflow: auto;
     }
@@ -40,6 +48,11 @@
 }
 
 @media screen and (min-width: 800px) {
+    .contact {
+        margin: 0 auto;
+        max-width: 80vw;
+    }
+
     .form {
         max-width: 80%;
         margin: 0 auto;

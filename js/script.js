@@ -1,18 +1,18 @@
-let galleryItems = document.getElementsByClassName("gallery__item");
-console.log(galleryItems);
+// let galleryItems = document.getElementsByClassName("gallery__item");
+// console.log(galleryItems);
 
-for (let i = 0; i < galleryItems.length; i++) {
-    galleryItems[i].classList.add("class");
-}
+// for (let i = 0; i < galleryItems.length; i++) {
+//     galleryItems[i].classList.add("class");
+// }
 
-Array.from( document.querySelectorAll('[data-expand]'), (input)=>{
-  let parent = input.parentNode;
-  function updateSize(){
-    parent.dataset.value = input.value
-  }
-  input.addEventListener('input', updateSize);
-  updateSize();
-});
+// Array.from( document.querySelectorAll('[data-expand]'), (input)=>{
+//   let parent = input.parentNode;
+//   function updateSize(){
+//     parent.dataset.value = input.value
+//   }
+//   input.addEventListener('input', updateSize);
+//   updateSize();
+// });
 
 
 

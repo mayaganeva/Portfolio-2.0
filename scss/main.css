@@ -684,10 +684,23 @@ a {
   opacity: .8;
 }
 
+.to-top {
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  border-radius: 50%;
+  inset: auto 0 0 auto;
+  position: absolute;
+}
+
+.arrow {
+  fill: none;
+  stroke: #191919;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
 .footer {
   bottom: 0;
-  -webkit-box-shadow: 0 -2px 0 #191919;
-          box-shadow: 0 -2px 0 #191919;
   display: none;
   font-size: 1.2rem;
   display: -webkit-box;
@@ -960,7 +973,11 @@ a {
 }
 
 .contact {
-  padding-top: 106px;
+  padding-block: 106px 5em;
+}
+
+.contact__text {
+  margin: 0;
 }
 
 .form {
@@ -1005,6 +1022,10 @@ a {
   font-weight: 300;
 }
 
+.form textarea {
+  height: 8em;
+}
+
 .form #message {
   overflow: auto;
 }
@@ -1014,6 +1035,10 @@ a {
 }
 
 @media screen and (min-width: 800px) {
+  .contact {
+    margin: 0 auto;
+    max-width: 80vw;
+  }
   .form {
     max-width: 80%;
     margin: 0 auto;
