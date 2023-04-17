@@ -28,15 +28,13 @@ body {
   position: relative;
 }
 
-button {
-  border: none;
+section {
+  position: relative;
+  z-index: 3;
 }
 
-.main {
-  display: -ms-grid;
-  display: grid;
-  gap: 106px;
-  margin-top: 106px;
+button {
+  border: none;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -340,20 +338,16 @@ a {
   margin-top: 2em;
 }
 
-.hero,
-.cta {
+.hero {
   text-align: center;
-  padding: 4em 2em 6em;
 }
 
-.hero__title,
-.cta__title {
+.hero__title {
   font-size: 4.5rem;
   margin: 0;
 }
 
-.hero__subtitle,
-.cta__subtitle {
+.hero__subtitle {
   font-weight: 400;
 }
 
@@ -371,7 +365,10 @@ a {
 
 @media screen and (min-width: 900px) {
   .hero {
-    margin: 6em 2em 6.5em;
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    place-content: center;
   }
   .hero__title {
     font-size: 7rem;
@@ -379,7 +376,7 @@ a {
 }
 
 .about {
-  margin-top: 4em;
+  margin-block: 10px 4em;
 }
 
 .about__picture > img {
@@ -479,7 +476,6 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: calc(-.9 * 106px);
   }
   .about__container {
     -ms-grid-column: 2;
@@ -579,7 +575,7 @@ a {
   position: fixed;
   -webkit-transition: 200ms ease;
   transition: 200ms ease;
-  z-index: 1;
+  z-index: 2;
 }
 
 .arrow {
@@ -602,9 +598,11 @@ a {
   display: -ms-grid;
   display: grid;
   height: calc(100vh - 106px);
+  padding-inline: 40px;
   place-content: center;
   text-align: center;
   width: 100%;
+  z-index: 1;
 }
 
 .contact__text {
@@ -613,93 +611,14 @@ a {
 
 .contact__link {
   color: #fff;
-  font-size: 7rem;
+  font-size: 4rem;
   font-weight: 550;
   margin-top: .1em;
 }
 
-.form {
-  display: -ms-grid;
-  display: grid;
-  margin-inline: auto;
-  width: calc(100% - 2 * 40px);
-}
-
-.form__title {
-  margin-top: 3rem;
-}
-
-.form__label {
-  font-weight: 500;
-}
-
-.form__wrap {
-  display: -ms-grid;
-  display: grid;
-}
-
-.form__wrap::after {
-  content: attr(data-replicated-value) " ";
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 2 / 2;
-  visibility: hidden;
-  white-space: pre-wrap;
-}
-
-.form__input, .form__wrap::after {
-  width: 100%;
-  margin: .2em 0 1em;
-  padding: .8em 1em;
-  background-color: #e4e4e4;
-  border: 0;
-  resize: none;
-}
-
-.form__input:focus, .form__wrap::after:focus {
-  outline: 2px solid #191919;
-}
-
-.form__input::-webkit-input-placeholder, .form__wrap::after::-webkit-input-placeholder {
-  font-weight: 300;
-}
-
-.form__input:-ms-input-placeholder, .form__wrap::after:-ms-input-placeholder {
-  font-weight: 300;
-}
-
-.form__input::-ms-input-placeholder, .form__wrap::after::-ms-input-placeholder {
-  font-weight: 300;
-}
-
-.form__input::placeholder, .form__wrap::after::placeholder {
-  font-weight: 300;
-}
-
-.form textarea {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 2 / 2;
-  min-height: 8em;
-  overflow: hidden;
-}
-
-.form #message {
-  overflow: auto;
-}
-
-.form__btn {
-  width: 100%;
-}
-
 @media screen and (min-width: 800px) {
-  .form {
-    max-width: 80%;
-    margin: 0 auto;
+  .contact__link {
+    font-size: 7rem;
   }
 }
 
@@ -720,6 +639,7 @@ a {
   padding-inline: 40px;
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 .footer__text {
@@ -751,13 +671,15 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1057,17 +979,21 @@ a {
 }
 
 .resume {
+  background-color: #efefef;
+}
+
+.resume__container {
   margin: 0 auto;
-  padding-inline: 40px;
+  padding: 0 40px 4em;
 }
 
 .resume__title {
   grid-column: span 2;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 @media (min-width: 800px) {
-  .resume {
+  .resume__container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;

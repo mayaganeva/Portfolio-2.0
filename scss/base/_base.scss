@@ -26,12 +26,11 @@ body {
     position: relative;
 }
 
-button {
-	border: none;
+section {
+    position: relative;
+    z-index: 3;
 }
 
-.main {
-    display: grid;
-    gap: $header-height;
-    margin-top: $header-height;
+button {
+	border: none;
 }

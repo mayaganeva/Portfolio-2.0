@@ -18,10 +18,11 @@
 	&__overlay {
 		align-items: center;
 		background-blend-mode: multiply;
-		background-color: rgba(black, .7);
+		background-color: rgba(black, .85);
 		backdrop-filter: blur(2px);
 		color: $white;
 		display: flex;
+		filter: grayscale(1);
 		justify-content: center;
 		height: 100%;
 		inset: 0;

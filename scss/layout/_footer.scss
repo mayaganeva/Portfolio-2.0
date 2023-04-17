@@ -9,6 +9,7 @@
     padding-inline: $mobile-margin;
     position: absolute;
     width: 100%;
+    z-index: 1;
 
     &__text {
         font-size: 1.2rem;

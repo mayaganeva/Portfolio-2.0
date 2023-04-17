@@ -1,19 +1,24 @@
 .resume {
-	margin: 0 auto;
-	padding-inline: $mobile-margin;
+	background-color: #efefef;
 
-
+	&__container {
+		margin: 0 auto;
+		padding: 0 $mobile-margin $section-margin;
+	}
 	&__title {
 		grid-column: span 2;
-		margin-bottom: 0;
+		margin: 0;
 	}
 
 }
 
 @media (min-width: 800px) {
 	.resume {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		max-width: 80vw;
+
+		&__container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			max-width: 80vw;
+		}
 	}
 }

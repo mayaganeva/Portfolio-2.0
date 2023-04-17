@@ -3,9 +3,11 @@
     color: $white;
     display: grid;
     height: calc(100vh - #{$header-height});
+    padding-inline: $mobile-margin;
     place-content: center;
     text-align: center;
     width: 100%;
+    z-index: 1;
 
     &__text {
         margin: 0;
@@ -13,77 +15,83 @@
 
     &__link {
         color: $white;
-        font-size: 7rem;
+        font-size: 4rem;
         font-weight: 550;
         margin-top: .1em;
     }
 }
 
-.form {
-    display: grid;
-    margin-inline: auto;
-    width: calc(100% - 2 * #{$mobile-margin});
+// .form {
+//     display: grid;
+//     margin-inline: auto;
+//     width: calc(100% - 2 * #{$mobile-margin});
     
-    &__title {
-        margin-top: 3rem;
-    }
+//     &__title {
+//         margin-top: 3rem;
+//     }
 
-    &__label {
-        font-weight: 500;
-    }
+//     &__label {
+//         font-weight: 500;
+//     }
 
-    &__wrap {
-        display: grid;
-    }
+//     &__wrap {
+//         display: grid;
+//     }
 
-    &__wrap::after {
-        content: attr(data-replicated-value) " ";
-        grid-area: 1 / 1 / 2 / 2;
-        visibility: hidden;
-        white-space: pre-wrap;
-    }
+//     &__wrap::after {
+//         content: attr(data-replicated-value) " ";
+//         grid-area: 1 / 1 / 2 / 2;
+//         visibility: hidden;
+//         white-space: pre-wrap;
+//     }
 
-    &__input,
-    &__wrap::after {
-        width: 100%;
-        margin: .2em 0 1em;
-        padding: .8em 1em;
-        background-color: $tools-bar-bg;
-        border: 0;
-        resize: none;
+//     &__input,
+//     &__wrap::after {
+//         width: 100%;
+//         margin: .2em 0 1em;
+//         padding: .8em 1em;
+//         background-color: $tools-bar-bg;
+//         border: 0;
+//         resize: none;
 
-        &:focus {
-            outline: 2px solid $main-color;
-        }
+//         &:focus {
+//             outline: 2px solid $main-color;
+//         }
 
-        &::placeholder {
-            font-weight: 300;
-        }
-    }
+//         &::placeholder {
+//             font-weight: 300;
+//         }
+//     }
 
-    textarea {
-        grid-area: 1 / 1 / 2 / 2;
-        min-height: 8em;
-        overflow: hidden;
-    }
+//     textarea {
+//         grid-area: 1 / 1 / 2 / 2;
+//         min-height: 8em;
+//         overflow: hidden;
+//     }
 
-    #message {
-        overflow: auto;
-    }
+//     #message {
+//         overflow: auto;
+//     }
 
-    &__btn {
-        width: 100%;
-    }
-}
+//     &__btn {
+//         width: 100%;
+//     }
+// }
 
 @media screen and (min-width: 800px) {
+    .contact {
+
+        &__link {
+            font-size: 7rem;
+        }
+    }
     // .contact {
     //     margin: 0 auto;
     //     max-width: 80vw;
     // }
 
-    .form {
-        max-width: 80%;
-        margin: 0 auto;
-    }
+    // .form {
+    //     max-width: 80%;
+    //     margin: 0 auto;
+    // }
 }

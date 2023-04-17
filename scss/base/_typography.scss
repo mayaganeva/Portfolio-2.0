@@ -34,10 +34,8 @@ a {
     margin-top: 2em;
 }
 
-.hero,
-.cta {
+.hero {
     text-align: center;
-    padding: 4em 2em 6em;
 
     &__title {
         font-size: 4.5rem;
@@ -64,7 +62,11 @@ a {
 
 @media screen and (min-width: 900px) {
     .hero {
-        margin: 6em 2em 6.5em;
+        display: grid;
+        height: 100vh;
+        place-content: center;
+
+        // margin: 6em 2em 6.5em;
 
         &__title {
             font-size: 7rem;

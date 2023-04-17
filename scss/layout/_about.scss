@@ -1,5 +1,5 @@
 .about {
-    margin-top: 4em;
+    margin-block: $gallery-gutter $section-margin;
 
     &__picture > img {
         width: 100vw;
@@ -91,7 +91,6 @@
         display: grid;
         grid-template-columns: $picture-width calc(438px + 8vw);
         justify-content: center;
-        margin-top: calc(-.9 * #{$header-height});
 
         &__container {
             grid-column: 2 / 3;
