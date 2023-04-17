@@ -379,7 +379,7 @@ a {
 }
 
 .about {
-  margin-top: calc(-.9 * 106px);
+  margin-top: 4em;
 }
 
 .about__picture > img {
@@ -389,7 +389,6 @@ a {
 .about__container {
   margin-inline: 40px;
   max-width: 650px;
-  padding-bottom: 6em;
 }
 
 .about__links {
@@ -471,15 +470,16 @@ a {
 
 @media (min-width: 850px) {
   .about {
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: calc(200px + 3vw) calc(438px + 8vw);
         grid-template-columns: calc(200px + 3vw) calc(438px + 8vw);
-    -webkit-column-gap: 40px;
-            column-gap: 40px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: calc(-.9 * 106px);
   }
   .about__container {
     -ms-grid-column: 2;
@@ -495,7 +495,7 @@ a {
     margin-bottom: 15.8em;
     position: -webkit-sticky;
     position: sticky;
-    top: calc(34px + calc(40px  - 7px)*2);
+    top: 106px;
   }
   .about__picture::before {
     background-color: #FFC528;
@@ -567,12 +567,54 @@ a {
   opacity: .8;
 }
 
+.to-top {
+  aspect-ratio: 1 / 1.2;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  inset: auto 0 0 auto;
+  margin: 40px;
+  outline: 1px solid transparent;
+  outline-offset: 60px;
+  position: fixed;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.arrow {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+@media (min-width: 800px) {
+  .to-top:hover {
+    outline-color: #ffffffb3;
+    outline-offset: 24px;
+  }
+}
+
 .contact {
-  padding-block: 106px 5em;
+  background-color: #191919;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  height: calc(100vh - 106px);
+  place-content: center;
+  text-align: center;
+  width: 100%;
 }
 
 .contact__text {
   margin: 0;
+}
+
+.contact__link {
+  color: #fff;
+  font-size: 7rem;
+  font-weight: 550;
+  margin-top: .1em;
 }
 
 .form {
@@ -654,10 +696,6 @@ a {
 }
 
 @media screen and (min-width: 800px) {
-  .contact {
-    margin: 0 auto;
-    max-width: 80vw;
-  }
   .form {
     max-width: 80%;
     margin: 0 auto;
@@ -669,6 +707,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   bottom: 0;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,8 +715,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 70px;
+  height: 106px;
   padding-inline: 40px;
+  position: absolute;
   width: 100%;
 }
 
@@ -1022,6 +1062,7 @@ a {
 
 .resume__title {
   grid-column: span 2;
+  margin-bottom: 0;
 }
 
 @media (min-width: 800px) {

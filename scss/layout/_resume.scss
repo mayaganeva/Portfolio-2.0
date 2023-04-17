@@ -2,8 +2,10 @@
 	margin: 0 auto;
 	padding-inline: $mobile-margin;
 
+
 	&__title {
 		grid-column: span 2;
+		margin-bottom: 0;
 	}
 
 }

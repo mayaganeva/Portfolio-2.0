@@ -1,8 +1,21 @@
 .contact {
-    padding-block: $header-height 5em;
+    background-color: $main-color;
+    color: $white;
+    display: grid;
+    height: calc(100vh - #{$header-height});
+    place-content: center;
+    text-align: center;
+    width: 100%;
 
     &__text {
         margin: 0;
+    }
+
+    &__link {
+        color: $white;
+        font-size: 7rem;
+        font-weight: 550;
+        margin-top: .1em;
     }
 }
 
@@ -64,10 +77,10 @@
 }
 
 @media screen and (min-width: 800px) {
-    .contact {
-        margin: 0 auto;
-        max-width: 80vw;
-    }
+    // .contact {
+    //     margin: 0 auto;
+    //     max-width: 80vw;
+    // }
 
     .form {
         max-width: 80%;
