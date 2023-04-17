@@ -12,5 +12,6 @@
 	.resume {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		max-width: 80vw;
 	}
 }

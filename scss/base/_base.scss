@@ -8,6 +8,7 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    scroll-padding-top: $header-height;
 }
 
 html::-webkit-scrollbar {
@@ -27,4 +28,10 @@ body {
 
 button {
 	border: none;
+}
+
+.main {
+    display: grid;
+    gap: $header-height;
+    margin-top: $header-height;
 }

@@ -30,16 +30,6 @@ a {
     margin: 1em 0 .6em;
 }
 
-.subtitle::after {
-    background-color: orange;
-    content: '';
-    display: block;
-    height: 4px;
-    position: relative;
-    top: 6px;
-    width: 50px;
-}
-
 .subtitle:nth-of-type(2) {
     margin-top: 2em;
 }

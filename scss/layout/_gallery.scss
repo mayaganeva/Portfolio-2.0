@@ -1,19 +1,14 @@
-.work {
-	padding-top: $header-height;
-}
-
 .gallery {
 	background-color: $white;
 	display: grid;
 	grid-auto-rows: 11;
 	gap: $gallery-gutter;
-	margin-bottom: 5em;
 	position: relative;
 	text-align: center;
 	z-index: 2;
 
 	&__item {
-		animation: slideup 200ms ease-in;
+		animation: slideup $transition-default;
 		max-height: 60vw;
 		overflow: hidden;
 		position: relative;
@@ -33,14 +28,22 @@
 		opacity: 0;
 		padding: 2em;
 		position: absolute;
-		transition: opacity 200ms ease-in;
+		transition: opacity $transition-default;
 		width: 100%;
+	}
+	
+	&__overlay:hover {
+		opacity: 1;
 	}
   
 	&__picture > img {
 		display: block;
 		width: 100%;
 		object-fit: cover;
+	}
+	
+	.website {
+		aspect-ratio: 5.3 / 3;
 	}
 }
 
@@ -53,10 +56,6 @@
 		"agape    agape   waves   trusting  trusting"
 		"paws     paws    fatcat  trusting  trusting"
 		"tom      render  render  trusting  trusting";
-	
-		&__overlay:hover {
-			opacity: 1;
-		}
   
 		.dikman {
 			grid-area: dikman;

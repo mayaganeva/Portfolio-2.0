@@ -13,10 +13,6 @@
     & a {
         line-height: 0;
     }
-
-    &-dummy {
-        height: $header-height;
-    }
 }
 
 .logo svg {
@@ -51,7 +47,7 @@
         width: 100vw;
     }
 
-    &__nav:target {
+    a:target {
         transform: translateX(100%);
     }
 

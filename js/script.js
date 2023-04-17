@@ -1,10 +1,19 @@
 
 
-const menuLinks = document.querySelectorAll('.menu__link');
-menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('toggle').click();
-  });
+var checkbox = document.querySelector( '#toggle' );
+var icon = document.querySelector( '#burger' );
+var listener = function( e ) {
+  if( e.target != checkbox && e.target != icon ) {
+    checkbox.checked = false;
+    document.removeEventListener( 'click', listener );
+
+  }
+};
+
+checkbox.addEventListener( 'click', function(){
+  if( this.checked ) {
+    document.addEventListener( 'click', listener );
+  } 
 });
 
 

@@ -1,6 +1,5 @@
 .about {
-    margin-left: auto;
-    padding-top: $header-height;
+    margin-top: calc(-.9 * #{$header-height});
 
     &__picture > img {
         width: 100vw;
@@ -27,7 +26,6 @@
 }
 
 .tools {
-    margin-bottom: 3em;
 
     &__label {
         font-size: 1.4rem;
@@ -147,7 +145,7 @@
             &::before {
                 height: 300px;
                 right: calc(100vw - #{$picture-width} - 650px);
-                width: 90vh;
+                width: 800px;
             }
         }
         
