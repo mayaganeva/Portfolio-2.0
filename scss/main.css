@@ -306,7 +306,7 @@ template {
 
 body {
   font: 1.5rem 'Clash Display', sans-serif;
-  color: #191919;
+  color: #161616;
   line-height: 1.5;
 }
 
@@ -315,14 +315,14 @@ h1, h2, h3, h4 {
 }
 
 a {
-  color: #191919;
+  color: #161616;
   font-size: 1.4rem;
   font-weight: 500;
   text-decoration: none;
 }
 
 .title {
-  border-top: 2px solid #191919;
+  border-top: 2px solid #161616;
   font-size: 3rem;
   margin: 10px 0 40px;
   padding-top: 20px;
@@ -422,7 +422,7 @@ a {
 .tools__progress {
   display: block;
   height: 100%;
-  background: #191919;
+  background: #161616;
 }
 
 .half {
@@ -537,7 +537,7 @@ a {
 .cta__btn,
 .about__btn,
 .form__btn {
-  background-color: #191919;
+  background-color: #161616;
   border: none;
   color: white;
   display: inline-block;
@@ -593,7 +593,7 @@ a {
 }
 
 .contact {
-  background-color: #191919;
+  background-color: #161616;
   color: #fff;
   display: -ms-grid;
   display: grid;
@@ -821,7 +821,7 @@ a {
 }
 
 .menu__nav {
-  background-color: #191919;
+  background-color: #161616;
   display: -ms-grid;
   display: grid;
   height: 100vh;
@@ -895,7 +895,7 @@ a {
 }
 
 .burger, .burger::before, .burger::after {
-  background-color: #191919;
+  background-color: #161616;
   content: '';
   display: block;
   height: 4px;
@@ -940,7 +940,7 @@ a {
 
 @media (min-width: 600px) {
   .menu__label:hover {
-    outline-color: #191919;
+    outline-color: #161616;
     outline-offset: 24px;
   }
   .menu__nav .menu__ul a:hover {
