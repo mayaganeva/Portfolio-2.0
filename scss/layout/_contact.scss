@@ -8,6 +8,8 @@
 
 .form {
     display: grid;
+    margin-inline: auto;
+    width: calc(100% - 2 * #{$mobile-margin});
     
     &__title {
         margin-top: 3rem;
@@ -17,7 +19,19 @@
         font-weight: 500;
     }
 
-    &__input {
+    &__wrap {
+        display: grid;
+    }
+
+    &__wrap::after {
+        content: attr(data-replicated-value) " ";
+        grid-area: 1 / 1 / 2 / 2;
+        visibility: hidden;
+        white-space: pre-wrap;
+    }
+
+    &__input,
+    &__wrap::after {
         width: 100%;
         margin: .2em 0 1em;
         padding: .8em 1em;
@@ -35,7 +49,9 @@
     }
 
     textarea {
-        height: 8em;
+        grid-area: 1 / 1 / 2 / 2;
+        min-height: 8em;
+        overflow: hidden;
     }
 
     #message {

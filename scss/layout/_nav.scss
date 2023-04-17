@@ -51,6 +51,10 @@
         width: 100vw;
     }
 
+    &__nav:target {
+        transform: translateX(100%);
+    }
+
     &__nav &__ul {
         align-items: center;
         display: flex;
@@ -62,79 +66,77 @@
     }
 
     &__nav &__ul a {
+        border-bottom: 1px solid transparent;
         color: $white;
         height: 100%;
+        padding-bottom: .2em;
         text-transform: uppercase;
         transition: $transition-default;
     }
 
-    &__nav &__ul a:hover {
-        color: white;
-        cursor: pointer;
-    }
-
-    &__nav &__ul a::before {
+    &__nav &__ul a::after {
         background-color: $white-transparent;
-        bottom: .4rem;
         content: '';
-        display: inline-block;
+        display: block;
         height: 1px;
-        margin-right: 6px;
         position: relative;
+        top: 4px;
         transition: $transition-default;
         width: 0;
     }
 
-    &__nav &__ul a:hover::before {
-        width: 50px;
+    &__nav &__ul a::after:focus,
+    &__nav &__ul a::after:focus-visible {
+        width: 100%;
+    }
+
+    &__nav &__ul a:focus,
+    &__nav &__ul a:focus-visible {
+        outline: none;
     }
 }
 
 .burger {
     transition: $transition-default;
-}
 
-.burger,
-.burger::before,
-.burger::after {
-    background-color: $main-color;
-    content: '';
-    display: block;
-    height: $burger-line-height;
-    width: $burger-line-width;
-    position: relative;
-    z-index: 1;
-}
+    &,
+    &::before,
+    &::after {
+        background-color: $main-color;
+        content: '';
+        display: block;
+        height: $burger-line-height;
+        width: $burger-line-width;
+        position: relative;
+        z-index: 1;
+    }
 
-.burger::before {
-    top: calc(#{$burger-line-height} * -2);
-}
+    &::before {
+        top: calc(#{$burger-line-height} * -2);
+    }
 
-.burger::after {
-    top: $burger-line-height;
+    &::after {
+        top: $burger-line-height;
+    }
 }
 
 [type="checkbox"] {
     display: none;
-}
-
-[type="checkbox"]:checked ~ .menu__label .burger {
-    background-color: $white;
-    transform: rotate(45deg);
-}
-
-[type="checkbox"]:checked ~ .menu__label .burger::before {
-    background-color: $white;
-    top: 0;
-    transform: rotate(90deg);
-}
-
-[type="checkbox"]:checked ~ .menu__label .burger::after {
-    display: none;
-}
-
-[type="checkbox"]:checked ~ .menu__nav {
-    transform: translateX(0);
+    &:checked ~ .menu__label .burger {
+        background-color: $white;
+        transform: rotate(45deg);
+    }
+    &:checked ~ .menu__label .burger::before {
+        background-color: $white;
+        top: 0;
+        transform: rotate(90deg);
+    }
+    &:checked ~ .menu__label .burger::after {
+        display: none;
+    }
+    &:checked ~ .menu__nav {
+        transform: translateX(0);
+    }
 }
 
 @media (min-width: 600px) {
@@ -144,6 +146,27 @@
         &__label:hover {
             outline-color: $main-color;
             outline-offset: 24px;
+        }
+
+        &__nav &__ul a:hover {
+            color: white;
+            cursor: pointer;
+        }
+    
+        &__nav &__ul a::before {
+            background-color: $white-transparent;
+            bottom: .4rem;
+            content: '';
+            display: inline-block;
+            height: 1px;
+            margin-right: 6px;
+            position: relative;
+            transition: $transition-default;
+            width: 0;
+        }
+        
+        &__nav &__ul a:hover::before {
+            width: 50px;
         }
 
         [type="checkbox"]:checked ~ .menu__label:hover {

@@ -1,76 +1,74 @@
 .footer {
-    bottom: 0;
-    display: none;
-    font-size: 1.2rem;
-    display: flex;
     align-items: center;
+    bottom: 0;
+    display: flex;
+    font-size: 1.2rem;
     justify-content: space-between;
-    padding: 0 $mobile-margin;
-    position: absolute;
+    height: $footer-height;
+    padding-inline: $mobile-margin;
     width: 100%;
-    z-index: 3;
 
     &__text {
         font-size: 1.2rem;
     }
 
-    &__links {
-        display: none;
-    }
+    // &__links {
+    //     display: none;
+    // }
 
-    &__link {
-        text-decoration: none;
-        color: $main-color;
-        font-weight: 500;
-        margin-left: 3vw;
-    }
+    // &__link {
+    //     text-decoration: none;
+    //     color: $main-color;
+    //     font-weight: 500;
+    //     margin-left: 3vw;
+    // }
 
-    &__icons {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        transform: translateY(3px);
-    }
+    // &__icons {
+    //     width: 100%;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: flex-end;
+    //     transform: translateY(3px);
+    // }
 
-    &__icon {
-        margin-left: 10%;
-    }
+    // &__icon {
+    //     margin-left: 10%;
+    // }
 
-    .behance,
-    .linkedin {
-        height: 16.5px;
-        transform: translateY(-2px);
-    }
+    // .behance,
+    // .linkedin {
+    //     height: 16.5px;
+    //     transform: translateY(-2px);
+    // }
 
-    .linkedin {
-        height: 18px;
-        transform: translateY(-2px);
-    }
+    // .linkedin {
+    //     height: 18px;
+    //     transform: translateY(-2px);
+    // }
 
-    .github {
-        height: 20px;
-    }
+    // .github {
+    //     height: 20px;
+    // }
 
-    .codepen {
-        height: 21px;
-    }
+    // .codepen {
+    //     height: 21px;
+    // }
 
     // .insta {
     //     height: 24px;
     // }
 }
 
-@media screen and (min-width: 700px) {
-    .footer {
-        padding: 0 2rem;
+// @media screen and (min-width: 700px) {
+//     .footer {
+//         padding: 0 2rem;
 
-        &__links {
-            display: unset;
-        }
+//         &__links {
+//             display: unset;
+//         }
 
-        &__icons {
-            display: none;
-        }
-    }
-}
+//         &__icons {
+//             display: none;
+//         }
+//     }
+// }

@@ -1,3 +1,13 @@
+
+
+const menuLinks = document.querySelectorAll('.menu__link');
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('toggle').click();
+  });
+});
+
+
 // let galleryItems = document.getElementsByClassName("gallery__item");
 // console.log(galleryItems);
 

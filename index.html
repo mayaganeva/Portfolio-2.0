@@ -28,265 +28,369 @@
                 <nav class="menu__nav">
                   <ul class="menu__ul">
                     <li class="menu__li">
-                        <a href="#work" class="menu__link">Work</a>
+                        <a href="#work" class="menu__link" id="work-link">Work</a>
                     </li>
                     <li class="menu__li">
-                        <a href="#about" class="menu__link">About</a>
+                        <a href="#about" class="menu__link" id="about-link">About</a>
                     </li>
+                    <!-- <li class="menu__li">
+                        <a href="#contact" class="menu__link" id="contact-link">Contact</a>
+                    </li> -->
                     <li class="menu__li">
-                        <a href="#contact" class="menu__link">Contact</a>
+                        <a href="#resume" class="menu__link" id="resume-link">Resume</a>
                     </li>
                   </ul>
                 </nav>
-              </div>
+            </div>
         </header>
         <div class="header-dummy"></div>
 
-        <section class="hero">
-            <h1 class="hero__title">Maya Ganeva</h1>
-            <h2 class="hero__subtitle">Design + Front End</h2>
-        </section>
-
-        <section class="work" id="work">
-            <div class="gallery">
-                <div class="gallery__item dikman">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Custom website for Dikman Systems</p>
+        <main class="main">
+            <section class="hero">
+                <h1 class="hero__title">Maya Ganeva</h1>
+                <h2 class="hero__subtitle">Design + Front End</h2>
+            </section>
+    
+            <section class="work" id="work">
+                <div class="gallery">
+                    <div class="gallery__item dikman">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Custom website for Dikman Systems</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 700px)"
+                                    srcset="img/gallery/dikman/dikman__thumbnail.png 1148w,
+                                            img/gallery/02-rainbow-circus/circus-tn1x-sm.jpg 1148w,
+                                            img/gallery/02-rainbow-circus/circus-tn2x-sm.webp 2296w,
+                                            img/gallery/02-rainbow-circus/circus-tn2x-sm.jpg 2296w">
+                            <img srcset="img/gallery/02-rainbow-circus/scene__fb1x.webp 700w,
+                                         img/gallery/02-rainbow-circus/scene__fb1x-sm.jpg 700w,
+                                         img/gallery/02-rainbow-circus/scene__fb2x-sm.webp 1640w,
+                                         img/gallery/02-rainbow-circus/scene__fb2x-sm.jpg 1640w" 
+                                alt="Illustration of red drapes opening to reveal the sparkling logo of Rainbow Circus" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 700px)"
-                                srcset="img/gallery/dikman/dikman__thumbnail.png 1148w,
-                                        img/gallery/02-rainbow-circus/circus-tn1x-sm.jpg 1148w,
-                                        img/gallery/02-rainbow-circus/circus-tn2x-sm.webp 2296w,
-                                        img/gallery/02-rainbow-circus/circus-tn2x-sm.jpg 2296w">
-                        <img srcset="img/gallery/02-rainbow-circus/scene__fb1x.webp 700w,
-                                     img/gallery/02-rainbow-circus/scene__fb1x-sm.jpg 700w,
-                                     img/gallery/02-rainbow-circus/scene__fb2x-sm.webp 1640w,
-                                     img/gallery/02-rainbow-circus/scene__fb2x-sm.jpg 1640w" 
-                            alt="Illustration of red drapes opening to reveal the sparkling logo of Rainbow Circus" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item circus">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Artist collective branding + social presence</p>
+                    <div class="gallery__item circus">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Artist collective branding + social presence</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 700px)"
+                                    srcset="img/gallery/02-rainbow-circus/circus-tn1x-sm.webp 1148w,
+                                            img/gallery/02-rainbow-circus/circus-tn1x-sm.jpg 1148w,
+                                            img/gallery/02-rainbow-circus/circus-tn2x-sm.webp 2296w,
+                                            img/gallery/02-rainbow-circus/circus-tn2x-sm.jpg 2296w">
+                            <img srcset="img/gallery/02-rainbow-circus/scene__fb1x.webp 700w,
+                                         img/gallery/02-rainbow-circus/scene__fb1x-sm.jpg 700w,
+                                         img/gallery/02-rainbow-circus/scene__fb2x-sm.webp 1640w,
+                                         img/gallery/02-rainbow-circus/scene__fb2x-sm.jpg 1640w" 
+                                alt="Illustration of red drapes opening to reveal the sparkling logo of Rainbow Circus" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 700px)"
-                                srcset="img/gallery/02-rainbow-circus/circus-tn1x-sm.webp 1148w,
-                                        img/gallery/02-rainbow-circus/circus-tn1x-sm.jpg 1148w,
-                                        img/gallery/02-rainbow-circus/circus-tn2x-sm.webp 2296w,
-                                        img/gallery/02-rainbow-circus/circus-tn2x-sm.jpg 2296w">
-                        <img srcset="img/gallery/02-rainbow-circus/scene__fb1x.webp 700w,
-                                     img/gallery/02-rainbow-circus/scene__fb1x-sm.jpg 700w,
-                                     img/gallery/02-rainbow-circus/scene__fb2x-sm.webp 1640w,
-                                     img/gallery/02-rainbow-circus/scene__fb2x-sm.jpg 1640w" 
-                            alt="Illustration of red drapes opening to reveal the sparkling logo of Rainbow Circus" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item render">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">UI/UX study of a social app</p>
+                    <div class="gallery__item render">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">UI/UX study of a social app</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 700px)"
+                                    srcset="">
+                            <img src="img/gallery/01-render/render-tn.webp" alt="Colorful thumbnail of an app titled render with phone mockups" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 700px)"
-                                srcset="">
-                        <img src="img/gallery/01-render/render-tn.webp" alt="Colorful thumbnail of an app titled render with phone mockups" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item waves tall">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Veterinary site design</p>
+                    <div class="gallery__item waves tall">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Veterinary site design</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 600px)" srcset="">
+                            <source media="(min-width: 960px)" srcset="">
+                            <img src="img/gallery/wavy/wavy-tn.jpg" alt="" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 600px)" srcset="">
-                        <source media="(min-width: 960px)" srcset="">
-                        <img src="img/gallery/wavy/wavy-tn.jpg" alt="" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item paws">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Veterinary site design + custom illustrations</p>
+                    <div class="gallery__item paws">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Veterinary site design + custom illustrations</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 600px)" srcset="">
+                            <source media="(min-width: 960px)" srcset="">
+                            <img src="img/gallery/paws/1920.jpg" alt="" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 600px)" srcset="">
-                        <source media="(min-width: 960px)" srcset="">
-                        <img src="img/gallery/paws/1920.jpg" alt="" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item trusting">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Veterinary site design</p>
+                    <div class="gallery__item trusting">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Veterinary site design</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 600px)" srcset="">
+                            <source media="(min-width: 960px)" srcset="">
+                            <img src="img/gallery/trusting/1280x720-green.jpg" alt="" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 600px)" srcset="">
-                        <source media="(min-width: 960px)" srcset="">
-                        <img src="img/gallery/trusting/1280x720-green.jpg" alt="" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item fatcat">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Small illustrations</p>
+                    <div class="gallery__item fatcat">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Small illustrations</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 600px)" srcset="">
+                            <source media="(min-width: 960px)" srcset="">
+                            <img src="img/gallery/orange-cat23.png" alt="" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 600px)" srcset="">
-                        <source media="(min-width: 960px)" srcset="">
-                        <img src="img/gallery/orange-cat23.png" alt="" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item agape">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Veterinary site design</p>
+                    <div class="gallery__item agape">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Veterinary site design</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 600px)" srcset="">
+                            <source media="(min-width: 960px)" srcset="">
+                            <img src="img/gallery/agape/1280.webp" alt="" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 600px)" srcset="">
-                        <source media="(min-width: 960px)" srcset="">
-                        <img src="img/gallery/agape/1280.webp" alt="" class="gallery__img">
-                    </picture>
-                </div>
-                <div class="gallery__item tom">
-                    <div class="gallery__overlay">
-                        <p class="gallery__label">Various posters</p>
+                    <div class="gallery__item tom">
+                        <div class="gallery__overlay">
+                            <p class="gallery__label">Various posters</p>
+                        </div>
+                        <picture class="gallery__picture">
+                            <source media="(min-width: 600px)" srcset="">
+                            <source media="(min-width: 960px)" srcset="">
+                            <img src="img/gallery/posters/plakat4-tn.webp" alt="" class="gallery__img">
+                        </picture>
                     </div>
-                    <picture class="gallery__picture">
-                        <source media="(min-width: 600px)" srcset="">
-                        <source media="(min-width: 960px)" srcset="">
-                        <img src="img/gallery/posters/plakat4-tn.webp" alt="" class="gallery__img">
-                    </picture>
                 </div>
-            </div>
-        </section>
-
-        <section class="about" id="about">
-            <picture class="about__picture">
-                <source media="(min-width: 600px)" srcset="">
-                <source media="(min-width: 960px)" srcset="">
-                <img src="img/self-animated-cropped.gif" alt="Illustration of Maya Ganeva in vivid colors" class="about__img">
-            </picture>
+            </section>
+    
+            <section class="about" id="about">
+                <picture class="about__picture">
+                    <source media="(min-width: 600px)" srcset="">
+                    <source media="(min-width: 960px)" srcset="">
+                    <img src="img/self-animated-cropped.gif" alt="Illustration of Maya Ganeva in vivid colors" class="about__img">
+                </picture>
+                
+                <div class="about__container">
+                    <div class="about__links">
+                        <a class="about__link" href="https://www.behance.net/mayaganeva" target="_blank">Behance</a>
+                        <a class="about__link" href="https://www.linkedin.com/in/mayaganeva/" target="_blank">LinkedIn</a>
+                        <a class="about__link" href="https://github.com/mayaganeva" target="_blank">GitHub</a>
+                        <a class="about__link" href="https://codepen.io/hrastalak" target="_blank">Codepen</a>
+                    </div>
+                    <h2 class="about__title title">About Me</h2>
+                    <div class="about__info">
+                        <p>👋 Hi, my name is Maya (like the bee!)</p>
+                        <p>🎓 I studied Animation and Graphic Design at New Bulgarian University.</p>
+                
+                        <p>🌇 Sofia native with a passion for designing and coding clean, accessible UI that makes your company and your clients' lives easier.</p>
+                
+                        <p>💻 My ideal workplace is where I can make an impact and be a part of a team of passionate, intelligent and empathetic people who learn and create together in a progressive and supportive environment.</p>
+                
+                        <p>🏔 In my free time you can find me making illustrations, rock climbing and dancing to 80's music.</p>
+                    </div>
+                    <div class="about__quote__container">
+                        <blockquote class="about__quote">Good design is like a refrigerator — when it works, no one notices, but when it doesn’t, it sure stinks.</blockquote>
+                    <figcaption class="about__source">— Irene Au</figcaption>
+                    </div>
+                    <div class="about__info">
+                        <p>💪 My biggest strengths are curiosity, persistence and organization.</p>
+                
+                        <p>👀 Curiosity, because it drives me to try new approaches and is the pillar of innovation and creativity. The world fascinates me and I'm always eager to understand it's How's and Why's.</p>
+                
+                        <p>🔧 Persistence, because in order to succeed you need to push through tough times and dig deep to solve the hardest problems. This is the hard work that follows the spark of a new idea, without which it quickly withers.</p>
+                
+                        <p>📋 Organization, because it's the backbone of creation - without it we're lost to the whims of inspiration and motivation. Being organized means taking charge of when you learn, when you create and when you rest so you can do all of it consistently.</p>
+                    </div>
+    
+                    <div class="tools">
+                        <h3 class="tools__title title">Toolbox</h3>
+                        <h4 class="tools__subtitle subtitle">Design</h4>
+                        <div class="tools__container">
+                            <div class="mini-container">
+                                <h6 class="tools__label">Research</h6>
+                                <div class="tools__bar"><span class="tools__progress max"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">Xd, Figma</h6>
+                                <div class="tools__bar"><span class="tools__progress max"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">Prototyping</h6>
+                                <div class="tools__bar"><span class="tools__progress max"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">Illustrator</h6>
+                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">UI/UX Design</h6>
+                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">Photoshop</h6>
+                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">Animation</h6>
+                                <div class="tools__bar"><span class="tools__progress two-third"></span></div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="tools__subtitle subtitle">Development</h4>
+                        <div class="tools__container">
+                            <div class="mini-container">
+                                <h6 class="tools__label">HTML/CSS</h6>
+                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">SCSS/Sass</h6>
+                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">Accessibility</h6>
+                                <div class="tools__bar"><span class="tools__progress two-third"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">Git</h6>
+                                <div class="tools__bar"><span class="tools__progress two-third"></span></div>
+                            </div>
+                            <div class="mini-container">
+                                <h6 class="tools__label">JavaScript</h6>
+                                <div class="tools__bar"><span class="tools__progress half"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                        <a class="about__btn" href="img/cv__maya-ganeva.pdf" download>Download my CV</a>
+                </div>
+            </section>
+    
+            <section class="resume" id="resume">
+                <h2 class="resume__title title">Resume</h2>
+                <div class="resume__container">
+                    <h4 class="resume__subtitle subtitle">
+                        Design Experience
+                    </h4>
+    
+                    <div class="resume__exp">
+                        <h5 class="resume__job-title">
+                            Web Designer at Brolin
+                        </h5>
+                        <div class="resume__date">
+                            Jul 2020 — Present
+                        </div>
+                        <ul class="resume__ul">
+                            <li class="resume__li">Redesigned a Veterinary Website CMS</li>
+                            <li class="resume__li">Designed versatile themes used to build veterinary clinics' sites</li>
+                            <li class="resume__li">Created illustrations, icons and logos in Photoshop and Illustrator</li>
+                            <li class="resume__li">Brought designs to life using CSS</li>
+                        </ul>
+                    </div>
+    
+                    <div class="resume__exp">
+                        <h5 class="resume__job-title">
+                            UI/UX Designer, Self-Employed
+                        </h5>
+                        <div class="resume__date">
+                            Feb 2020 — Jul 2020
+                        </div>
+                        <ul class="resume__ul">
+                            <li class="resume__li">Designed a mobile app from scratch</li>
+                            <li class="resume__li">Honed research, prototyping, user testing & high fidelity design skills</li>
+                        </ul>
+                    </div>
+    
+                    <div class="resume__exp">
+                        <h5 class="resume__job-title">
+                            Motion Design Intern at Human Advertising Agency
+                        </h5>
+                        <div class="resume__date">
+                            Aug 2018 — Oct 2018
+                        </div>
+                        <ul class="resume__ul">
+                            <li class="resume__li">Created, edited and animated visual materials needed for digital
+                            advertising campaigns of various companies</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="resume__container">
+                    <h4 class="resume__subtitle subtitle">
+                        Education
+                    </h4>
+                    <div class="resume__exp">
+                        <h5 class="resume__job-title">
+                            2D Animation & Production at Grozen Entertainment
+                        </h5>
+                        <div class="resume__date">
+                            Feb 2014 — Apr 2014
+                        </div>
+                        <ul class="resume__ul">
+                            <li class="resume__li">Went through the full process of creating a short animation — character design, script writing, background painting and vector animation</li>
+                        </ul>
+                    </div>
+    
+                    <div class="resume__exp">
+                        <h5 class="resume__job-title">
+                            Certificate for Conquering Responsive Layouts
+                        </h5>
+                        <div class="resume__date">
+                            Jan 2022 — Apr 2022
+                        </div>
+                        <ul class="resume__ul">
+                            <li class="resume__li">Working with responsive units</li>
+                            <li class="resume__li">Learning flexbox</li>
+                            <li class="resume__li">Mastering Media Queries</li>
+                        </ul>
+                    </div>
+    
+                    <div class="resume__exp">
+                        <h5 class="resume__job-title">
+                            CSS Grid Course by Wes Bos
+                        </h5>
+                        <div class="resume__date">
+                            May 2022 — Jun 2022
+                        </div>
+                        <ul class="resume__ul">
+                            <li class="resume__li">Studied using CSS grid to place, size, align and architect designs</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                </div>
+            </section>
             
-            <div class="about__container">
-                <div class="about__links">
-                    <a class="about__link" href="https://www.behance.net/mayaganeva" target="_blank">Behance</a>
-                    <a class="about__link" href="https://www.linkedin.com/in/mayaganeva/" target="_blank">LinkedIn</a>
-                    <a class="about__link" href="https://github.com/mayaganeva" target="_blank">GitHub</a>
-                    <a class="about__link" href="https://codepen.io/hrastalak" target="_blank">Codepen</a>
-                </div>
-                <h2 class="about__title">About Me</h2>
-                <div class="about__info">
-                    <p>👋 Hi, my name is Maya (like the bee!)</p>
-                    <p>🎓 I studied Animation and Graphic Design at New Bulgarian University.</p>
-            
-                    <p>🌇 Sofia native with a passion for designing and coding clean, accessible UI that makes your company and your clients' lives easier.</p>
-            
-                    <p>💻 My ideal workplace is where I can make an impact and be a part of a team of passionate, intelligent and empathetic people who learn and create together in a progressive and supportive environment.</p>
-            
-                    <p>🏔 In my free time you can find me making illustrations, rock climbing and dancing to 80's music.</p>
-                </div>
-                <div class="about__quote__container">
-                    <blockquote class="about__quote">Good design is like a refrigerator — when it works, no one notices, but when it doesn’t, it sure stinks.</blockquote>
-                <figcaption class="about__source">— Irene Au</figcaption>
-                </div>
-                <div class="about__info">
-                    <p>💪 My biggest strengths are curiosity, persistence and organization.</p>
-            
-                    <p>👀 Curiosity, because it drives me to try new approaches and is the pillar of innovation and creativity. The world fascinates me and I'm always eager to understand it's How's and Why's.</p>
-            
-                    <p>🔧 Persistence, because in order to succeed you need to push through tough times and dig deep to solve the hardest problems. This is the hard work that follows the spark of a new idea, without which it quickly withers.</p>
-            
-                    <p>📋 Organization, because it's the backbone of creation - without it we're lost to the whims of inspiration and motivation. Being organized means taking charge of when you learn, when you create and when you rest so you can do all of it consistently.</p>
-                </div>
-
-                <div class="tools">
-                    <h3 class="tools__title">Toolbox</h3>
-                    <h4 class="tools__subtitle">Design</h4>
-                    <div class="tools__container">
-                        <div class="mini-container">
-                            <h5 class="tools__label">Research</h5>
-                            <div class="tools__bar"><span class="tools__progress max"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">Xd, Figma</h5>
-                            <div class="tools__bar"><span class="tools__progress max"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">Prototyping</h5>
-                            <div class="tools__bar"><span class="tools__progress max"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">Illustrator</h5>
-                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">UI/UX Design</h5>
-                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">Photoshop</h5>
-                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">Animation</h5>
-                            <div class="tools__bar"><span class="tools__progress two-third"></span></div>
-                        </div>
-                    </div>
-                    
-                    <h4 class="tools__subtitle">Development</h4>
-                    <div class="tools__container">
-                        <div class="mini-container">
-                            <h5 class="tools__label">HTML/CSS</h5>
-                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">SCSS/Sass</h5>
-                            <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">Accessibility</h5>
-                            <div class="tools__bar"><span class="tools__progress two-third"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">Git</h5>
-                            <div class="tools__bar"><span class="tools__progress two-third"></span></div>
-                        </div>
-                        <div class="mini-container">
-                            <h5 class="tools__label">JavaScript</h5>
-                            <div class="tools__bar"><span class="tools__progress half"></span></div>
-                        </div>
-                    </div>
-                </div>
-                    <a class="about__btn" href="img/cv__maya-ganeva.pdf" download>Download my CV</a>
-            </div>
-        </section>
-        
-        <section class="contact" id="contact">
-            <form action="" class="form" autocomplete="on">
-                <p class="contact__text">Hope my work made you smile!</p>
-                <p class="contact__text">If you like what you see and would like to collaborate or just gush over web design</p>
-                <h1 class="form__title">Come say hi!</h1>
-                <label class="form__label" for="name">
+            <!-- <section class="contact" id="contact">
+                <form action="" class="form" autocomplete="on">
+                    <p class="contact__text">Hope my work made you smile!</p>
+                    <p class="contact__text">If you like what you see and would like to collaborate or just gush over web design</p>
+                    <h1 class="form__title">Come say hi!</h1>
+                    <label class="form__label" for="name"></label>
                     <span>Hi! My name is</span>
                     <input class="form__input" type="text" id="name" name="name" placeholder="Your name goes here" required>
-                </label>
-                <label class="form__label" for="email">
+    
+                    <label class="form__label" for="email"></label>
                     <span>Here's my email</span>
                     <input class="form__input" type="email" id="email" name="email" placeholder="Your email goes here" required>
-                </label>
-                <label class="form__label" for="message">
+    
+                    <label class="form__label" for="message"></label>
                     <span>So get this!</span>
-                    <textarea class="form__input" type="text" id="message" name="message" placeholder="Super exciting thing you want to talk about goes here" required></textarea>
-                </label>
-                <input type="submit" value="Send message" class="form__btn"><br>
-            </form>
-        </section>
+                    <div class="form__wrap">
+                        <textarea class="form__input" type="text" id="message" name="message"
+                        placeholder="Super exciting thing you want to talk about goes here"
+                        required
+                        onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+                    </div>
+                    <input type="submit" value="Send message" class="form__btn"><br>
+                </form>
+            </section> -->
+    
+            <!-- <div class="to-top">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31.2" style="enable-background:new 0 0 31 31.2;" xml:space="preserve">
+                    <polyline class="arrow" points="1.5,16.9 15.5,2.9 29.5,16.9"/>
+                    <line class="arrow" x1="15.5" y1="30.3" x2="15.5" y2="2.9"/>
+                  </svg>
+            </div> -->
+        </main>
 
         <footer class="footer">
             <p class="footer__text">©2022</p>
         </footer>
-
-        <div class="to-top">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" xml:space="preserve">
-                <polyline class="arrow" points="19.6,30.2 30,19.8 40.4,30.2"/>
-                <line class="arrow" x1="30" y1="40.2" x2="30" y2="20.1"/>
-              </svg>
-        </div>
     </body>
 </html>

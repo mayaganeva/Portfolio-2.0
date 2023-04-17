@@ -9,6 +9,7 @@
     padding: .75em 1.75em;
     text-align: center;
     text-decoration: none;
+    transition: $transition-default;
 }
 
 .cta__btn {
@@ -25,18 +26,41 @@
     opacity: .8;
 }
 
-.to-top {
-    aspect-ratio: 1 / 1;
-    // background-color: $main-color;
-    cursor: pointer;
-    border-radius: 50%;
-    inset: auto 0 0 auto;
-    position: absolute;
-}
+// .to-top {
+//     aspect-ratio: 1 / 1.2;
+//     border-radius: 50%;
+//     cursor: pointer;
+//     height: 28px;
+//     inset: auto 0 0 auto;
+//     margin: $mobile-margin;
+//     outline: 1px solid transparent;
+//     outline-offset: 60px;
+//     // padding: $mobile-margin;
+//     position: fixed;
+//     transition: $transition-default;
+//     z-index: 4;
+// }
 
-.arrow {
-    fill: none;
-    stroke: $main-color;
-    stroke-width: 4;
-    stroke-miterlimit:10;
-}
+// .to-top::before {
+//     background-color: $white;
+//     content: '';
+//     height: $header-height;
+//     inset: auto 0 0 0;
+//     position: fixed;
+//     width: 100vw;
+//     z-index: -1;
+// }
+
+// .arrow {
+//     fill: none;
+//     stroke: $main-color;
+//     stroke-width: 5;
+//     stroke-miterlimit: 10;
+// }
+
+// @media (min-width: 800px) {
+//     .to-top:hover {
+//         outline-color: $main-color;
+//         outline-offset: 24px;
+//     }
+// }
