@@ -10,14 +10,17 @@
     z-index: 1;
 
     &__text {
-        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    &__text:first-child {
+        margin-top: -2em;
     }
 
     &__link {
         color: $white;
         font-size: 4rem;
         font-weight: 550;
-        margin-top: .1em;
     }
 }
 
@@ -81,8 +84,26 @@
 @media screen and (min-width: 800px) {
     .contact {
 
+        &::after {
+            content: 'Thanks for visiting';
+            display: block;
+            font-size: $font-size-xxs;
+            height: max-content;
+            left: calc(#{$mobile-margin} - 7px);
+            position: fixed;
+            top: 55%;
+            width: min-content;
+            writing-mode: vertical-rl;
+            transform: rotate(-180deg) translateY(55%);
+        }
+        
+        &__text {
+            margin: 0;
+        }
+
         &__link {
-            font-size: 7rem;
+            font-size: $font-size-xxxl;
+            margin-top: .2em;
         }
     }
     // .contact {

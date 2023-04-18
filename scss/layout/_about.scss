@@ -10,6 +10,11 @@
         max-width: 650px;
     }
 
+    & .title {
+        border-top: 2px solid $main-color;
+        padding-top: 20px;
+    }
+
     &__links {
         grid-column: 2 / 3;
         display: flex;
@@ -19,15 +24,29 @@
     }
 
     &__info {
-        font-size: 1.3rem;
         margin-bottom: 3.5em;
+    }
+
+    &__info p::before {
+        background-color: $main-color;
+        content: '';
+        display: inline-block;
+        height: 2px;
+        margin-right: .4rem;
+        position: relative;
+        width: 40px;
+        top: -.5rem;
+    }
+
+    &__source {
+        text-align: right;
     }
 }
 
 .tools {
 
     &__label {
-        font-size: 1.4rem;
+        font-size: $font-size-xs;
         font-weight: 400;
         margin: 0 0 .5em;
     }

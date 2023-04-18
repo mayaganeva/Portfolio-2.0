@@ -3,7 +3,6 @@
     bottom: 0;
     color: $white;
     display: flex;
-    font-size: 1.2rem;
     justify-content: space-between;
     height: $header-height;
     padding-inline: $mobile-margin;
@@ -12,7 +11,7 @@
     z-index: 1;
 
     &__text {
-        font-size: 1.2rem;
+        font-size: $font-size-xxs;
     }
 
     // &__links {
