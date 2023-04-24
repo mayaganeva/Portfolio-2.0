@@ -597,18 +597,16 @@ a {
   z-index: 2;
 }
 
+.to-top:hover {
+  outline-color: #ffffffb3;
+  outline-offset: 24px;
+}
+
 .arrow {
   fill: none;
   stroke: #fff;
   stroke-width: 5;
   stroke-miterlimit: 10;
-}
-
-@media (min-width: 800px) {
-  .to-top:hover {
-    outline-color: #ffffffb3;
-    outline-offset: 24px;
-  }
 }
 
 .contact {
