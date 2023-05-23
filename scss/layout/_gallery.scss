@@ -8,13 +8,13 @@
 	z-index: 2;
 
 	&__item {
-		animation: slideup $transition-default;
+		// animation: slideup $transition-default;
 		max-height: 60vw;
 		overflow: hidden;
 		position: relative;
 		width: 100%;
 	}
-  
+
 	&__overlay {
 		align-items: center;
 		background-blend-mode: multiply;

@@ -700,8 +700,6 @@ a {
 }
 
 .gallery__item {
-  -webkit-animation: slideup 200ms ease;
-          animation: slideup 200ms ease;
   max-height: 60vw;
   overflow: hidden;
   position: relative;
