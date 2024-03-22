@@ -9,7 +9,14 @@
 		grid-column: span 2;
 		margin: 0;
 	}
-
+	&__subtitle {
+		color: $gray-6;
+	}
+	&__job-title {
+		font-size: $fz-m;
+		font-weight: $fw-l;
+		margin-block: $space-s;
+	}
 }
 
 @media (min-width: 800px) {

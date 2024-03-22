@@ -11,7 +11,7 @@
     }
 
     & .title {
-        border-top: 2px solid $main-color;
+        border-top: 2px solid $primary;
         padding-top: 20px;
     }
 
@@ -28,7 +28,7 @@
     }
 
     &__info p::before {
-        background-color: $main-color;
+        background-color: $primary;
         content: '';
         display: inline-block;
         height: 2px;
@@ -46,13 +46,13 @@
 .tools {
 
     &__label {
-        font-size: $font-size-xs;
+        font-size: $fz-xs;
         font-weight: 400;
         margin: 0 0 .5em;
     }
     
     &__bar {
-        background: $tools-bar-bg;
+        background: $gray-3;
         height: .7rem;
         margin-bottom: 1em;
     }
@@ -60,7 +60,7 @@
     &__progress {
         display: block;
         height: 100%;
-        background: $main-color;
+        background: $primary;
     }
 }
 
@@ -108,7 +108,7 @@
     .about {
         column-gap: $mobile-margin;
         display: grid;
-        grid-template-columns: $picture-width calc(438px + 8vw);
+        grid-template-columns: $avatar-w calc(438px + 8vw);
         justify-content: center;
 
         &__container {
@@ -122,13 +122,13 @@
             height: 50vh;
             margin-bottom: 6.8em;
             position: sticky;
-            top: $header-height;
+            top: $header-h;
 
             &::before {
                 background-color: $accent;
                 content: '';
                 display: inline-block;
-                height: $picture-width;
+                height: $avatar-w;
                 left: -600px;
                 position: absolute;
                 width: 80vh;
@@ -137,7 +137,7 @@
 
             & img {
                 margin-left: 0;
-                width: $picture-width;
+                width: $avatar-w;
                 max-width: 300px;
             }
         }
@@ -162,7 +162,7 @@
     
             &::before {
                 height: 300px;
-                right: calc(100vw - #{$picture-width} - 650px);
+                right: calc(100vw - #{$avatar-w} - 650px);
                 width: 800px;
             }
         }

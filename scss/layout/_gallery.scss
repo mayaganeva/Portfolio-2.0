@@ -1,5 +1,5 @@
 .gallery {
-	background-color: $white;
+	background-color: $gray-1;
 	display: grid;
 	grid-auto-rows: 11;
 	gap: $gallery-gutter;
@@ -8,7 +8,7 @@
 	z-index: 2;
 
 	&__item {
-		// animation: slideup $transition-default;
+		// animation: slideup $transition;
 		max-height: 60vw;
 		overflow: hidden;
 		position: relative;
@@ -20,7 +20,7 @@
 		background-blend-mode: multiply;
 		background-color: rgba(black, .85);
 		backdrop-filter: blur(2px);
-		color: $white;
+		color: $gray-1;
 		display: flex;
 		filter: grayscale(1);
 		justify-content: center;
@@ -29,7 +29,7 @@
 		opacity: 0;
 		padding: 2em;
 		position: absolute;
-		transition: opacity $transition-default;
+		transition: opacity $transition;
 		width: 100%;
 	}
 	

@@ -1,8 +1,8 @@
 .contact {
-    background-color: $main-color;
-    color: $white;
+    background-color: $primary;
+    color: $gray-1;
     display: grid;
-    height: calc(100vh - #{$header-height});
+    height: calc(100vh - $header-h);
     padding-inline: $mobile-margin;
     place-content: center;
     text-align: center;
@@ -10,7 +10,7 @@
     z-index: 1;
 
     &__text {
-        margin-bottom: 1em;
+        margin-bottom: $space-s;
     }
 
     &__text:first-child {
@@ -18,7 +18,7 @@
     }
 
     &__link {
-        color: $white;
+        color: $gray-1;
         font-size: 4rem;
         font-weight: 550;
     }
@@ -34,7 +34,7 @@
 //     }
 
 //     &__label {
-//         font-weight: 500;
+//         font-weight: $fw-l;
 //     }
 
 //     &__wrap {
@@ -53,12 +53,12 @@
 //         width: 100%;
 //         margin: .2em 0 1em;
 //         padding: .8em 1em;
-//         background-color: $tools-bar-bg;
+//         background-color: $gray-3;
 //         border: 0;
 //         resize: none;
 
 //         &:focus {
-//             outline: 2px solid $main-color;
+//             outline: 2px solid $primary;
 //         }
 
 //         &::placeholder {
@@ -87,7 +87,7 @@
         &::after {
             content: 'Thanks for visiting';
             display: block;
-            font-size: $font-size-xxs;
+            font-size: $fz-xxs;
             height: max-content;
             left: calc(#{$mobile-margin} - 7px);
             position: fixed;
@@ -102,7 +102,7 @@
         }
 
         &__link {
-            font-size: $font-size-xxxl;
+            font-size: $fz-xxxl;
             margin-top: .2em;
         }
     }

@@ -1,7 +1,7 @@
 .cta__btn,
 .about__btn,
 .form__btn {
-    background-color: $main-color;
+    background-color: $primary;
     border: none;
     color: white;
     display: inline-block;
@@ -9,7 +9,7 @@
     padding: .75em 1.75em;
     text-align: center;
     text-decoration: none;
-    transition: $transition-default;
+    transition: $transition;
 }
 
 .cta__btn {
@@ -17,6 +17,7 @@
 }
 
 .about__btn {
+	margin-top: $mobile-margin;
     width: 100%;
 }
 
@@ -37,18 +38,18 @@
     outline-offset: 60px;
     // padding: $mobile-margin;
     position: fixed;
-    transition: $transition-default;
+    transition: $transition;
     z-index: 2;
 }
 
 .to-top:hover {
-    outline-color: $white-transparent;
+    outline-color: $gray-0;
     outline-offset: 24px;
 }
 
 .arrow {
     fill: none;
-    stroke: $white;
+    stroke: $gray-1;
     stroke-width: 5;
     stroke-miterlimit: 10;
 }

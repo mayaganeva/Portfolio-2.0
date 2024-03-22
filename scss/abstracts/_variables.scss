@@ -1,46 +1,67 @@
 // Colors
-$accent: #FFC528;
-$main-color: #161616;
-$gallery-hover: #3b3b3b;
-$tools-bar-bg: #e4e4e4;
-$white: #fff;
-$white-transparent: #ffffffb3;
+$accent:  #FFC528;
+$gray-10: #161616;
+$gray-6:  #3b3b3b;
+$gray-3:  #e4e4e4;
+$gray-1:  #fff;
+$gray-0:  #ffffffb3;
+
+// Semantic Colors
+$primary:       $gray-10;
+$gallery-hover: $gray-6;
+$tools-bar-bg:  $gray-3;
 
 // Typography
-$font-size-xxs: 1.2rem;
-$font-size-xs: 1.4rem;
-$font-size-s: 1.5rem;
-$font-size-m: 2rem;
-$font-size-l: 2.5rem;
-$font-size-xl: 3rem;
-$font-size-xxl: 4.5rem;
-$font-size-xxxl: 7rem;
+$fw-s:    400;
+$fw-m:    500;
+$fw-l:    600;
+$fw-xl:   700;
+$fz-xxs:  1.2rem;
+$fz-xs:   1.4rem;
+$fz-s:    1.5rem;
+$fz-m:    1.9rem;
+$fz-l:    2.5rem;
+$fz-xl:   3rem;
+$fz-xxl:  4rem;
+$fz-xxxl: 7rem;
+
+// Spacing
+$space-unit:  1em;                       // 16
+$space-xxxs: calc(0.125 * $space-unit);  // 2
+$space-xxs:  calc(0.25 * $space-unit);   // 4
+$space-xs:   calc(0.5 * $space-unit);    // 8
+$space-s:    $space-unit;                // 16
+$space-m:    calc(1.5 * $space-unit);    // 24
+$space-l:    calc(2.5 * $space-unit);    // 40
+$space-xl:   calc(3.25 * $space-unit);   // 52
+$space-xxl:  calc(5 * $space-unit);      // 80
+$space-xxxl: calc(8.5 * $space-unit);    // 136
 
 // Layout
-$section-margin: 4em;
+$section-margin: $space-l;
 
 // Header
-$border-width: 2px;
+$border-width:       2px;
 $burger-line-height: 4px;
-$burger-line-width: 28px;
-$header-height: 106px;
-$mobile-margin: 40px;
-$logo-height: 34px;
+$burger-line-width:  28px;
+$header-h:           106px;
+$logo-height:        34px;
+$mobile-margin:      $space-l;
 
 // Gallery
-$gallery-width: 100vw;
+$gallery-w:      100vw;
 $gallery-gutter: 10px;
-$ar-sq: 1 / 1;
+$ar-sq:   1 / 1;
 $ar-wide: 2 / 1;
 $ar-tall: 1 / 2;
-$ar-big: 2 / 3;
-$row-height: calc((#{$gallery-width} - #{$gallery-gutter} * 4) / 5);
+$ar-big:  2 / 3;
+$row-height: calc(($gallery-w - $gallery-gutter * 4) / 5);
 
 // About Me
-$picture-width: calc(200px + 3vw);
+$avatar-w: calc(200px + 3vw);
 
 //Animation
-$transition-default: 200ms ease;
+$transition: 200ms ease;
 
 // Footer
 $footer-height: 70px;

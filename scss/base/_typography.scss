@@ -1,30 +1,29 @@
 @import url(https://api.fontshare.com/css?f[]=clash-display@1&display=swap);
 
 body {
-    font: $font-size-s 'Clash Display', sans-serif;
-    color: $main-color;
-    line-height: 1.5;
+    font: $fw-s $fz-s / 1.4 'Clash Display', sans-serif;
+    color: $primary;
 }
 
 h1, h2, h3, h4 {
-    line-height: 1;
+    line-height: 1.1;
 }
 
 a {
-    color: $main-color;
-    font-size: $font-size-xs;
-    font-weight: 500;
+    color: $primary;
+    font-size: $fz-xs;
+    font-weight: $fw-l;
     text-decoration: none;
 }
 
 .title {
-    font-size: $font-size-xl;
-    margin: 10px 0 40px;
+    font-size: $fz-xl;
+    margin: $space-xs 0 $space-l;
 }
 
 .subtitle {
-    font-size: $font-size-l;
-    font-weight: 500;
+    font-size: $fz-l;
+    font-weight: $fw-l;
     margin: 1em 0 .6em;
 }
 
@@ -38,26 +37,26 @@ a {
     place-content: center;
     text-align: center;
 
-    &__title {
-        font-size: $font-size-xxl;
+    h1 {
+        font-size: $fz-xxl;
         margin: 0 $mobile-margin;
     }
 
     &__subtitle {
-        font-size: $font-size-m;
-        font-weight: 400;
+        font-size: $fz-m;
+        font-weight: $fw-s;
     }
 }
 
 .cta {
-    background-color: $white;
+    background-color: $gray-1;
     position: relative;
     z-index: 2;
 }
 
 @media (min-width: 440px) {
     .title {
-        font-size: $font-size-xxl;
+        font-size: $fz-xxl;
     }
 }
 
@@ -65,11 +64,11 @@ a {
     .hero {
 
         &__title {
-            font-size: $font-size-xxxl;
+            font-size: $fz-xxxl;
         }
 
         &__subtitle {
-            font-size: $font-size-l;
+            font-size: $fz-l;
         }
     }
 }

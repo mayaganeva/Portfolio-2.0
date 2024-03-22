@@ -1,402 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="Maya Ganeva">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Maya Ganeva</title>
-        <link rel="icon" type="image/x-icon" href="img/logo/x-icon-5.svg">
-        <link rel="stylesheet" href="scss/main.css">
-    </head>
 
-    <body>
-        <header class="header">
-            <a class="logo" href="index.html">
-                <svg      
-                    xmlns="http://www.w3.org/2000/svg"
-                    xml:space="preserve" baseProfile="tiny"
-                    overflow="visible" version="1.2"
-                    viewBox="0 0 250 250">
-                    <path fill="#010101" d="M250 171v26.4h-92.1V250H0V118.5h131.5V49.2L79 84.2l-52.6-35v42.9H0V0l79 52.6L157.9 0v144.7H26.4v78.9h105.1v-26.2H65.8V171z"/>
-                </svg>
-            </a>
-            <div class="menu">
-                <input type="checkbox" id="toggle"></input>
-                <label class="menu__label" for="toggle">
-                  <div class="burger" id="burger"></div>
-                </label>
-                <nav class="menu__nav">
-                  <ul class="menu__ul">
-                    <li class="menu__li">
-                        <a href="#work" class="menu__link">Work</a>
-                    </li>
-                    <li class="menu__li">
-                        <a href="#about" class="menu__link">About</a>
-                    </li>
-                    <li class="menu__li">
-                        <a href="#resume" class="menu__link">Resume</a>
-                    </li>
-                    <li class="menu__li">
-                        <a href="#contact" class="menu__link" id="contact-link">Contact</a>
-                    </li>
-                  </ul>
-                </nav>
-            </div>
-        </header>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Maya Ganeva">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maya Ganeva</title>
+	<link rel="icon" type="image/x-icon" href="img/logo/x-icon-5.svg">
+	<link rel="stylesheet" href="scss/main.css">
+</head>
 
-        <main class="main">
-            <section class="hero" id="top">
-                <h1 class="hero__title">Maya Ganeva</h1>
-                <h2 class="hero__subtitle">Design + Front End</h2>
-            </section>
-    
-            <section class="work" id="work">
-                <div class="gallery">
-                    <div class="gallery__item dikman">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Custom website for Dikman Systems</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <img srcset="img/gallery/dikman/dikman__thumb--300.webp 300w,
-                                         img/gallery/dikman/dikman__thumb--600.webp 600w,
-                                         img/gallery/dikman/dikman__thumb--900.webp 900w,
-                                         img/gallery/dikman/dikman__thumb--1080.webp 1080w,
-                                         img/gallery/dikman/dikman__thumb--1280.webp 1280w,
-                                         img/gallery/dikman/dikman__thumb--1920.webp 1920w"
-                                alt="Home Page of Dikman Systems featuring a close-up photo of a circuit board with a midnight blue filter" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item circus">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Artist collective branding + social presence</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <img srcset="img/gallery/rainbow-circus/circus__thumb--300.webp 300w,
-                                         img/gallery/rainbow-circus/circus__thumb--600.webp 600w,
-                                         img/gallery/rainbow-circus/circus__thumb--900.webp 900w,
-                                         img/gallery/rainbow-circus/circus__thumb--1024.webp 1024w,
-                                         img/gallery/rainbow-circus/circus__thumb--1280.webp 1280w,
-                                         img/gallery/rainbow-circus/circus__thumb--1920.webp 1920w" 
-                                alt="Illustration of red drapes opening to reveal the sparkling logo of Rainbow Circus" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item agape">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Veterinary site design</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <img srcset="img/gallery/agape/agape__thumb--300.webp 300w,
-                                         img/gallery/agape/agape__thumb--600.webp 600w,
-                                         img/gallery/agape/agape__thumb--900.webp 900w,
-                                         img/gallery/agape/agape__thumb--1024.webp 1024w,
-                                         img/gallery/agape/agape__thumb--1280.webp 1280w"
-                            src="img/gallery/agape/1280.webp" alt="Home Page of a Veterinary Clinic Website featuring a large photo of a calico cat and a similarly colored dog looking at each other" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item render">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">UI/UX study of a social app</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <source media="(min-width: 700px)"
-                                    srcset="">
-                            <img src="img/gallery/render/render-tn.webp" alt="Colorful thumbnail of an app titled render with phone mockups" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item waves tall">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Veterinary site design</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <source media="(min-width: 600px)" srcset="">
-                            <source media="(min-width: 960px)" srcset="">
-                            <img src="img/gallery/wavy/wavy-tn.jpg" alt="" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item paws">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Veterinary site design + custom illustrations</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <source media="(min-width: 600px)" srcset="">
-                            <source media="(min-width: 960px)" srcset="">
-                            <img src="img/gallery/paws/1920.jpg" alt="" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item trusting">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Veterinary site design</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <source media="(min-width: 600px)" srcset="">
-                            <source media="(min-width: 960px)" srcset="">
-                            <img src="img/gallery/trusting/1280x720-green.jpg" alt="" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item fatcat">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Small illustrations</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <source media="(min-width: 600px)" srcset="">
-                            <source media="(min-width: 960px)" srcset="">
-                            <img src="img/gallery/orange-cat23.png" alt="" class="gallery__img">
-                        </picture>
-                    </div>
-                    <div class="gallery__item tom">
-                        <div class="gallery__overlay">
-                            <p class="gallery__label">Various posters</p>
-                        </div>
-                        <picture class="gallery__picture">
-                            <source media="(min-width: 600px)" srcset="">
-                            <source media="(min-width: 960px)" srcset="">
-                            <img src="img/gallery/posters/plakat4-tn.webp" alt="" class="gallery__img">
-                        </picture>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="about" id="about">
-                <picture class="about__picture">
-                    <source media="(min-width: 600px)" srcset="">
-                    <source media="(min-width: 960px)" srcset="">
-                    <img src="img/self-animated-cropped.gif" alt="Illustration of Maya Ganeva in vivid colors" class="about__img">
-                </picture>
-                
-                <div class="about__container">
-                    <div class="about__links">
-                        <a class="about__link" href="https://www.behance.net/mayaganeva" target="_blank">Behance</a>
-                        <a class="about__link" href="https://www.linkedin.com/in/mayaganeva/" target="_blank">LinkedIn</a>
-                        <a class="about__link" href="https://github.com/mayaganeva" target="_blank">GitHub</a>
-                        <a class="about__link" href="https://codepen.io/hrastalak" target="_blank">Codepen</a>
-                    </div>
-                    <h2 class="about__title title">About Me</h2>
-                    <div class="about__info">
-                        <p>Multidisciplinary designer focused on web design & development.</p>
-                
-                        <p>My passion is to build projects that inspire people and make their lives
-                            easier. Design is not only pretty, it's a tool with a purpose and using it
-                            to its fullest potential is what I strive for. I'm looking to be a part of a
-                            passionate team and create something amazing together.</p>
+<body>
+	<header class="header">
+		<a class="logo" href="index.html">
+			<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" baseProfile="tiny" overflow="visible"
+			version="1.2" viewBox="0 0 250 250">
+				<path fill="#010101"
+					d="M250 171v26.4h-92.1V250H0V118.5h131.5V49.2L79 84.2l-52.6-35v42.9H0V0l79 52.6L157.9 0v144.7H26.4v78.9h105.1v-26.2H65.8V171z" />
+			</svg>
+		</a>
+		<div class="menu">
+			<input type="checkbox" id="toggle"></input>
+			<label class="menu__label" for="toggle">
+				<div class="burger" id="burger"></div>
+			</label>
+			<nav class="menu__nav">
+				<ul class="menu__ul">
+					<li class="menu__li">
+						<a href="#work" class="menu__link">Work</a>
+					</li>
+					<li class="menu__li">
+						<a href="#about" class="menu__link">About</a>
+					</li>
+					<li class="menu__li">
+						<a href="#resume" class="menu__link">Resume</a>
+					</li>
+					<li class="menu__li">
+						<a href="#contact" class="menu__link" id="contact-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-                        <p>My passion is building projects that inspire people and make their lives
-                            easier. Design for me is the meeting point of functionality and aesthetics. I'm looking to be a part of a
-                            passionate team and create something amazing together.</p>
-                
-                        <p>🏔 In my free time you can find me making illustrations, rock climbing and dancing to 80's music.</p>
-                    </div>
-                    <div class="about__quote__container">
-                        <blockquote class="about__quote">Good design is like a refrigerator — when it works, no one notices, but when it doesn’t, it sure stinks.</blockquote>
-                    <figcaption class="about__source">— Irene Au</figcaption>
-                    </div>
-    
-                    <div class="tools">
-                        <h3 class="tools__title title">Toolbox</h3>
-                        <h4 class="tools__subtitle subtitle">Design</h4>
-                        <div class="tools__container">
-                            <div class="mini-container">
-                                <h6 class="tools__label">Research</h6>
-                                <div class="tools__bar"><span class="tools__progress max"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">Xd, Figma</h6>
-                                <div class="tools__bar"><span class="tools__progress max"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">Prototyping</h6>
-                                <div class="tools__bar"><span class="tools__progress max"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">Illustrator</h6>
-                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">UI/UX Design</h6>
-                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">Photoshop</h6>
-                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">Animation</h6>
-                                <div class="tools__bar"><span class="tools__progress two-third"></span></div>
-                            </div>
-                        </div>
-                        
-                        <h4 class="tools__subtitle subtitle">Development</h4>
-                        <div class="tools__container">
-                            <div class="mini-container">
-                                <h6 class="tools__label">HTML/CSS</h6>
-                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">SCSS/Sass</h6>
-                                <div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">Accessibility</h6>
-                                <div class="tools__bar"><span class="tools__progress two-third"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">Git</h6>
-                                <div class="tools__bar"><span class="tools__progress two-third"></span></div>
-                            </div>
-                            <div class="mini-container">
-                                <h6 class="tools__label">JavaScript</h6>
-                                <div class="tools__bar"><span class="tools__progress half"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="resume" id="resume">
-                <div class="resume__container">
-                    <h2 class="resume__title title">Resume</h2>
-                    <div class="resume__column">
-                        <h4 class="resume__subtitle subtitle">
-                            Design Experience
-                        </h4>
-        
-                        <div class="resume__exp">
-                            <h5 class="resume__job-title">
-                                Web Designer at Brolin
-                            </h5>
-                            <div class="resume__date">
-                                Jul 2020 — Present
-                            </div>
-                            <ul class="resume__ul">
-                                <li class="resume__li">Redesigned a Veterinary Website CMS</li>
-                                <li class="resume__li">Designed versatile themes used to build veterinary clinics' sites</li>
-                                <li class="resume__li">Created illustrations, icons and logos in Photoshop and Illustrator</li>
-                                <li class="resume__li">Brought designs to life using CSS</li>
-                            </ul>
-                        </div>
-        
-                        <div class="resume__exp">
-                            <h5 class="resume__job-title">
-                                UI/UX Designer, Self-Employed
-                            </h5>
-                            <div class="resume__date">
-                                Feb 2020 — Jul 2020
-                            </div>
-                            <ul class="resume__ul">
-                                <li class="resume__li">Designed a mobile app from scratch</li>
-                                <li class="resume__li">Honed research, prototyping, user testing & high fidelity design skills</li>
-                            </ul>
-                        </div>
-        
-                        <div class="resume__exp">
-                            <h5 class="resume__job-title">
-                                Motion Design Intern at Human Advertising Agency
-                            </h5>
-                            <div class="resume__date">
-                                Aug 2018 — Oct 2018
-                            </div>
-                            <ul class="resume__ul">
-                                <li class="resume__li">Created, edited and animated visual materials needed for digital
-                                advertising campaigns of various companies</li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                    <div class="resume__column">
-                        <h4 class="resume__subtitle subtitle">
-                            Education
-                        </h4>
+	<main class="main">
+		<section class="hero" id="top">
+			<h1 class="hero__title">Maya Ganeva</h1>
+			<h2 class="hero__subtitle">Design + Front End</h2>
+		</section>
 
-                        <div class="resume__exp">
-                            <h5 class="resume__job-title">
-                                New Bulgarian University
-                            </h5>
-                            <div class="resume__date">
-                                Oct 2013 — Jun 2014
-                            </div>
-                            <ul class="resume__ul">
-                                <li class="resume__li">Animation Major: everything needed to create animations, from script writing and various animation techniques to video editing</li>
-                                <li class="resume__li">Graphic Design Minor: multidisciplinary education in print, web design, branding</li>
-                            </ul>
-                        </div>
+		<section class="work" id="work">
+			<div class="gallery">
+				<div class="gallery__item dikman">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Custom website for Dikman Systems</p>
+					</div>
+					<picture class="gallery__picture">
+						<img srcset="img/gallery/dikman/dikman__thumb--300.webp 300w,
+										 img/gallery/dikman/dikman__thumb--600.webp 600w,
+										 img/gallery/dikman/dikman__thumb--900.webp 900w,
+										 img/gallery/dikman/dikman__thumb--1080.webp 1080w,
+										 img/gallery/dikman/dikman__thumb--1280.webp 1280w,
+										 img/gallery/dikman/dikman__thumb--1920.webp 1920w"
+							alt="Home Page of Dikman Systems featuring a close-up photo of a circuit board with a midnight blue filter"
+							class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item circus">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Artist collective branding + social presence</p>
+					</div>
+					<picture class="gallery__picture">
+						<img srcset="img/gallery/rainbow-circus/circus__thumb--300.webp 300w,
+										 img/gallery/rainbow-circus/circus__thumb--600.webp 600w,
+										 img/gallery/rainbow-circus/circus__thumb--900.webp 900w,
+										 img/gallery/rainbow-circus/circus__thumb--1024.webp 1024w,
+										 img/gallery/rainbow-circus/circus__thumb--1280.webp 1280w,
+										 img/gallery/rainbow-circus/circus__thumb--1920.webp 1920w"
+							alt="Illustration of red drapes opening to reveal the sparkling logo of Rainbow Circus"
+							class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item agape">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Veterinary site design</p>
+					</div>
+					<picture class="gallery__picture">
+						<img srcset="img/gallery/agape/agape__thumb--300.webp 300w,
+										 img/gallery/agape/agape__thumb--600.webp 600w,
+										 img/gallery/agape/agape__thumb--900.webp 900w,
+										 img/gallery/agape/agape__thumb--1024.webp 1024w,
+										 img/gallery/agape/agape__thumb--1280.webp 1280w"
+							src="img/gallery/agape/1280.webp"
+							alt="Home Page of a Veterinary Clinic Website featuring a large photo of a calico cat and a similarly colored dog looking at each other"
+							class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item render">
+					<div class="gallery__overlay">
+						<p class="gallery__label">UI/UX study of a social app</p>
+					</div>
+					<picture class="gallery__picture">
+						<source media="(min-width: 700px)" srcset="">
+						<img src="img/gallery/render/render-tn.webp"
+							alt="Colorful thumbnail of an app titled render with phone mockups" class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item waves tall">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Veterinary site design</p>
+					</div>
+					<picture class="gallery__picture">
+						<source media="(min-width: 600px)" srcset="">
+						<source media="(min-width: 960px)" srcset="">
+						<img src="img/gallery/wavy/wavy-tn.jpg" alt="" class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item paws">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Veterinary site design + custom illustrations</p>
+					</div>
+					<picture class="gallery__picture">
+						<source media="(min-width: 600px)" srcset="">
+						<source media="(min-width: 960px)" srcset="">
+						<img src="img/gallery/paws/1920.jpg" alt="" class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item trusting">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Veterinary site design</p>
+					</div>
+					<picture class="gallery__picture">
+						<source media="(min-width: 600px)" srcset="">
+						<source media="(min-width: 960px)" srcset="">
+						<img src="img/gallery/trusting/1280x720-green.jpg" alt="" class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item fatcat">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Small illustrations</p>
+					</div>
+					<picture class="gallery__picture">
+						<source media="(min-width: 600px)" srcset="">
+						<source media="(min-width: 960px)" srcset="">
+						<img src="img/gallery/orange-cat23.png" alt="" class="gallery__img">
+					</picture>
+				</div>
+				<div class="gallery__item tom">
+					<div class="gallery__overlay">
+						<p class="gallery__label">Various posters</p>
+					</div>
+					<picture class="gallery__picture">
+						<source media="(min-width: 600px)" srcset="">
+						<source media="(min-width: 960px)" srcset="">
+						<img src="img/gallery/posters/plakat4-tn.webp" alt="" class="gallery__img">
+					</picture>
+				</div>
+			</div>
+		</section>
 
-                        <div class="resume__exp">
-                            <h5 class="resume__job-title">
-                                2D Animation & Production at Grozen Entertainment
-                            </h5>
-                            <div class="resume__date">
-                                Feb 2014 — Apr 2014
-                            </div>
-                            <ul class="resume__ul">
-                                <li class="resume__li">Went through the full process of creating a short animation — character design, script writing, background painting and vector animation</li>
-                            </ul>
-                        </div>
-        
-                        <div class="resume__exp">
-                            <h5 class="resume__job-title">
-                                Certificate for Conquering Responsive Layouts
-                            </h5>
-                            <div class="resume__date">
-                                Jan 2022 — Apr 2022
-                            </div>
-                            <ul class="resume__ul">
-                                <li class="resume__li">Working with responsive units</li>
-                                <li class="resume__li">Learning flexbox</li>
-                                <li class="resume__li">Mastering Media Queries</li>
-                            </ul>
-                        </div>
-        
-                        <div class="resume__exp">
-                            <h5 class="resume__job-title">
-                                CSS Grid Course by Wes Bos
-                            </h5>
-                            <div class="resume__date">
-                                May 2022 — Jun 2022
-                            </div>
-                            <ul class="resume__ul">
-                                <li class="resume__li">Studied using CSS grid to place, size, align and architect designs</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a class="about__btn" href="img/cv__maya-ganeva.pdf" download>Download my CV</a>
-                </div>
-            </section>
-            
-            <section class="contact" id="contact">
-                <p class="contact__text">That's pretty much it.</p>
-                <p class="contact__text">Have a project in mind or want to nerd over web design?</p>
-                <a href="mailto:mayagganeva@gmail.com" class="contact__link">Let's talk</a>
-                <!-- <form action="" class="form" autocomplete="on">
-                    <h1 class="form__title">Come say hi!</h1>
-                    <label class="form__label" for="name"></label>
-                    <span>Hi! My name is</span>
-                    <input class="form__input" type="text" id="name" name="name" placeholder="Your name goes here" required>
-    
-                    <label class="form__label" for="email"></label>
-                    <span>Here's my email</span>
-                    <input class="form__input" type="email" id="email" name="email" placeholder="Your email goes here" required>
-    
-                    <label class="form__label" for="message"></label>
-                    <span>So get this!</span>
-                    <div class="form__wrap">
-                        <textarea class="form__input" type="text" id="message" name="message"
-                        placeholder="Super exciting thing you want to talk about goes here"
-                        required
-                        onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
-                    </div>
-                    <input type="submit" value="Send message" class="form__btn"><br>
-                </form> -->
-            </section>
-    
-            <a href="#top" class="to-top">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31.2" style="enable-background:new 0 0 31 31.2;" xml:space="preserve">
-                    <polyline class="arrow" points="1.5,16.9 15.5,2.9 29.5,16.9"/>
-                    <line class="arrow" x1="15.5" y1="30.3" x2="15.5" y2="2.9"/>
-                  </svg>
-            </a>
-        </main>
+		<section class="about" id="about">
+			<picture class="about__picture">
+				<source media="(min-width: 600px)" srcset="">
+				<source media="(min-width: 960px)" srcset="">
+				<img src="img/self-animated-cropped.gif" alt="Illustration of Maya Ganeva in vivid colors"
+					class="about__img">
+			</picture>
 
-        <footer class="footer">
-            <p class="footer__text">©2022</p>
-        </footer>
-    </body>
+			<div class="about__container">
+				<div class="about__links">
+					<a class="about__link" href="https://www.behance.net/mayaganeva" target="_blank">Behance</a>
+					<a class="about__link" href="https://www.linkedin.com/in/mayaganeva/" target="_blank">LinkedIn</a>
+					<a class="about__link" href="https://github.com/mayaganeva" target="_blank">GitHub</a>
+					<a class="about__link" href="https://codepen.io/hrastalak" target="_blank">Codepen</a>
+				</div>
+				<h2 class="about__title title">About Me</h2>
+				<div class="about__info">
+					<p>Multidisciplinary designer focused on web design & development.</p>
+
+					<p>My passion is to build projects that inspire people and make their lives
+						easier. Design is not only pretty, it's a tool with a purpose and using it
+						to its fullest potential is what I strive for. I'm looking to be a part of a
+						passionate team and create something amazing together.</p>
+
+					<p>My passion is building projects that inspire people and make their lives
+						easier. Design for me is the meeting point of functionality and aesthetics. I'm looking to be a
+						part of a
+						passionate team and create something amazing together.</p>
+
+					<p>🏔 In my free time you can find me making illustrations, rock climbing and dancing to 80's music.
+					</p>
+				</div>
+				<div class="about__quote__container">
+					<blockquote class="about__quote">Good design is like a refrigerator — when it works, no one notices, but when it doesn’t, it sure stinks.</blockquote>
+					<figcaption class="about__source">— Irene Au</figcaption>
+				</div>
+
+				<div class="tools">
+					<h3 class="tools__title title">Toolbox</h3>
+					<h4 class="tools__subtitle subtitle">Design</h4>
+					<div class="tools__container">
+						<div class="mini-container">
+							<h6 class="tools__label">Research</h6>
+							<div class="tools__bar"><span class="tools__progress max"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">Xd, Figma</h6>
+							<div class="tools__bar"><span class="tools__progress max"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">Prototyping</h6>
+							<div class="tools__bar"><span class="tools__progress max"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">Illustrator</h6>
+							<div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">UI/UX Design</h6>
+							<div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">Photoshop</h6>
+							<div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">Animation</h6>
+							<div class="tools__bar"><span class="tools__progress two-third"></span></div>
+						</div>
+					</div>
+
+					<h4 class="tools__subtitle subtitle">Development</h4>
+					<div class="tools__container">
+						<div class="mini-container">
+							<h6 class="tools__label">HTML/CSS</h6>
+							<div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">SCSS/Sass</h6>
+							<div class="tools__bar"><span class="tools__progress three-fourth"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">Accessibility</h6>
+							<div class="tools__bar"><span class="tools__progress two-third"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">Git</h6>
+							<div class="tools__bar"><span class="tools__progress two-third"></span></div>
+						</div>
+						<div class="mini-container">
+							<h6 class="tools__label">JavaScript</h6>
+							<div class="tools__bar"><span class="tools__progress half"></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="resume" id="resume">
+			<div class="resume__container">
+				<h2 class="resume__title title">Design Experience</h2>
+				<div class="resume__col">
+					<div class="resume__exp">
+						<h5 class="resume__job-title">
+							Web Designer at Brolin
+						</h5>
+						<div class="resume__date">
+							Jul 2020 — Present
+						</div>
+						<ul class="resume__ul">
+							<li class="resume__li">Redesigned a Veterinary Website CMS</li>
+							<li class="resume__li">Designed versatile themes used to build veterinary clinics' sites</li>
+							<li class="resume__li">Created illustrations, icons and logos in Photoshop and Illustrator</li>
+							<li class="resume__li">Brought designs to life using CSS</li>
+						</ul>
+					</div>
+
+					<div class="resume__exp">
+						<h5 class="resume__job-title">
+							UI/UX Designer, Self-Employed
+						</h5>
+						<div class="resume__date">
+							Feb 2020 — Jul 2020
+						</div>
+						<ul class="resume__ul">
+							<li class="resume__li">Designed a mobile app from scratch</li>
+							<li class="resume__li">Honed research, prototyping, user testing & high fidelity design skills</li>
+						</ul>
+					</div>
+
+					<div class="resume__exp">
+						<h5 class="resume__job-title">
+							Motion Design Intern at Human Advertising Agency
+						</h5>
+						<div class="resume__date">
+							Aug 2018 — Oct 2018
+						</div>
+						<ul class="resume__ul">
+							<li class="resume__li">Created, edited and animated visual materials needed for digital
+								advertising campaigns of various companies</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="resume__col">
+					<h4 class="resume__subtitle subtitle">
+						Education
+					</h4>
+
+					<div class="resume__exp">
+						<h5 class="resume__job-title">
+							New Bulgarian University
+						</h5>
+						<div class="resume__date">
+							Oct 2013 — Jun 2014
+						</div>
+						<ul class="resume__ul">
+							<li class="resume__li">Animation Major: everything needed to create animations, from script writing and various animation techniques to video editing</li>
+							<li class="resume__li">Graphic Design Minor: multidisciplinary education in print, web design, branding</li>
+						</ul>
+					</div>
+
+					<div class="resume__exp">
+						<h5 class="resume__job-title">
+							2D Animation & Production at Grozen Entertainment
+						</h5>
+						<div class="resume__date">
+							Feb 2014 — Apr 2014
+						</div>
+						<ul class="resume__ul">
+							<li class="resume__li">Went through the full process of creating a short animation — character design, script writing, background painting and vector animation</li>
+						</ul>
+					</div>
+
+					<div class="resume__exp">
+						<h5 class="resume__job-title">
+							Certificate for Conquering Responsive Layouts
+						</h5>
+						<div class="resume__date">
+							Jan 2022 — Apr 2022
+						</div>
+						<ul class="resume__ul">
+							<li class="resume__li">Working with responsive units</li>
+							<li class="resume__li">Learning flexbox</li>
+							<li class="resume__li">Mastering Media Queries</li>
+						</ul>
+					</div>
+
+					<div class="resume__exp">
+						<h5 class="resume__job-title">
+							CSS Grid Course by Wes Bos
+						</h5>
+						<div class="resume__date">
+							May 2022 — Jun 2022
+						</div>
+						<ul class="resume__ul">
+							<li class="resume__li">Studied using CSS grid to place, size, align and architect designs</li>
+						</ul>
+					</div>
+				</div>
+				<a class="about__btn" href="img/cv__maya-ganeva.pdf" download>Download my CV</a>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<p class="contact__text">That's pretty much it.</p>
+			<p class="contact__text">Have a project in mind or want to nerd over web design?</p>
+			<a href="mailto:mayagganeva@gmail.com" class="contact__link">Let's talk</a>
+			<!-- <form action="" class="form" autocomplete="on">
+				<h2 class="form__title">Come say hi!</h2>
+				<label class="form__label" for="name"></label>
+				<span>Hi! My name is</span>
+				<input class="form__input" type="text" id="name" name="name" placeholder="Your name goes here" required>
+
+				<label class="form__label" for="email"></label>
+				<span>Here's my email</span>
+				<input class="form__input" type="email" id="email" name="email" placeholder="Your email goes here" required>
+
+				<label class="form__label" for="message"></label>
+				<span>So get this!</span>
+				<div class="form__wrap">
+					<textarea class="form__input" type="text" id="message" name="message"
+					placeholder="Super exciting thing you want to talk about goes here"
+					required
+					onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+				</div>
+				<input type="submit" value="Send message" class="form__btn"><br>
+			</form> -->
+		</section>
+
+		<a href="#top" class="to-top">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31.2"
+				style="enable-background:new 0 0 31 31.2;" xml:space="preserve">
+				<polyline class="arrow" points="1.5,16.9 15.5,2.9 29.5,16.9" />
+				<line class="arrow" x1="15.5" y1="30.3" x2="15.5" y2="2.9" />
+			</svg>
+		</a>
+	</main>
+
+	<footer class="footer">
+		<p class="footer__text">©2024</p>
+	</footer>
+</body>
+
 </html>

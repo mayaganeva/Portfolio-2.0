@@ -1,17 +1,17 @@
 .footer {
     align-items: center;
     bottom: 0;
-    color: $white;
+    color: $gray-1;
     display: flex;
     justify-content: space-between;
-    height: $header-height;
+    height: $header-h;
     padding-inline: $mobile-margin;
     position: absolute;
     width: 100%;
     z-index: 1;
 
     &__text {
-        font-size: $font-size-xxs;
+        font-size: $fz-xxs;
     }
 
     // &__links {
@@ -20,8 +20,8 @@
 
     // &__link {
     //     text-decoration: none;
-    //     color: $main-color;
-    //     font-weight: 500;
+    //     color: $primary;
+    //     font-weight: $fw-l;
     //     margin-left: 3vw;
     // }
 

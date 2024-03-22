@@ -1,9 +1,10 @@
 .header {
     align-items: center;
-    background-color: $white;
+    background-color: $gray-1;
+	background-color: deeppink;
     display: flex;
     justify-content: space-between;
-    height: $header-height;
+    height: $header-h;
     padding-inline: $mobile-margin;
     position: fixed;
     top: 0;
@@ -30,19 +31,19 @@
         outline: 1px solid transparent;
         outline-offset: 60px;
         position: relative;
-        transition: $transition-default;
+        transition: $transition;
         width: $burger-line-width;
         z-index: 1;
     }
 
     &__nav {
-        background-color: $main-color;
+        background-color: $primary;
         display: grid;
         height: 100vh;
         inset: 0 0 0 auto;
         overflow: hidden;
         position: absolute;
-        transition: $transition-default;
+        transition: $transition;
         transform: translateX(100%);
         width: 100vw;
     }
@@ -63,21 +64,21 @@
 
     &__nav &__ul a {
         border-bottom: 1px solid transparent;
-        color: $white;
+        color: $gray-1;
         height: 100%;
         padding-bottom: .2em;
         text-transform: uppercase;
-        transition: $transition-default;
+        transition: $transition;
     }
 
     &__nav &__ul a::after {
-        background-color: $white-transparent;
+        background-color: $gray-0;
         content: '';
         display: block;
         height: 1px;
         position: relative;
         top: 4px;
-        transition: $transition-default;
+        transition: $transition;
         width: 0;
     }
 
@@ -93,12 +94,12 @@
 }
 
 .burger {
-    transition: $transition-default;
+    transition: $transition;
 
     &,
     &::before,
     &::after {
-        background-color: $main-color;
+        background-color: $primary;
         content: '';
         display: block;
         height: $burger-line-height;
@@ -108,7 +109,7 @@
     }
 
     &::before {
-        top: calc(#{$burger-line-height} * -2);
+        top: calc(-2 * $burger-line-height);
     }
 
     &::after {
@@ -119,11 +120,11 @@
 [type="checkbox"] {
     display: none;
     &:checked ~ .menu__label .burger {
-        background-color: $white;
+        background-color: $gray-1;
         transform: rotate(45deg);
     }
     &:checked ~ .menu__label .burger::before {
-        background-color: $white;
+        background-color: $gray-1;
         top: 0;
         transform: rotate(90deg);
     }
@@ -140,7 +141,7 @@
     .menu {
 
         &__label:hover {
-            outline-color: $main-color;
+            outline-color: $primary;
             outline-offset: 24px;
         }
 
@@ -150,14 +151,14 @@
         }
     
         &__nav &__ul a::before {
-            background-color: $white-transparent;
+            background-color: $gray-0;
             bottom: .4rem;
             content: '';
             display: inline-block;
             height: 1px;
             margin-right: 6px;
             position: relative;
-            transition: $transition-default;
+            transition: $transition;
             width: 0;
         }
         
@@ -166,7 +167,7 @@
         }
 
         [type="checkbox"]:checked ~ .menu__label:hover {
-            outline-color: $white-transparent;
+            outline-color: $gray-0;
         }
 
         &__nav {
